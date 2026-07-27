@@ -1,0 +1,112 @@
+[
+  {
+    "id": "java_4_9_q1",
+    "metadata": { "module": "Java", "chapter": "4.9" },
+    "content": { "question_text": "What is the primary purpose of packaging an application into a Java Archive (JAR) file?", "question_type": "concept" },
+    "grading_instructions": {
+      "core_requirements": ["To give users a single file instead of a directory structure filled with class files.", "To compress the files using the ZIP compression format."],
+      "acceptable_variations": ["Single file distribution, uses ZIP compression."],
+      "strictness_level": "moderate"
+    }
+  },
+  {
+    "id": "java_4_9_1_q1",
+    "metadata": { "module": "Java", "chapter": "4.9.1" },
+    "content": { "question_text": "What tool do you use to create JAR files, and what is the general format/syntax of the command?", "question_type": "concept" },
+    "grading_instructions": {
+      "core_requirements": ["The `jar` tool.", "`jar options file1 file2 ...` (or `jar cvf jarFileName file1 file2 ...`)"],
+      "acceptable_variations": ["jar tool, jar cvf name files"],
+      "strictness_level": "strict"
+    }
+  },
+  {
+    "id": "java_4_9_1_q2",
+    "metadata": { "module": "Java", "chapter": "4.9.1" },
+    "content": { "question_text": "In the `jar` command, what do the `c`, `v`, and `f` options do?", "question_type": "list", "expected_count": 3 },
+    "grading_instructions": {
+      "core_requirements": ["`c`: Creates a new or empty archive and adds files to it.", "`v`: Generates verbose output.", "`f`: Specifies the JAR file name as the second command-line argument."],
+      "acceptable_variations": ["c = create, v = verbose, f = file name."],
+      "strictness_level": "moderate"
+    }
+  },
+  {
+    "id": "java_4_9_2_q1",
+    "metadata": { "module": "Java", "chapter": "4.9.2" },
+    "content": { "question_text": "What is the specific name and directory location of the manifest file inside a JAR archive?", "question_type": "concept" },
+    "grading_instructions": {
+      "core_requirements": ["Name: `MANIFEST.MF`", "Location: The `META-INF` subdirectory."],
+      "acceptable_variations": ["MANIFEST.MF in META-INF"],
+      "strictness_level": "strict"
+    }
+  },
+  {
+    "id": "java_4_9_2_q2",
+    "metadata": { "module": "Java", "chapter": "4.9.2" },
+    "content": { "question_text": "If you want to update the manifest of an existing JAR file with additions from a text file, which two `jar` command options must you use together?", "question_type": "code" },
+    "grading_instructions": {
+      "core_requirements": ["`u` (Updates an existing JAR file)", "`m` (Adds a manifest to the JAR file / modifies it)"],
+      "acceptable_variations": ["um or ufm"],
+      "strictness_level": "strict"
+    }
+  },
+  {
+    "id": "java_4_9_3_q1",
+    "metadata": { "module": "Java", "chapter": "4.9.3" },
+    "content": { "question_text": "What are the two ways to specify the main class (entry point) for an executable JAR file?", "question_type": "list", "expected_count": 2 },
+    "grading_instructions": {
+      "core_requirements": ["Use the `e` option in the jar command (e.g., `jar cvfe ...`).", "Specify `Main-Class: com.mycompany.mypkg.MainAppClass` directly in the manifest file."],
+      "acceptable_variations": ["e option in command line, or Main-Class entry in manifest."],
+      "strictness_level": "strict"
+    }
+  },
+  {
+    "id": "java_4_9_3_q2",
+    "metadata": { "module": "Java", "chapter": "4.9.3" },
+    "content": { "question_text": "What crucial formatting caution must be followed when editing the last line in a manifest file manually?", "question_type": "concept" },
+    "grading_instructions": {
+      "core_requirements": ["The last line in the manifest must end with a newline character (line terminator).", "Otherwise, the manifest will not be read correctly."],
+      "acceptable_variations": ["Must end with a newline/line break."],
+      "strictness_level": "strict"
+    }
+  },
+  {
+    "id": "java_4_9_3_q3",
+    "metadata": { "module": "Java", "chapter": "4.9.3" },
+    "content": { "question_text": "What command do users run to start a packaged program from the terminal?", "question_type": "code" },
+    "grading_instructions": {
+      "core_requirements": ["`java -jar MyProgram.jar`"],
+      "acceptable_variations": ["java -jar followed by the file name"],
+      "strictness_level": "strict"
+    }
+  },
+  {
+    "id": "java_4_9_4_q1",
+    "metadata": { "module": "Java", "chapter": "4.9.4" },
+    "content": { "question_text": "What is the sole purpose of multi-release JAR files?", "question_type": "concept" },
+    "grading_instructions": {
+      "core_requirements": ["To enable a particular version of your program or library to work with multiple JDK releases (backward compatibility)."],
+      "acceptable_variations": ["To support different Java versions in the same JAR."],
+      "strictness_level": "moderate"
+    }
+  },
+  {
+    "id": "java_4_9_4_q2",
+    "metadata": { "module": "Java", "chapter": "4.9.4" },
+    "content": { "question_text": "In a multi-release JAR file, where must the version-specific class files be placed?", "question_type": "concept" },
+    "grading_instructions": {
+      "core_requirements": ["In the `META-INF/versions` directory."],
+      "acceptable_variations": ["META-INF/versions"],
+      "strictness_level": "strict"
+    }
+  },
+  {
+    "id": "java_4_9_5_q1",
+    "metadata": { "module": "Java", "chapter": "4.9.5" },
+    "content": { "question_text": "According to JEP 293 (starting with Java 9), how should multiletter command-line options be formatted in Linux tools and modern Java tools?", "question_type": "concept" },
+    "grading_instructions": {
+      "core_requirements": ["Multiletter option names are preceded by double dashes (e.g., `--class-path`)."],
+      "acceptable_variations": ["Double dashes for long options."],
+      "strictness_level": "strict"
+    }
+  }
+]

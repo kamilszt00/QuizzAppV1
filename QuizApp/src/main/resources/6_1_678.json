@@ -1,0 +1,243 @@
+[
+  {
+    "id": "java_6_1_6_q1",
+    "metadata": { "module": "Java", "chapter": "6.1.6" },
+    "content": {
+      "question_text": "How is the ambiguity solved when the same method is defined as default in an interface and also as a concrete method in a superclass?",
+      "question_type": "concept"
+    },
+    "grading_instructions": {
+      "core_requirements": ["The superclass method wins."],
+      "acceptable_variations": ["Superclass wins.", "Class method overrides interface default."],
+      "strictness_level": "strict"
+    }
+  },
+  {
+    "id": "java_6_1_6_q2",
+    "metadata": { "module": "Java", "chapter": "6.1.6" },
+    "content": {
+      "question_text": "How is the problem solved when two interfaces provide a default method with exactly the same name and parameter types?",
+      "question_type": "concept"
+    },
+    "grading_instructions": {
+      "core_requirements": ["You must override the method — otherwise the compiler reports an error."],
+      "acceptable_variations": ["You must override it.", "Compile-time error if not overridden."],
+      "strictness_level": "strict"
+    }
+  },
+  {
+    "id": "java_6_1_6_q3",
+    "metadata": { "module": "Java", "chapter": "6.1.6" },
+    "content": {
+      "question_text": "What happens if two interfaces have a method with the same name and parameter types, but only one is default?",
+      "question_type": "concept"
+    },
+    "grading_instructions": {
+      "core_requirements": ["The compiler still reports an error — if either interface contains an implementation, there is a conflict."],
+      "acceptable_variations": ["Compiler error.", "Conflict exists if one is default."],
+      "strictness_level": "strict"
+    }
+  },
+  {
+    "id": "java_6_1_6_q4",
+    "metadata": { "module": "Java", "chapter": "6.1.6" },
+    "content": {
+      "question_text": "What happens if neither of the shared methods in two interfaces are default?",
+      "question_type": "concept"
+    },
+    "grading_instructions": {
+      "core_requirements": ["No conflict — the implementing class must implement the method."],
+      "acceptable_variations": ["No conflict.", "Implementing class must provide implementation."],
+      "strictness_level": "strict"
+    }
+  },
+  {
+    "id": "java_6_1_7_q1",
+    "metadata": { "module": "Java", "chapter": "6.1.7" },
+    "content": {
+      "question_text": "What is a callback pattern in programming?",
+      "question_type": "concept"
+    },
+    "grading_instructions": {
+      "core_requirements": ["A pattern that allows you to specify the action that should occur whenever a particular event happens."],
+      "acceptable_variations": ["Passing a behavior to be executed later.", "A function or object that is called back when something happens."],
+      "strictness_level": "moderate"
+    }
+  },
+  {
+    "id": "java_6_1_7_q2",
+    "metadata": { "module": "Java", "chapter": "6.1.7" },
+    "content": {
+      "question_text": "What is the object-oriented approach to implementing callbacks in Java?",
+      "question_type": "concept"
+    },
+    "grading_instructions": {
+      "core_requirements": ["You pass an object of a class that implements a specific interface.", "The framework/component then calls a method on that object when the event occurs."],
+      "acceptable_variations": ["Pass an object that implements a callback interface.", "The callback is an object with a known method that gets invoked."],
+      "strictness_level": "moderate"
+    }
+  },
+  {
+    "id": "java_6_1_7_q3",
+    "metadata": { "module": "Java", "chapter": "6.1.7" },
+    "content": {
+      "question_text": "Why is passing an object more flexible than passing a bare function for callbacks in Java?",
+      "question_type": "concept"
+    },
+    "grading_instructions": {
+      "core_requirements": ["An object can carry additional information (state) beyond just the method to be called.", "This allows for more complex and stateful callbacks."],
+      "acceptable_variations": ["Objects can hold state and data.", "More flexible because you can store additional information in the object."],
+      "strictness_level": "moderate"
+    }
+  },
+  {
+    "id": "java_6_1_7_q4",
+    "metadata": { "module": "Java", "chapter": "6.1.7" },
+    "content": {
+      "question_text": "In the callback pattern, what is the role of the interface (e.g., ActionListener)?",
+      "question_type": "concept"
+    },
+    "grading_instructions": {
+      "core_requirements": ["It defines the contract that the callback object must fulfill.", "It specifies which method the framework will call."],
+      "acceptable_variations": ["It acts as a contract between the caller and the callback.", "It defines the method signature the callback must implement."],
+      "strictness_level": "moderate"
+    }
+  },
+  {
+    "id": "java_6_1_7_q5",
+    "metadata": { "module": "Java", "chapter": "6.1.7" },
+    "content": {
+      "question_text": "How does a framework (like Timer) know which method to call on a callback object?",
+      "question_type": "concept"
+    },
+    "grading_instructions": {
+      "core_requirements": ["The framework uses the interface that the callback object implements.", "It calls the specific method defined by that interface."],
+      "acceptable_variations": ["Through the interface contract.", "Because the object implements a known interface with a known method."],
+      "strictness_level": "moderate"
+    }
+  },
+  {
+    "id": "java_6_1_8_q1",
+    "metadata": { "module": "Java", "chapter": "6.1.8" },
+    "content": {
+      "question_text": "What is the purpose of the Comparator interface when there is already a compareTo method?",
+      "question_type": "concept"
+    },
+    "grading_instructions": {
+      "core_requirements": [
+        "It is used to compare objects in a different way than the compareTo method.",
+        "It allows custom ordering without modifying the class itself."
+      ],
+      "acceptable_variations": [
+        "To define alternative sorting orders.",
+        "For custom comparison logic outside the class."
+      ],
+      "strictness_level": "moderate"
+    }
+  },
+  {
+    "id": "java_6_1_8_q2",
+    "metadata": { "module": "Java", "chapter": "6.1.8" },
+    "content": {
+      "question_text": "How do you use the Comparator interface?",
+      "question_type": "concept"
+    },
+    "grading_instructions": {
+      "core_requirements": [
+        "Create a class that implements Comparator and implement the compare method with your custom logic (or supply a lambda for the same purpose)."
+      ],
+      "acceptable_variations": [
+        "Implement Comparator and override compare()",
+        "Use a lambda to define the comparison."
+      ],
+      "strictness_level": "moderate"
+    }
+  },
+  {
+    "id": "java_6_1_8_q3",
+    "metadata": { "module": "Java", "chapter": "6.1.8" },
+    "content": {
+      "question_text": "How do you actually use a class/lambda that implements Comparator?",
+      "question_type": "concept"
+    },
+    "grading_instructions": {
+      "core_requirements": [
+        "Use it as an argument in a sorting method, e.g. Arrays.sort(arr, comparatorInstance) or list.sort(comparatorInstance)."
+      ],
+      "acceptable_variations": [
+        "Pass it to Arrays.sort() or Collections.sort().",
+        "As a comparator argument in sorting methods."
+      ],
+      "strictness_level": "moderate"
+    }
+  },
+  {
+    "id": "java_6_1_8_q4",
+    "metadata": { "module": "Java", "chapter": "6.1.8" },
+    "content": {
+      "question_text": "What is the name of the built-in case-insensitive comparator for String?",
+      "question_type": "concept"
+    },
+    "grading_instructions": {
+      "core_requirements": ["String.CASE_INSENSITIVE_ORDER"],
+      "acceptable_variations": ["CASE_INSENSITIVE_ORDER"],
+      "strictness_level": "strict"
+    }
+  },
+  {
+    "id": "java_6_1_8_q5",
+    "metadata": { "module": "Java", "chapter": "6.1.8" },
+    "content": {
+      "question_text": "Why can't you shuffle an array by sorting it with a random comparator?",
+      "question_type": "concept"
+    },
+    "grading_instructions": {
+      "core_requirements": [
+        "The sorting algorithm may detect that the comparator violates its contract (e.g., not transitive), since results differ between calls.",
+        "It could throw an exception."
+      ],
+      "acceptable_variations": [
+        "Random comparators violate the Comparator contract.",
+        "Sorting expects a consistent order — random breaks it."
+      ],
+      "strictness_level": "moderate"
+    }
+  },
+  {
+    "id": "java_6_1_8_q6",
+    "metadata": { "module": "Java", "chapter": "6.1.8" },
+    "content": {
+      "question_text": "How do you properly shuffle an array in Java?",
+      "question_type": "concept"
+    },
+    "grading_instructions": {
+      "core_requirements": ["Convert to a List and use Collections.shuffle()."],
+      "acceptable_variations": [
+        "Use Collections.shuffle() on a List.",
+        "Convert array to list, shuffle, then convert back."
+      ],
+      "strictness_level": "moderate"
+    }
+  },
+  {
+    "id": "java_6_1_8_q7",
+    "metadata": { "module": "Java", "chapter": "6.1.8" },
+    "content": {
+      "question_text": "What are the three rules a Comparator must fulfill?",
+      "question_type": "list",
+      "expected_count": 3
+    },
+    "grading_instructions": {
+      "core_requirements": [
+        "Reflexivity — comparing an element to itself (or an equal element) returns 0.",
+        "Antisymmetry — swapping the arguments swaps the sign of the result.",
+        "Transitivity — if x comes before y and y comes before z, then x must come before z."
+      ],
+      "acceptable_variations": [
+        "Reflexive, antisymmetric, transitive.",
+        "Consistent with equals, symmetric, transitive."
+      ],
+      "strictness_level": "moderate"
+    }
+  }
+]

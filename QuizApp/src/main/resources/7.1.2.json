@@ -1,0 +1,171 @@
+[
+  {
+    "id": "java_7_1_2_q1",
+    "metadata": { "module": "Java", "chapter": "7.1.2" },
+    "content": {
+      "question_text": "Where do you declare that a method might throw an exception?",
+      "question_type": "concept"
+    },
+    "grading_instructions": {
+      "core_requirements": [
+        "In the method header (signature), using the throws clause."
+      ],
+      "acceptable_variations": [
+        "In the method signature.",
+        "With throws in the method declaration."
+      ],
+      "strictness_level": "strict"
+    }
+  },
+  {
+    "id": "java_7_1_2_q2",
+    "metadata": { "module": "Java", "chapter": "7.1.2" },
+    "content": {
+      "question_text": "What are four situations when an exception can be thrown?",
+      "question_type": "list",
+      "expected_count": 4
+    },
+    "grading_instructions": {
+      "core_requirements": [
+        "Calling a method that throws a checked exception.",
+        "Detecting an error and throwing a checked exception with the throw statement.",
+        "Making a programming error (e.g., null pointer, index out of bounds).",
+        "An internal error in the Java runtime or library."
+      ],
+      "acceptable_variations": [
+        "Calling a method that throws an exception.",
+        "Using throw on an error condition.",
+        "Programming mistakes.",
+        "Internal JVM errors."
+      ],
+      "strictness_level": "moderate"
+    }
+  },
+  {
+    "id": "java_7_1_2_q3",
+    "metadata": { "module": "Java", "chapter": "7.1.2" },
+    "content": {
+      "question_text": "Which two situations require you to use throws, and why?",
+      "question_type": "concept"
+    },
+    "grading_instructions": {
+      "core_requirements": [
+        "When you call a method that throws a checked exception.",
+        "When your own method throws a checked exception.",
+        "Because those are checked exceptions — the compiler forces you to handle or declare them."
+      ],
+      "acceptable_variations": [
+        "Calling a method that throws checked exceptions.",
+        "Throwing a checked exception yourself.",
+        "The compiler requires it for checked exceptions."
+      ],
+      "strictness_level": "moderate"
+    }
+  },
+  {
+    "id": "java_7_1_2_q4",
+    "metadata": { "module": "Java", "chapter": "7.1.2" },
+    "content": {
+      "question_text": "How do you declare that a method might throw an exception?",
+      "question_type": "code"
+    },
+    "grading_instructions": {
+      "core_requirements": [
+        "Use throws ExceptionName in the method definition."
+      ],
+      "acceptable_variations": [
+        "public void method() throws ExceptionName { }",
+        "Add throws clause to the method signature."
+      ],
+      "strictness_level": "strict"
+    }
+  },
+  {
+    "id": "java_7_1_2_q5",
+    "metadata": { "module": "Java", "chapter": "7.1.2" },
+    "content": {
+      "question_text": "Can a method throw more than one exception?",
+      "question_type": "boolean"
+    },
+    "grading_instructions": {
+      "core_requirements": ["Yes — you can declare multiple exceptions separated by commas."],
+      "acceptable_variations": ["Yes."],
+      "strictness_level": "strict"
+    }
+  },
+  {
+    "id": "java_7_1_2_q6",
+    "metadata": { "module": "Java", "chapter": "7.1.2" },
+    "content": {
+      "question_text": "Which exceptions are generally out of your control?",
+      "question_type": "concept"
+    },
+    "grading_instructions": {
+      "core_requirements": [
+        "Exceptions that inherit from Error.",
+        "These represent serious system-level issues (e.g., OutOfMemoryError, StackOverflowError)."
+      ],
+      "acceptable_variations": [
+        "Errors.",
+        "Subclasses of Error.",
+        "Serious internal problems."
+      ],
+      "strictness_level": "moderate"
+    }
+  },
+  {
+    "id": "java_7_1_2_q7",
+    "metadata": { "module": "Java", "chapter": "7.1.2" },
+    "content": {
+      "question_text": "Can a method declare that it throws an unchecked exception?",
+      "question_type": "boolean"
+    },
+    "grading_instructions": {
+      "core_requirements": [
+        "It can, but it's considered bad style."
+      ],
+      "acceptable_variations": [
+        "Yes, but not recommended.",
+        "Technically possible but bad practice."
+      ],
+      "strictness_level": "strict"
+    }
+  },
+  {
+    "id": "java_7_1_2_q8",
+    "metadata": { "module": "Java", "chapter": "7.1.2" },
+    "content": {
+      "question_text": "Why is it bad style to declare that a method throws unchecked exceptions?",
+      "question_type": "concept"
+    },
+    "grading_instructions": {
+      "core_requirements": [
+        "Unchecked exceptions are caused by programming errors that are under your control (e.g., null pointer, index out of bounds).",
+        "They should be fixed, not declared and propagated."
+      ],
+      "acceptable_variations": [
+        "They represent bugs you should fix.",
+        "Unchecked exceptions are preventable mistakes."
+      ],
+      "strictness_level": "moderate"
+    }
+  },
+  {
+    "id": "java_7_1_2_q9",
+    "metadata": { "module": "Java", "chapter": "7.1.2" },
+    "content": {
+      "question_text": "Which exceptions must a method declare?",
+      "question_type": "concept"
+    },
+    "grading_instructions": {
+      "core_requirements": [
+        "All checked exceptions that it may throw."
+      ],
+      "acceptable_variations": [
+        "Only checked exceptions.",
+        "All checked exceptions it might throw."
+      ],
+      "strictness_level": "strict"
+    }
+  }
+]

@@ -1,0 +1,62 @@
+[
+  {
+    "id": "java_5_9_awareness_q1",
+    "metadata": { "module": "Java", "chapter": "5.9 (awareness)" },
+    "content": { "question_text": "In general terms, what does null handling mean in the context of switch pattern matching?", "question_type": "concept" },
+    "grading_instructions": {
+      "core_requirements": ["Switches can explicitly handle a null selector value using a case null, instead of throwing a NullPointerException like a classic switch would."],
+      "acceptable_variations": ["You can add a case for null so the switch doesn't crash when the value is null."],
+      "strictness_level": "lenient"
+    }
+  },
+  {
+    "id": "java_5_9_awareness_q2",
+    "metadata": { "module": "Java", "chapter": "5.9 (awareness)" },
+    "content": { "question_text": "In general terms, what is a guard in a switch pattern?", "question_type": "concept" },
+    "grading_instructions": {
+      "core_requirements": ["A guard is an extra condition attached to a case (using the when keyword) that must also be true for that case to be selected."],
+      "acceptable_variations": ["An additional if-like condition added to a case."],
+      "strictness_level": "lenient"
+    }
+  },
+  {
+    "id": "java_5_9_awareness_q3",
+    "metadata": { "module": "Java", "chapter": "5.9 (awareness)" },
+    "content": { "question_text": "In general terms, what does it mean for a switch to be exhaustive?", "question_type": "concept" },
+    "grading_instructions": {
+      "core_requirements": ["Every possible value the switch could receive must be covered by some case, so the switch always has somewhere to go."],
+      "acceptable_variations": ["All possible cases are accounted for, nothing is left unhandled."],
+      "strictness_level": "lenient"
+    }
+  },
+  {
+    "id": "java_5_9_awareness_q4",
+    "metadata": { "module": "Java", "chapter": "5.9 (awareness)" },
+    "content": { "question_text": "In general terms, what is dominance in a switch with pattern cases?", "question_type": "concept" },
+    "grading_instructions": {
+      "core_requirements": ["Dominance is when an earlier, broader case makes a later case impossible to ever reach, which causes a compile-time error."],
+      "acceptable_variations": ["An earlier case 'blocks' a later one from ever matching."],
+      "strictness_level": "lenient"
+    }
+  },
+  {
+    "id": "java_5_9_awareness_q5",
+    "metadata": { "module": "Java", "chapter": "5.9 (awareness)" },
+    "content": { "question_text": "In general terms, what restriction exists around using constants (like numbers or specific strings) inside record patterns?", "question_type": "concept" },
+    "grading_instructions": {
+      "core_requirements": ["You cannot directly match against a constant value inside a record pattern — you have to use a guard condition instead to check the value."],
+      "acceptable_variations": ["Record patterns can't check for exact constant values directly; a guard is needed instead."],
+      "strictness_level": "lenient"
+    }
+  },
+  {
+    "id": "java_5_9_awareness_q6",
+    "metadata": { "module": "Java", "chapter": "5.9 (awareness)" },
+    "content": { "question_text": "In general terms, what is the variable scope/fallthrough issue that can occur with pattern variables in a switch?", "question_type": "concept" },
+    "grading_instructions": {
+      "core_requirements": ["A variable introduced by a pattern is only usable in that case (and if execution falls through, in limited situations) — trying to use it after falling into a different, unrelated case can cause errors."],
+      "acceptable_variations": ["Pattern variables have tricky scoping rules around fallthrough between cases."],
+      "strictness_level": "lenient"
+    }
+  }
+]

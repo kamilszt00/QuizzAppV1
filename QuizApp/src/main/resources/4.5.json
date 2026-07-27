@@ -1,0 +1,72 @@
+[
+  {
+    "id": "java_4_5_q1",
+    "metadata": { "module": "Java", "chapter": "4.5" },
+    "content": { "question_text": "What is the difference between 'call by value' and 'call by reference' in programming languages?", "question_type": "concept" },
+    "grading_instructions": {
+      "core_requirements": ["Call by value means the method gets a copy of the value that the caller provides — it cannot modify the original variable.", "Call by reference means the method gets the location of the variable that the caller provides — it can modify the value stored there."],
+      "acceptable_variations": ["Call by value = copy of value; call by reference = access to the original variable's memory location."],
+      "strictness_level": "strict"
+    }
+  },
+  {
+    "id": "java_4_5_q2",
+    "metadata": { "module": "Java", "chapter": "4.5" },
+    "content": { "question_text": "Does Java use call by value or call by reference? What does this mean in practice?", "question_type": "concept" },
+    "grading_instructions": {
+      "core_requirements": ["Java always uses call by value.", "This means the method gets a copy of all arguments and cannot modify the contents of any variable in the method call."],
+      "acceptable_variations": ["Java is always call by value — methods work on copies, never originals."],
+      "strictness_level": "strict"
+    }
+  },
+  {
+    "id": "java_4_5_q3",
+    "metadata": { "module": "Java", "chapter": "4.5" },
+    "content": { "question_text": "What are the two kinds of method parameters in Java?", "question_type": "list", "expected_count": 2 },
+    "grading_instructions": {
+      "core_requirements": ["Primitive types (number types, char, boolean).", "Object references."],
+      "acceptable_variations": ["Primitives and object references."],
+      "strictness_level": "strict"
+    }
+  },
+  {
+    "id": "java_4_5_q4",
+    "metadata": { "module": "Java", "chapter": "4.5" },
+    "content": { "question_text": "Can a method modify a primitive type parameter? Explain with the tripleValue example.", "question_type": "concept" },
+    "grading_instructions": {
+      "core_requirements": ["No — a method cannot modify a primitive type parameter.", "When tripleValue(percent) is called, x gets a copy of percent's value (10). x is tripled to 30, but percent remains 10. When the method ends, x is discarded and percent is unchanged."],
+      "acceptable_variations": ["Primitive parameters are copies — changes inside the method have no effect on the original variable."],
+      "strictness_level": "strict"
+    }
+  },
+  {
+    "id": "java_4_5_q5",
+    "metadata": { "module": "Java", "chapter": "4.5" },
+    "content": { "question_text": "Can a method change the state of an object parameter? Explain why.", "question_type": "concept" },
+    "grading_instructions": {
+      "core_requirements": ["Yes — a method can change the state of an object parameter.", "The method receives a copy of the object reference, but both the copy and the original refer to the same object. Calling mutator methods through the copied reference modifies the actual object."],
+      "acceptable_variations": ["Object reference is copied, but both copies point to the same object — so state changes are visible outside the method."],
+      "strictness_level": "strict"
+    }
+  },
+  {
+    "id": "java_4_5_q6",
+    "metadata": { "module": "Java", "chapter": "4.5" },
+    "content": { "question_text": "Can a method make an object parameter refer to a new object? Explain why not, using the swap example.", "question_type": "concept" },
+    "grading_instructions": {
+      "core_requirements": ["No — a method cannot make an object parameter refer to a new object.", "In the swap(Employee x, Employee y) example, x and y are copies of the references a and b. The method swaps the copies, but when it ends the parameter variables are discarded. The original variables a and b still refer to the same objects as before the call."],
+      "acceptable_variations": ["The method swaps copies of references — the originals are unaffected. Java does not use call by reference for objects."],
+      "strictness_level": "strict"
+    }
+  },
+  {
+    "id": "java_4_5_q7",
+    "metadata": { "module": "Java", "chapter": "4.5" },
+    "content": { "question_text": "Summarize the three things a method can and cannot do with method parameters in Java.", "question_type": "list", "expected_count": 3 },
+    "grading_instructions": {
+      "core_requirements": ["A method cannot modify a parameter of a primitive type (number types, char, or boolean).", "A method can change the state of an object parameter.", "A method cannot make an object parameter refer to a new object."],
+      "acceptable_variations": ["Cannot change primitives; can mutate object state; cannot reassign object references."],
+      "strictness_level": "strict"
+    }
+  }
+]

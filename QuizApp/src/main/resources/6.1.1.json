@@ -1,0 +1,264 @@
+[
+  {
+    "id": "java_6_1_1_q1",
+    "metadata": { "module": "Java", "chapter": "6.1.1" },
+    "content": {
+      "question_text": "What is an interface in Java?",
+      "question_type": "concept"
+    },
+    "grading_instructions": {
+      "core_requirements": [
+        "An interface is a reference type that defines a contract — it tells classes what to do but not how.",
+        "It contains abstract method signatures that implementing classes must provide."
+      ],
+      "acceptable_variations": [
+        "A technique of telling classes what to do but not how.",
+        "A set of requirements that a class must fulfill."
+      ],
+      "strictness_level": "moderate"
+    }
+  },
+  {
+    "id": "java_6_1_1_q2",
+    "metadata": { "module": "Java", "chapter": "6.1.1" },
+    "content": {
+      "question_text": "Is an interface a class?",
+      "question_type": "boolean"
+    },
+    "grading_instructions": {
+      "core_requirements": [
+        "No — an interface is not a class.",
+        "It is a reference type that defines a set of abstract methods."
+      ],
+      "acceptable_variations": [
+        "No, it's a set of requirements.",
+        "No."
+      ],
+      "strictness_level": "strict"
+    }
+  },
+  {
+    "id": "java_6_1_1_q3",
+    "metadata": { "module": "Java", "chapter": "6.1.1" },
+    "content": {
+      "question_text": "What is the default access modifier given to methods in an interface?",
+      "question_type": "concept"
+    },
+    "grading_instructions": {
+      "core_requirements": [
+        "public — all interface methods are implicitly public abstract."
+      ],
+      "acceptable_variations": [
+        "public",
+        "Methods are public by default."
+      ],
+      "strictness_level": "strict"
+    }
+  },
+  {
+    "id": "java_6_1_1_q4",
+    "metadata": { "module": "Java", "chapter": "6.1.1" },
+    "content": {
+      "question_text": "What cannot an interface have?",
+      "question_type": "concept"
+    },
+    "grading_instructions": {
+      "core_requirements": [
+        "Interfaces cannot have instance fields (they can only have static final constants).",
+        "They cannot have constructors or state."
+      ],
+      "acceptable_variations": [
+        "Instance fields.",
+        "Cannot have state or constructors."
+      ],
+      "strictness_level": "strict"
+    }
+  },
+  {
+    "id": "java_6_1_1_q5",
+    "metadata": { "module": "Java", "chapter": "6.1.1" },
+    "content": {
+      "question_text": "Which keyword is used to implement an interface in Java?",
+      "question_type": "code"
+    },
+    "grading_instructions": {
+      "core_requirements": [
+        "implements"
+      ],
+      "acceptable_variations": [
+        "The implements keyword."
+      ],
+      "strictness_level": "strict"
+    }
+  },
+  {
+    "id": "java_6_1_1_q6",
+    "metadata": { "module": "Java", "chapter": "6.1.1" },
+    "content": {
+      "question_text": "Write an example of how to implement an interface.",
+      "question_type": "code"
+    },
+    "grading_instructions": {
+      "core_requirements": [
+        "Syntax: class ClassName implements InterfaceName { }",
+        "Example: class Example implements Comparable { }"
+      ],
+      "acceptable_variations": [
+        "class Example implements Interface {}",
+        "public class MyClass implements MyInterface {}"
+      ],
+      "strictness_level": "strict"
+    }
+  },
+  {
+    "id": "java_6_1_1_q7",
+    "metadata": { "module": "Java", "chapter": "6.1.1" },
+    "content": {
+      "question_text": "What is required of a class after it implements an interface?",
+      "question_type": "concept"
+    },
+    "grading_instructions": {
+      "core_requirements": [
+        "It must provide concrete implementations for all abstract methods declared in the interface.",
+        "If it doesn't, the class must be declared abstract."
+      ],
+      "acceptable_variations": [
+        "It must implement all methods of the interface.",
+        "Provide implementations for all interface methods."
+      ],
+      "strictness_level": "moderate"
+    }
+  },
+  {
+    "id": "java_6_1_1_q8",
+    "metadata": { "module": "Java", "chapter": "6.1.1" },
+    "content": {
+      "question_text": "Are methods implemented by a class for an interface also public by default?",
+      "question_type": "boolean"
+    },
+    "grading_instructions": {
+      "core_requirements": [
+        "No — the implementing class methods must be explicitly declared public.",
+        "If you use a more restrictive access modifier, the compiler will complain."
+      ],
+      "acceptable_variations": [
+        "No, they need the public modifier.",
+        "No, they must be public."
+      ],
+      "strictness_level": "strict"
+    }
+  },
+  {
+    "id": "java_6_1_1_q9",
+    "metadata": { "module": "Java", "chapter": "6.1.1" },
+    "content": {
+      "question_text": "What happens if you don't use a generic type when implementing an interface?",
+      "question_type": "concept"
+    },
+    "grading_instructions": {
+      "core_requirements": [
+        "You use a raw type, which is treated as an Object type.",
+        "This requires explicit casting when accessing the elements."
+      ],
+      "acceptable_variations": [
+        "It becomes a raw type of Object, requiring casts."
+      ],
+      "strictness_level": "moderate"
+    }
+  },
+  {
+    "id": "java_6_1_1_q10",
+    "metadata": { "module": "Java", "chapter": "6.1.1" },
+    "content": {
+      "question_text": "Should the compareTo method be compatible with the equals method? If yes, how?",
+      "question_type": "concept"
+    },
+    "grading_instructions": {
+      "core_requirements": [
+        "Yes — if x.equals(y) returns true, then x.compareTo(y) should return 0.",
+        "This is recommended for consistency, though not strictly required."
+      ],
+      "acceptable_variations": [
+        "Yes, x.compareTo(y) should return 0 if x.equals(y) is true."
+      ],
+      "strictness_level": "moderate"
+    }
+  },
+  {
+    "id": "java_6_1_1_q11",
+    "metadata": { "module": "Java", "chapter": "6.1.1" },
+    "content": {
+      "question_text": "What are the possible return values of the compareTo() method?",
+      "question_type": "list",
+      "expected_count": 3
+    },
+    "grading_instructions": {
+      "core_requirements": [
+        "A positive integer (e.g., 1) if the first object is greater than the second.",
+        "A negative integer (e.g., -1) if the first object is less than the second.",
+        "Zero (0) if the two objects are equal."
+      ],
+      "acceptable_variations": [
+        "1, -1, 0",
+        "Positive, negative, zero."
+      ],
+      "strictness_level": "strict"
+    }
+  },
+  {
+    "id": "java_6_1_1_q12",
+    "metadata": { "module": "Java", "chapter": "6.1.1" },
+    "content": {
+      "question_text": "What is required in subclasses when the notion of comparison is different?",
+      "question_type": "concept"
+    },
+    "grading_instructions": {
+      "core_requirements": [
+        "You should outlaw comparison of objects that belong to different classes.",
+        "This prevents comparing incompatible types."
+      ],
+      "acceptable_variations": [
+        "Outlaw comparison of different classes.",
+        "Prevent cross-type comparison."
+      ],
+      "strictness_level": "moderate"
+    }
+  },
+  {
+    "id": "java_6_1_1_q13",
+    "metadata": { "module": "Java", "chapter": "6.1.1" },
+    "content": {
+      "question_text": "How do you outlaw comparison of objects that belong to different classes in code?",
+      "question_type": "code"
+    },
+    "grading_instructions": {
+      "core_requirements": [
+        "Check: if (getClass() != other.getClass()) throw new ClassCastException();",
+        "This ensures only objects of the same class can be compared."
+      ],
+      "acceptable_variations": [
+        "Throw ClassCastException if classes differ.",
+        "if (getClass() != other.getClass()) throw new ClassCastException();"
+      ],
+      "strictness_level": "moderate"
+    }
+  },
+  {
+    "id": "java_6_1_1_q14",
+    "metadata": { "module": "Java", "chapter": "6.1.1" },
+    "content": {
+      "question_text": "What is required in subclasses when the notion of comparison is fixed?",
+      "question_type": "concept"
+    },
+    "grading_instructions": {
+      "core_requirements": [
+        "Supply a simple compareTo method in the superclass and make it final.",
+        "This ensures the comparison behavior is consistent across all subclasses."
+      ],
+      "acceptable_variations": [
+        "Make the compareTo method final in the superclass."
+      ],
+      "strictness_level": "moderate"
+    }
+  }
+]

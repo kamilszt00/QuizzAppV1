@@ -1,0 +1,232 @@
+[
+  {
+    "id": "java_4_3_1_q1",
+    "metadata": { "module": "Java", "chapter": "4.3.1" },
+    "content": { "question_text": "What are the three main components that make up a class definition in Java?", "question_type": "list", "expected_count": 3 },
+    "grading_instructions": {
+      "core_requirements": ["Fields (instance variables) that store the object's data.", "Constructors that initialize the object.", "Methods that define the object's behavior."],
+      "acceptable_variations": ["Fields, constructors, and methods."],
+      "strictness_level": "moderate"
+    }
+  },
+  {
+    "id": "java_4_3_1_q2",
+    "metadata": { "module": "Java", "chapter": "4.3.1" },
+    "content": { "question_text": "What are the three instance fields of the Employee class, and what are their types?", "question_type": "list", "expected_count": 3 },
+    "grading_instructions": {
+      "core_requirements": ["private String name", "private double salary", "private LocalDate hireDay"],
+      "acceptable_variations": ["name (String), salary (double), hireDay (LocalDate)"],
+      "strictness_level": "strict"
+    }
+  },
+  {
+    "id": "java_4_3_2_q1",
+    "metadata": { "module": "Java", "chapter": "4.3.2" },
+    "content": { "question_text": "How many constructors and how many methods does the Employee class have, and what are their signatures?", "question_type": "concept" },
+    "grading_instructions": {
+      "core_requirements": ["One constructor: Employee(String n, double s, int year, int month, int day).", "Four methods: String getName(), double getSalary(), LocalDate getHireDay(), void raiseSalary(double byPercent)."],
+      "acceptable_variations": ["1 constructor, 4 methods with correct names and return types."],
+      "strictness_level": "strict"
+    }
+  },
+  {
+    "id": "java_4_3_2_q2",
+    "metadata": { "module": "Java", "chapter": "4.3.2" },
+    "content": { "question_text": "What does the private keyword on instance fields guarantee?", "question_type": "concept" },
+    "grading_instructions": {
+      "core_requirements": ["Only methods of the class itself can access those instance fields.", "No outside method can read or write to these fields directly."],
+      "acceptable_variations": ["private means the field is accessible only within the class."],
+      "strictness_level": "strict"
+    }
+  },
+  {
+    "id": "java_4_3_3_q1",
+    "metadata": { "module": "Java", "chapter": "4.3.3" },
+    "content": { "question_text": "What are five key rules about constructors in Java?", "question_type": "list", "expected_count": 5 },
+    "grading_instructions": {
+      "core_requirements": ["A constructor has the same name as the class.", "A class can have more than one constructor.", "A constructor can have zero, one, or more parameters.", "A constructor has no return value.", "A constructor is always called with the new operator."],
+      "acceptable_variations": ["Any correct rephrasing of the five points."],
+      "strictness_level": "strict"
+    }
+  },
+  {
+    "id": "java_4_3_3_q2",
+    "metadata": { "module": "Java", "chapter": "4.3.3" },
+    "content": { "question_text": "What is the danger of declaring a local variable inside a constructor with the same name as an instance field?", "question_type": "concept" },
+    "grading_instructions": {
+      "core_requirements": ["The local variable shadows the instance field with the same name.", "The instance field is never actually set — the constructor only modifies the local variable, which disappears when the constructor exits."],
+      "acceptable_variations": ["Variable shadowing — local variable hides the instance field so the field stays uninitialized."],
+      "strictness_level": "strict"
+    }
+  },
+  {
+    "id": "java_4_3_3_q3",
+    "metadata": { "module": "Java", "chapter": "4.3.3" },
+    "content": { "question_text": "What is the key difference between a constructor and a regular method in terms of how it can be called?", "question_type": "concept" },
+    "grading_instructions": {
+      "core_requirements": ["A constructor can only be called in conjunction with the new operator.", "You cannot apply a constructor to an existing object to reset its instance fields."],
+      "acceptable_variations": ["Constructors are only invoked via new — they cannot be called on existing objects."],
+      "strictness_level": "strict"
+    }
+  },
+  {
+    "id": "java_4_3_4_q1",
+    "metadata": { "module": "Java", "chapter": "4.3.4" },
+    "content": { "question_text": "What is the var keyword in Java, and when can it be used?", "question_type": "concept" },
+    "grading_instructions": {
+      "core_requirements": ["The var keyword allows you to declare a local variable without specifying its type explicitly, provided the type can be inferred from the initial value.", "It can only be used with local variables inside methods — you must always declare the types of parameters and fields explicitly."],
+      "acceptable_variations": ["var = type inference for local variables only. Cannot be used for fields or parameters."],
+      "strictness_level": "strict"
+    }
+  },
+  {
+    "id": "java_4_3_4_q2",
+    "metadata": { "module": "Java", "chapter": "4.3.4" },
+    "content": { "question_text": "Why does the book recommend not using var with numeric types such as int, long, or double?", "question_type": "concept" },
+    "grading_instructions": {
+      "core_requirements": ["To avoid confusion between the different numeric literals such as 0, 0L, and 0.0, which have different types.", "Without an explicit type declaration, it is easy to accidentally create the wrong numeric type."],
+      "acceptable_variations": ["Numeric literal types are ambiguous — 0 could be int, 0L is long, 0.0 is double."],
+      "strictness_level": "moderate"
+    }
+  },
+  {
+    "id": "java_4_3_5_q1",
+    "metadata": { "module": "Java", "chapter": "4.3.5" },
+    "content": { "question_text": "What happens if you call a method on a null object variable?", "question_type": "concept" },
+    "grading_instructions": {
+      "core_requirements": ["A NullPointerException occurs.", "This is a serious error similar to an index out of bounds exception, and if not caught, the program is terminated."],
+      "acceptable_variations": ["NullPointerException — program crashes if not caught."],
+      "strictness_level": "strict"
+    }
+  },
+  {
+    "id": "java_4_3_5_q2",
+    "metadata": { "module": "Java", "chapter": "4.3.5" },
+    "content": { "question_text": "What are the two approaches for handling a potentially null argument passed to a constructor?", "question_type": "list", "expected_count": 2 },
+    "grading_instructions": {
+      "core_requirements": ["The permissive approach: convert the null argument into an appropriate non-null value (e.g. using Objects.requireNonNullElse(n, \"unknown\")).", "The tough love approach: reject the null argument outright by throwing a NullPointerException immediately (e.g. using Objects.requireNonNull(n, \"The name cannot be null\"))."],
+      "acceptable_variations": ["Permissive = substitute a default value; tough love = throw exception immediately."],
+      "strictness_level": "moderate"
+    }
+  },
+  {
+    "id": "java_4_3_5_q3",
+    "metadata": { "module": "Java", "chapter": "4.3.5" },
+    "content": { "question_text": "What are the two advantages of the 'tough love' approach (Objects.requireNonNull) over letting a NullPointerException occur later?", "question_type": "list", "expected_count": 2 },
+    "grading_instructions": {
+      "core_requirements": ["The exception report includes a description of the problem.", "The exception report pinpoints the exact location of the problem in the constructor, rather than occurring elsewhere with no easy way to trace it back to the faulty argument."],
+      "acceptable_variations": ["Better error message + exact location of the bug is identified immediately."],
+      "strictness_level": "moderate"
+    }
+  },
+  {
+    "id": "java_4_3_6_q1",
+    "metadata": { "module": "Java", "chapter": "4.3.6" },
+    "content": { "question_text": "What is the difference between an implicit and an explicit parameter in a Java method call?", "question_type": "concept" },
+    "grading_instructions": {
+      "core_requirements": ["The implicit parameter is the object on which the method is invoked — it appears before the method name.", "The explicit parameter is the value passed inside the parentheses after the method name."],
+      "acceptable_variations": ["Implicit = the object before the dot; explicit = the argument in parentheses."],
+      "strictness_level": "strict"
+    }
+  },
+  {
+    "id": "java_4_3_6_q2",
+    "metadata": { "module": "Java", "chapter": "4.3.6" },
+    "content": { "question_text": "What is the 'this' keyword in Java, and what does it refer to inside a method?", "question_type": "concept" },
+    "grading_instructions": {
+      "core_requirements": ["Every method has an implicit parameter whose name is the keyword 'this'.", "'this' refers to the object on which the method was invoked — the implicit argument."],
+      "acceptable_variations": ["'this' = reference to the current object the method is operating on."],
+      "strictness_level": "strict"
+    }
+  },
+  {
+    "id": "java_4_3_7_q1",
+    "metadata": { "module": "Java", "chapter": "4.3.7" },
+    "content": { "question_text": "What are the three items you must supply when you want to both get and set the value of an instance field?", "question_type": "list", "expected_count": 3 },
+    "grading_instructions": {
+      "core_requirements": ["A private instance field.", "A field accessor method.", "A field mutator method."],
+      "acceptable_variations": ["private field + getter + setter."],
+      "strictness_level": "strict"
+    }
+  },
+  {
+    "id": "java_4_3_7_q2",
+    "metadata": { "module": "Java", "chapter": "4.3.7" },
+    "content": { "question_text": "What is the first key benefit of using accessor methods instead of making instance fields directly accessible?", "question_type": "concept" },
+    "grading_instructions": {
+      "core_requirements": ["You can change the internal implementation of the field without affecting any code outside the class.", "For example, changing the name field from a single String to separate firstName and lastName fields only requires updating the getName() method — the rest of the program is unaffected."],
+      "acceptable_variations": ["Internal representation can change freely without breaking outside code."],
+      "strictness_level": "moderate"
+    }
+  },
+  {
+    "id": "java_4_3_7_q3",
+    "metadata": { "module": "Java", "chapter": "4.3.7" },
+    "content": { "question_text": "What is the second key benefit of using mutator methods instead of making instance fields directly accessible?", "question_type": "concept" },
+    "grading_instructions": {
+      "core_requirements": ["Mutator methods can perform error checking before modifying the field.", "For example, a setSalary method can verify the salary is never set below 0, whereas direct field access would allow any value to be assigned."],
+      "acceptable_variations": ["Mutators can validate data before setting it — direct field access cannot."],
+      "strictness_level": "moderate"
+    }
+  },
+  {
+    "id": "java_4_3_7_q4",
+    "metadata": { "module": "Java", "chapter": "4.3.7" },
+    "content": { "question_text": "Why is it dangerous for an accessor method to return a reference to a mutable object?", "question_type": "concept" },
+    "grading_instructions": {
+      "core_requirements": ["Both the returned reference and the internal field reference point to the same object.", "Calling mutator methods on the returned reference will automatically change the private state of the object, breaking encapsulation."],
+      "acceptable_variations": ["Returning a mutable reference leaks access to private state — outside code can modify the object's internals."],
+      "strictness_level": "strict"
+    }
+  },
+  {
+    "id": "java_4_3_8_q1",
+    "metadata": { "module": "Java", "chapter": "4.3.8" },
+    "content": { "question_text": "In Java, can a method access the private fields of another object of the same class? Explain.", "question_type": "concept" },
+    "grading_instructions": {
+      "core_requirements": ["Yes — a method can access the private fields of any object of its own class, not just the object it is invoked on.", "For example, an equals method in the Employee class can access the private fields of both the implicit parameter (harry) and the explicit parameter (boss) as long as boss is also of type Employee."],
+      "acceptable_variations": ["Access control in Java is class-based, not object-based."],
+      "strictness_level": "strict"
+    }
+  },
+  {
+    "id": "java_4_3_9_q1",
+    "metadata": { "module": "Java", "chapter": "4.3.9" },
+    "content": { "question_text": "When should you make a method private instead of public?", "question_type": "concept" },
+    "grading_instructions": {
+      "core_requirements": ["When the method is a helper method used internally for a computation and should not be part of the public interface.", "Helper methods that are too close to the current implementation or require a special calling order should be private."],
+      "acceptable_variations": ["Private methods are implementation details — internal helpers not meant for outside use."],
+      "strictness_level": "moderate"
+    }
+  },
+  {
+    "id": "java_4_3_9_q2",
+    "metadata": { "module": "Java", "chapter": "4.3.9" },
+    "content": { "question_text": "What is the key advantage of making a method private in terms of future maintenance?", "question_type": "concept" },
+    "grading_instructions": {
+      "core_requirements": ["You are under no obligation to keep a private method available if you change the implementation.", "Since no outside code can call it, you can simply drop it if it becomes unnecessary. If a method is public, you cannot remove it because other code might rely on it."],
+      "acceptable_variations": ["Private methods can be freely removed or changed; public methods create obligations to outside code."],
+      "strictness_level": "moderate"
+    }
+  },
+  {
+    "id": "java_4_3_10_q1",
+    "metadata": { "module": "Java", "chapter": "4.3.10" },
+    "content": { "question_text": "What does declaring an instance field as 'final' guarantee?", "question_type": "concept" },
+    "grading_instructions": {
+      "core_requirements": ["The field must be initialized by the end of every constructor.", "After construction, the field value may not be modified again."],
+      "acceptable_variations": ["final field = set once during construction, never changed afterwards."],
+      "strictness_level": "strict"
+    }
+  },
+  {
+    "id": "java_4_3_10_q2",
+    "metadata": { "module": "Java", "chapter": "4.3.10" },
+    "content": { "question_text": "What does 'final' mean when applied to a field that holds a reference to a mutable object?", "question_type": "concept" },
+    "grading_instructions": {
+      "core_requirements": ["The final keyword means the object reference stored in the variable will never change — it will always refer to the same object.", "However, the object itself can still be mutated through its own methods."],
+      "acceptable_variations": ["final = the reference is fixed, not the object's contents. The object can still be modified internally."],
+      "strictness_level": "strict"
+    }
+  }
+]

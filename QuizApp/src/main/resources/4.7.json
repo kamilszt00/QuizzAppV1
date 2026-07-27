@@ -1,0 +1,52 @@
+[
+  {
+    "id": "java_4_7_1_q1",
+    "metadata": { "module": "Java", "chapter": "4.7.1" },
+    "content": { "question_text": "What is a `record` in modern Java, and what is its primary purpose?", "question_type": "concept" },
+    "grading_instructions": {
+      "core_requirements": ["A record is a special form of a class designed specifically to be an immutable data carrier."],
+      "acceptable_variations": ["A class whose state cannot change, used strictly for holding/transferring data."],
+      "strictness_level": "moderate"
+    }
+  },
+  {
+    "id": "java_4_7_1_q2",
+    "metadata": { "module": "Java", "chapter": "4.7.1" },
+    "content": { "question_text": "When you declare a `record`, what four pieces of boilerplate code does the Java compiler automatically generate for you behind the scenes?", "question_type": "list", "expected_count": 4 },
+    "grading_instructions": {
+      "core_requirements": ["A private final instance field for each variable.", "A canonical constructor.", "Public accessor methods.", "The equals, hashCode, and toString methods."],
+      "acceptable_variations": ["Fields, a constructor, getters, and standard object methods (equals/hashCode/toString)."],
+      "strictness_level": "moderate"
+    }
+  },
+  {
+    "id": "java_4_7_1_q3",
+    "metadata": { "module": "Java", "chapter": "4.7.1" },
+    "content": { "question_text": "Are the automatically generated accessor methods in a record named with the standard `get` prefix (e.g., `getName()`)?", "question_type": "boolean" },
+    "grading_instructions": {
+      "core_requirements": ["No.", "The accessor methods have the exact same name as the instance fields themselves (e.g., `name()`)."],
+      "acceptable_variations": ["No, they drop the 'get' and just use the variable name."],
+      "strictness_level": "strict"
+    }
+  },
+  {
+    "id": "java_4_7_2_q1",
+    "metadata": { "module": "Java", "chapter": "4.7.2" },
+    "content": { "question_text": "What is a 'compact' constructor in a Java record, and what is its primary use case?", "question_type": "concept" },
+    "grading_instructions": {
+      "core_requirements": ["It is a constructor declared with no parameter list.", "It is primarily used to validate or normalize parameters before they are automatically assigned to the record's fields."],
+      "acceptable_variations": ["A constructor without arguments used for validation checks."],
+      "strictness_level": "moderate"
+    }
+  },
+  {
+    "id": "java_4_7_2_q2",
+    "metadata": { "module": "Java", "chapter": "4.7.2" },
+    "content": { "question_text": "If you need to write a custom constructor for a record that takes fewer parameters than the record's full state, what strict rule must that custom constructor follow?", "question_type": "concept" },
+    "grading_instructions": {
+      "core_requirements": ["It must delegate to another constructor (ultimately the canonical constructor) by using the `this(...)` keyword."],
+      "acceptable_variations": ["It has to call this(...) to ensure all fields get initialized."],
+      "strictness_level": "strict"
+    }
+  }
+]

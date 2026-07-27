@@ -1,0 +1,160 @@
+[
+  {
+    "id": "java_7_1_1_q1",
+    "metadata": { "module": "Java", "chapter": "7.1.1" },
+    "content": {
+      "question_text": "Can you create your own custom exceptions in Java?",
+      "question_type": "boolean"
+    },
+    "grading_instructions": {
+      "core_requirements": ["Yes"],
+      "acceptable_variations": [],
+      "strictness_level": "strict"
+    }
+  },
+  {
+    "id": "java_7_1_1_q2",
+    "metadata": { "module": "Java", "chapter": "7.1.1" },
+    "content": {
+      "question_text": "What class do all exceptions ultimately derive from?",
+      "question_type": "concept"
+    },
+    "grading_instructions": {
+      "core_requirements": ["Throwable"],
+      "acceptable_variations": [],
+      "strictness_level": "strict"
+    }
+  },
+  {
+    "id": "java_7_1_1_q3",
+    "metadata": { "module": "Java", "chapter": "7.1.1" },
+    "content": {
+      "question_text": "How does the exception hierarchy first split, directly below Throwable?",
+      "question_type": "concept"
+    },
+    "grading_instructions": {
+      "core_requirements": ["Into Error and Exception"],
+      "acceptable_variations": [],
+      "strictness_level": "strict"
+    }
+  },
+  {
+    "id": "java_7_1_1_q4",
+    "metadata": { "module": "Java", "chapter": "7.1.1" },
+    "content": {
+      "question_text": "Describe what the Error hierarchy represents, and whether you should typically throw Error exceptions yourself.",
+      "question_type": "concept"
+    },
+    "grading_instructions": {
+      "core_requirements": ["Describes internal errors and resource exhaustion situations inside the Java runtime system", "Rare", "Should not be thrown by your own code, unless deliberately terminating the program gracefully"],
+      "acceptable_variations": [],
+      "strictness_level": "moderate"
+    }
+  },
+  {
+    "id": "java_7_1_1_q5",
+    "metadata": { "module": "Java", "chapter": "7.1.1" },
+    "content": {
+      "question_text": "How does the Exception branch of the hierarchy split into two categories, and what are those two categories officially called?",
+      "question_type": "concept"
+    },
+    "grading_instructions": {
+      "core_requirements": ["Splits into RuntimeException (unchecked) and all other exceptions (checked, commonly exemplified by IOException)"],
+      "acceptable_variations": ["Answer may use 'RuntimeExceptions and IOExceptions' informally, as long as the checked/unchecked distinction is also understood"],
+      "strictness_level": "moderate"
+    }
+  },
+  {
+    "id": "java_7_1_1_q6",
+    "metadata": { "module": "Java", "chapter": "7.1.1" },
+    "content": {
+      "question_text": "What causes a RuntimeException to occur?",
+      "question_type": "concept"
+    },
+    "grading_instructions": {
+      "core_requirements": ["It happens when you (the programmer) make a programming error"],
+      "acceptable_variations": [],
+      "strictness_level": "moderate"
+    }
+  },
+  {
+    "id": "java_7_1_1_q7",
+    "metadata": { "module": "Java", "chapter": "7.1.1" },
+    "content": {
+      "question_text": "What do the non-RuntimeException (checked) exceptions generally describe?",
+      "question_type": "concept"
+    },
+    "grading_instructions": {
+      "core_requirements": ["Any exception that is not a RuntimeException — problems that can occur even without a programming error, often involving external conditions"],
+      "acceptable_variations": [],
+      "strictness_level": "moderate"
+    }
+  },
+  {
+    "id": "java_7_1_1_q8",
+    "metadata": { "module": "Java", "chapter": "7.1.1" },
+    "content": {
+      "question_text": "Give examples of RuntimeExceptions.",
+      "question_type": "list",
+      "expected_count": 3
+    },
+    "grading_instructions": {
+      "core_requirements": ["Bad cast", "Out-of-bounds array access", "Null pointer access"],
+      "acceptable_variations": ["Any 3 valid RuntimeException examples matching these categories"],
+      "strictness_level": "moderate"
+    }
+  },
+  {
+    "id": "java_7_1_1_q9",
+    "metadata": { "module": "Java", "chapter": "7.1.1" },
+    "content": {
+      "question_text": "Give examples of non-RuntimeException (checked) exceptions.",
+      "question_type": "list",
+      "expected_count": 2
+    },
+    "grading_instructions": {
+      "core_requirements": ["Reading past the end of a file", "Opening a file that does not exist"],
+      "acceptable_variations": ["Any valid checked-exception examples matching these categories"],
+      "strictness_level": "moderate"
+    }
+  },
+  {
+    "id": "java_7_1_1_q10",
+    "metadata": { "module": "Java", "chapter": "7.1.1" },
+    "content": {
+      "question_text": "What is the general rule of thumb regarding whose fault a RuntimeException is?",
+      "question_type": "concept"
+    },
+    "grading_instructions": {
+      "core_requirements": ["If it's a RuntimeException, it's your (the programmer's) fault"],
+      "acceptable_variations": [],
+      "strictness_level": "moderate"
+    }
+  },
+  {
+    "id": "java_7_1_1_q11",
+    "metadata": { "module": "Java", "chapter": "7.1.1" },
+    "content": {
+      "question_text": "What are checked exceptions?",
+      "question_type": "concept"
+    },
+    "grading_instructions": {
+      "core_requirements": ["Any exception other than a RuntimeException or an Error"],
+      "acceptable_variations": [],
+      "strictness_level": "strict"
+    }
+  },
+  {
+    "id": "java_7_1_1_q12",
+    "metadata": { "module": "Java", "chapter": "7.1.1" },
+    "content": {
+      "question_text": "What are unchecked exceptions?",
+      "question_type": "concept"
+    },
+    "grading_instructions": {
+      "core_requirements": ["RuntimeException and Error (and their subclasses)"],
+      "acceptable_variations": [],
+      "strictness_level": "strict"
+    }
+  }
+]

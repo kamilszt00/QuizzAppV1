@@ -1,0 +1,132 @@
+[
+  {
+    "id": "java_6_1_2_q1",
+    "metadata": { "module": "Java", "chapter": "6.1.2" },
+    "content": {
+      "question_text": "Is an interface a class?",
+      "question_type": "boolean"
+    },
+    "grading_instructions": {
+      "core_requirements": ["No — an interface is a reference type, not a class."],
+      "acceptable_variations": ["No."],
+      "strictness_level": "strict"
+    }
+  },
+  {
+    "id": "java_6_1_2_q2",
+    "metadata": { "module": "Java", "chapter": "6.1.2" },
+    "content": {
+      "question_text": "Can you declare variables of an interface type?",
+      "question_type": "boolean"
+    },
+    "grading_instructions": {
+      "core_requirements": ["Yes — you can declare interface variables (e.g., List<String> list)."],
+      "acceptable_variations": ["Yes."],
+      "strictness_level": "strict"
+    }
+  },
+  {
+    "id": "java_6_1_2_q3",
+    "metadata": { "module": "Java", "chapter": "6.1.2" },
+    "content": {
+      "question_text": "To what kind of object must an interface variable refer?",
+      "question_type": "concept"
+    },
+    "grading_instructions": {
+      "core_requirements": ["It must refer to an object of a class that implements that interface."],
+      "acceptable_variations": ["To an object that implements the interface."],
+      "strictness_level": "strict"
+    }
+  },
+  {
+    "id": "java_6_1_2_q4",
+    "metadata": { "module": "Java", "chapter": "6.1.2" },
+    "content": {
+      "question_text": "How can you check if an object implements a specific interface?",
+      "question_type": "code"
+    },
+    "grading_instructions": {
+      "core_requirements": ["Using the instanceof operator."],
+      "acceptable_variations": ["With instanceof check."],
+      "strictness_level": "strict"
+    }
+  },
+  {
+    "id": "java_6_1_2_q5",
+    "metadata": { "module": "Java", "chapter": "6.1.2" },
+    "content": {
+      "question_text": "Can an interface extend another interface?",
+      "question_type": "boolean"
+    },
+    "grading_instructions": {
+      "core_requirements": ["Yes — interfaces support multiple inheritance through extension."],
+      "acceptable_variations": ["Yes."],
+      "strictness_level": "strict"
+    }
+  },
+  {
+    "id": "java_6_1_2_q6",
+    "metadata": { "module": "Java", "chapter": "6.1.2" },
+    "content": {
+      "question_text": "What does extending interfaces allow in terms of inheritance?",
+      "question_type": "concept"
+    },
+    "grading_instructions": {
+      "core_requirements": ["It allows multiple chains of inheritance that go from a greater degree of generality to a greater degree of specialization."],
+      "acceptable_variations": ["Allows specialization and generalization chains."],
+      "strictness_level": "moderate"
+    }
+  },
+  {
+    "id": "java_6_1_2_q7",
+    "metadata": { "module": "Java", "chapter": "6.1.2" },
+    "content": {
+      "question_text": "Can you supply constants in an interface?",
+      "question_type": "boolean"
+    },
+    "grading_instructions": {
+      "core_requirements": ["Yes — interfaces can declare constants."],
+      "acceptable_variations": ["Yes."],
+      "strictness_level": "strict"
+    }
+  },
+  {
+    "id": "java_6_1_2_q8",
+    "metadata": { "module": "Java", "chapter": "6.1.2" },
+    "content": {
+      "question_text": "What is the default modifier for static fields (constants) declared in an interface?",
+      "question_type": "concept"
+    },
+    "grading_instructions": {
+      "core_requirements": ["They are implicitly public static final."],
+      "acceptable_variations": ["public static final.", "Always public static final."],
+      "strictness_level": "strict"
+    }
+  },
+  {
+    "id": "java_6_1_2_q9",
+    "metadata": { "module": "Java", "chapter": "6.1.2" },
+    "content": {
+      "question_text": "Can a class implement only one interface?",
+      "question_type": "boolean"
+    },
+    "grading_instructions": {
+      "core_requirements": ["No — a class can implement multiple interfaces."],
+      "acceptable_variations": ["False."],
+      "strictness_level": "strict"
+    }
+  },
+  {
+    "id": "java_6_1_2_q10",
+    "metadata": { "module": "Java", "chapter": "6.1.2" },
+    "content": {
+      "question_text": "Can records and enumerations implement interfaces?",
+      "question_type": "boolean"
+    },
+    "grading_instructions": {
+      "core_requirements": ["Yes — both records and enums can implement interfaces."],
+      "acceptable_variations": ["Yes."],
+      "strictness_level": "strict"
+    }
+  }
+]

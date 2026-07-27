@@ -1,0 +1,229 @@
+[
+  {
+    "id": "java_5_8_q1",
+    "metadata": { "module": "Java", "chapter": "5.8" },
+    "content": {
+      "question_text": "What is a sealed class in Java?",
+      "question_type": "concept"
+    },
+    "grading_instructions": {
+      "core_requirements": [
+        "A class that controls which classes may inherit from it.",
+        "It restricts the direct subclasses to a specific list."
+      ],
+      "acceptable_variations": [
+        "A class that limits which classes can extend it.",
+        "A class with a fixed set of permitted subclasses."
+      ],
+      "strictness_level": "strict"
+    }
+  },
+  {
+    "id": "java_5_8_q2",
+    "metadata": { "module": "Java", "chapter": "5.8" },
+    "content": {
+      "question_text": "Declare an example sealed class with its permitted subclasses.",
+      "question_type": "code"
+    },
+    "grading_instructions": {
+      "core_requirements": [
+        "Syntax: public abstract sealed class ClassName permits Subclass1, Subclass2 { }",
+        "Example: public abstract sealed class JSONValue permits JSONArray, JSONNumber, JSONString { }"
+      ],
+      "acceptable_variations": [
+        "sealed class Shape permits Circle, Rectangle { }",
+        "public sealed class Node permits Element, Text { }"
+      ],
+      "strictness_level": "strict"
+    }
+  },
+  {
+    "id": "java_5_8_q3",
+    "metadata": { "module": "Java", "chapter": "5.8" },
+    "content": {
+      "question_text": "What is required from permitted subclasses when it comes to accessibility?",
+      "question_type": "concept"
+    },
+    "grading_instructions": {
+      "core_requirements": [
+        "Permitted subclasses must be accessible.",
+        "They cannot be private classes that are nested inside another class (unless nested in the sealed class itself).",
+        "They cannot be package-visible classes from another package."
+      ],
+      "acceptable_variations": [
+        "They must be accessible to the sealed class.",
+        "Private nested classes in other classes are not allowed."
+      ],
+      "strictness_level": "moderate"
+    }
+  },
+  {
+    "id": "java_5_8_q4",
+    "metadata": { "module": "Java", "chapter": "5.8" },
+    "content": {
+      "question_text": "What is required from permitted subclasses that are public?",
+      "question_type": "concept"
+    },
+    "grading_instructions": {
+      "core_requirements": [
+        "Public permitted subclasses must be in the same package as the sealed class.",
+        "They must be accessible."
+      ],
+      "acceptable_variations": [
+        "They must be in the same package."
+      ],
+      "strictness_level": "strict"
+    }
+  },
+  {
+    "id": "java_5_8_q5",
+    "metadata": { "module": "Java", "chapter": "5.8" },
+    "content": {
+      "question_text": "How does the rule for public permitted subclasses change when you use modules?",
+      "question_type": "concept"
+    },
+    "grading_instructions": {
+      "core_requirements": [
+        "They only need to be in the same module (not necessarily the same package)."
+      ],
+      "acceptable_variations": [
+        "Same module is sufficient.",
+        "They can be in different packages within the same module."
+      ],
+      "strictness_level": "strict"
+    }
+  },
+  {
+    "id": "java_5_8_q6",
+    "metadata": { "module": "Java", "chapter": "5.8" },
+    "content": {
+      "question_text": "Can a sealed class be declared without a permits clause? What happens then?",
+      "question_type": "concept"
+    },
+    "grading_instructions": {
+      "core_requirements": [
+        "Yes, a sealed class can be declared without a permits clause.",
+        "Then all of its direct subclasses must be declared in the same file.",
+        "Programmers without access to that file cannot form subclasses."
+      ],
+      "acceptable_variations": [
+        "Yes, all permitted subclasses must be in the same file."
+      ],
+      "strictness_level": "moderate"
+    }
+  },
+  {
+    "id": "java_5_8_q7",
+    "metadata": { "module": "Java", "chapter": "5.8" },
+    "content": {
+      "question_text": "What benefit is connected to sealed classes and pattern matching with switch expressions?",
+      "question_type": "concept"
+    },
+    "grading_instructions": {
+      "core_requirements": [
+        "The compiler can check that all direct subclasses are covered as cases.",
+        "No default clause is needed if all permitted subclasses are listed."
+      ],
+      "acceptable_variations": [
+        "Exhaustiveness checking — the compiler knows all possible subclasses.",
+        "No default case required when all subclasses are handled."
+      ],
+      "strictness_level": "moderate"
+    }
+  },
+  {
+    "id": "java_5_8_q8",
+    "metadata": { "module": "Java", "chapter": "5.8" },
+    "content": {
+      "question_text": "Does a permitted subclass of a sealed class need to be final?",
+      "question_type": "boolean"
+    },
+    "grading_instructions": {
+      "core_requirements": [
+        "No.",
+        "Permitted subclasses can be final, sealed, or non-sealed."
+      ],
+      "acceptable_variations": [
+        "No, they have three options."
+      ],
+      "strictness_level": "strict"
+    }
+  },
+  {
+    "id": "java_5_8_q9",
+    "metadata": { "module": "Java", "chapter": "5.8" },
+    "content": {
+      "question_text": "Can a permitted subclass of a sealed class also be sealed?",
+      "question_type": "boolean"
+    },
+    "grading_instructions": {
+      "core_requirements": [
+        "Yes."
+      ],
+      "acceptable_variations": [
+        "Yes, it can be sealed.",
+        "Yes, it can further restrict its own subclasses."
+      ],
+      "strictness_level": "strict"
+    }
+  },
+  {
+    "id": "java_5_8_q10",
+    "metadata": { "module": "Java", "chapter": "5.8" },
+    "content": {
+      "question_text": "What must a subclass of a sealed class specify regarding its inheritance control?",
+      "question_type": "list",
+      "expected_count": 3
+    },
+    "grading_instructions": {
+      "core_requirements": [
+        "It must specify whether it is sealed.",
+        "It must specify whether it is final.",
+        "It must specify whether it is non-sealed (open for subclassing)."
+      ],
+      "acceptable_variations": [
+        "Must be declared as final, sealed, or non-sealed."
+      ],
+      "strictness_level": "strict"
+    }
+  },
+  {
+    "id": "java_5_8_q11",
+    "metadata": { "module": "Java", "chapter": "5.8" },
+    "content": {
+      "question_text": "What does it mean when a permitted subclass is declared as non-sealed?",
+      "question_type": "concept"
+    },
+    "grading_instructions": {
+      "core_requirements": [
+        "It means the class is open for subclassing.",
+        "Any class can extend it, regardless of the sealed hierarchy."
+      ],
+      "acceptable_variations": [
+        "It allows unlimited subclassing.",
+        "It reopens the class for extension."
+      ],
+      "strictness_level": "strict"
+    }
+  },
+  {
+    "id": "java_5_8_q12",
+    "metadata": { "module": "Java", "chapter": "5.8" },
+    "content": {
+      "question_text": "What is special about the non-sealed keyword?",
+      "question_type": "concept"
+    },
+    "grading_instructions": {
+      "core_requirements": [
+        "It is the first Java keyword with a hyphen.",
+        "It is a contextual keyword — you can still use 'sealed' as a variable or method name.",
+        "There is no ambiguity with subtraction (non - sealed)."
+      ],
+      "acceptable_variations": [
+        "First hyphenated keyword in Java.",
+        "Contextual keyword, not a reserved word."
+      ],
+      "strictness_level": "moderate"
+    }
+  }
+]

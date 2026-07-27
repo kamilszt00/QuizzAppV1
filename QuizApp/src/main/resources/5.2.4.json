@@ -1,0 +1,152 @@
+[
+  {
+    "id": "java_5_2_4_q1",
+    "metadata": { "module": "Java", "chapter": "5.2.4" },
+    "content": { "question_text": "What is a hashcode?", "question_type": "concept" },
+    "grading_instructions": {
+      "core_requirements": ["An integer value derived from an object."],
+      "acceptable_variations": ["A numeric fingerprint representing an object."],
+      "strictness_level": "moderate"
+    }
+  },
+  {
+    "id": "java_5_2_4_q2",
+    "metadata": { "module": "Java", "chapter": "5.2.4" },
+    "content": { "question_text": "If x == y (the objects are equal), what does this require about their hashcodes?", "question_type": "concept" },
+    "grading_instructions": {
+      "core_requirements": ["If x and y are equal, their hashcodes must also be equal."],
+      "acceptable_variations": ["Equal objects must produce equal hash codes."],
+      "strictness_level": "strict"
+    }
+  },
+  {
+    "id": "java_5_2_4_q3",
+    "metadata": { "module": "Java", "chapter": "5.2.4" },
+    "content": { "question_text": "Where is the default hashCode method defined, and what value does it return?", "question_type": "concept" },
+    "grading_instructions": {
+      "core_requirements": ["It is defined in the Object class.", "It returns a hashcode derived from the object's memory address."],
+      "acceptable_variations": ["Object.hashCode() — based on the object's location in memory."],
+      "strictness_level": "moderate"
+    }
+  },
+  {
+    "id": "java_5_2_4_q4",
+    "metadata": { "module": "Java", "chapter": "5.2.4" },
+    "content": { "question_text": "What is the name of the default hashcode returned by Object's hashCode method?", "question_type": "concept" },
+    "grading_instructions": {
+      "core_requirements": ["The identity hashcode."],
+      "acceptable_variations": ["identity hash code"],
+      "strictness_level": "strict"
+    }
+  },
+  {
+    "id": "java_5_2_4_q5",
+    "metadata": { "module": "Java", "chapter": "5.2.4" },
+    "content": { "question_text": "How is the String class's hashCode derived?", "question_type": "concept" },
+    "grading_instructions": {
+      "core_requirements": ["It is derived from the String's content (the characters it holds)."],
+      "acceptable_variations": ["Based on the actual character data, not memory location."],
+      "strictness_level": "strict"
+    }
+  },
+  {
+    "id": "java_5_2_4_q6",
+    "metadata": { "module": "Java", "chapter": "5.2.4" },
+    "content": { "question_text": "According to the equals/hashCode contract, if two objects are equal, what is required of their hashcodes? Is the reverse also required?", "question_type": "concept" },
+    "grading_instructions": {
+      "core_requirements": ["If two objects are equal, they must produce equal hashcodes.", "The reverse is NOT required — unequal objects are allowed to share the same hashcode (a collision)."],
+      "acceptable_variations": ["Equal objects → equal hashcodes is mandatory; unequal objects can still collide."],
+      "strictness_level": "strict"
+    }
+  },
+  {
+    "id": "java_5_2_4_q7",
+    "metadata": { "module": "Java", "chapter": "5.2.4" },
+    "content": { "question_text": "What is an easy general approach to create a hashCode method for an object with multiple fields?", "question_type": "concept" },
+    "grading_instructions": {
+      "core_requirements": ["Combine the hashcodes of the instance fields so the resulting values are widely scattered/distributed."],
+      "acceptable_variations": ["Merge field hash codes together to spread out the results and reduce collisions."],
+      "strictness_level": "moderate"
+    }
+  },
+  {
+    "id": "java_5_2_4_q8",
+    "metadata": { "module": "Java", "chapter": "5.2.4" },
+    "content": { "question_text": "How do you create a null-safe hashcode for a field that might be null?", "question_type": "code" },
+    "grading_instructions": {
+      "core_requirements": ["Use Objects.hashCode(), which returns 0 if the value is null."],
+      "acceptable_variations": ["Objects.hashCode(field) instead of field.hashCode() directly."],
+      "strictness_level": "strict"
+    }
+  },
+  {
+    "id": "java_5_2_4_q9",
+    "metadata": { "module": "Java", "chapter": "5.2.4" },
+    "content": { "question_text": "What is the easy, convenient way to create a hashCode method for an object with multiple fields?", "question_type": "code" },
+    "grading_instructions": {
+      "core_requirements": ["Use Objects.hash() and pass all the fields as parameters."],
+      "acceptable_variations": ["Objects.hash(field1, field2, ...)"],
+      "strictness_level": "strict"
+    }
+  },
+  {
+    "id": "java_5_2_4_q10",
+    "metadata": { "module": "Java", "chapter": "5.2.4" },
+    "content": { "question_text": "How is the hashcode for an array created by default?", "question_type": "concept" },
+    "grading_instructions": {
+      "core_requirements": ["It is NOT derived from the array's content — it uses the default Object.hashCode() (identity-based)."],
+      "acceptable_variations": ["Default array hashCode ignores contents, based on memory identity only."],
+      "strictness_level": "strict"
+    }
+  },
+  {
+    "id": "java_5_2_4_q11",
+    "metadata": { "module": "Java", "chapter": "5.2.4" },
+    "content": { "question_text": "How do you create a hashcode for an array that IS derived from its content?", "question_type": "code" },
+    "grading_instructions": {
+      "core_requirements": ["Use Arrays.hashCode()."],
+      "acceptable_variations": ["Arrays.hashCode(myArray)"],
+      "strictness_level": "strict"
+    }
+  },
+  {
+    "id": "java_5_2_4_q12",
+    "metadata": { "module": "Java", "chapter": "5.2.4" },
+    "content": { "question_text": "How do you create a content-based hashcode for a multi-dimensional array?", "question_type": "code" },
+    "grading_instructions": {
+      "core_requirements": ["Use Arrays.deepHashCode()."],
+      "acceptable_variations": ["Arrays.deepHashCode(myArray)"],
+      "strictness_level": "strict"
+    }
+  },
+  {
+    "id": "java_5_2_4_q13",
+    "metadata": { "module": "Java", "chapter": "5.2.4" },
+    "content": { "question_text": "What is the special behavior of Arrays.hashCode for a zero-length array?", "question_type": "concept" },
+    "grading_instructions": {
+      "core_requirements": ["It returns 1 for a zero-length array, to distinguish it from a null array reference."],
+      "acceptable_variations": ["Empty array returns 1, not 0, to differ from null."],
+      "strictness_level": "strict"
+    }
+  },
+  {
+    "id": "java_5_2_4_q14",
+    "metadata": { "module": "Java", "chapter": "5.2.4" },
+    "content": { "question_text": "To get the most widely distinct values when combining hashcodes, what kind of numbers should be used as multipliers?", "question_type": "concept" },
+    "grading_instructions": {
+      "core_requirements": ["Prime numbers (e.g., 7, 11, 13, or 31)."],
+      "acceptable_variations": ["Small distinct primes."],
+      "strictness_level": "moderate"
+    }
+  },
+  {
+    "id": "java_5_2_4_q15",
+    "metadata": { "module": "Java", "chapter": "5.2.4" },
+    "content": { "question_text": "How does hashCode work for Java records?", "question_type": "concept" },
+    "grading_instructions": {
+      "core_requirements": ["Record types automatically provide a hashCode method that derives a hashcode from the hash codes of the component values."],
+      "acceptable_variations": ["Auto-generated based on the record's components."],
+      "strictness_level": "moderate"
+    }
+  }
+]

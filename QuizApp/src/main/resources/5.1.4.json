@@ -1,0 +1,32 @@
+[
+  {
+    "id": "java_5_1_4_q1",
+    "metadata": { "module": "Java", "chapter": "5.1.4" },
+    "content": { "question_text": "What is an inheritance hierarchy?", "question_type": "concept" },
+    "grading_instructions": {
+      "core_requirements": ["The collection of all classes extending a common superclass."],
+      "acceptable_variations": ["A group of classes all derived from the same base class."],
+      "strictness_level": "moderate"
+    }
+  },
+  {
+    "id": "java_5_1_4_q2",
+    "metadata": { "module": "Java", "chapter": "5.1.4" },
+    "content": { "question_text": "What is an inheritance chain?", "question_type": "concept" },
+    "grading_instructions": {
+      "core_requirements": ["The path from a particular class to its ancestors in the inheritance hierarchy."],
+      "acceptable_variations": ["The line of descent from a specific subclass up to its parent classes."],
+      "strictness_level": "moderate"
+    }
+  },
+  {
+    "id": "java_5_1_4_q3",
+    "metadata": { "module": "Java", "chapter": "5.1.4" },
+    "content": { "question_text": "Does Java support multiple inheritance (where a class can have multiple superclasses)?", "question_type": "boolean" },
+    "grading_instructions": {
+      "core_requirements": ["No.", "Java does not support multiple inheritance."],
+      "acceptable_variations": ["False"],
+      "strictness_level": "strict"
+    }
+  }
+]

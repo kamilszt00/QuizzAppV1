@@ -1,0 +1,52 @@
+[
+  {
+    "id": "java_5_1_10_q1",
+    "metadata": { "module": "Java", "chapter": "5.1.10" },
+    "content": { "question_text": "Can a subclass access the private fields of its superclass?", "question_type": "boolean" },
+    "grading_instructions": {
+      "core_requirements": ["No — a subclass cannot access the private fields of its superclass.", "Private features are not accessible in any other class, including subclasses."],
+      "acceptable_variations": ["Private means inaccessible everywhere outside the class, including subclasses."],
+      "strictness_level": "strict"
+    }
+  },
+  {
+    "id": "java_5_1_10_q2",
+    "metadata": { "module": "Java", "chapter": "5.1.10" },
+    "content": { "question_text": "What does declaring a field or method as protected allow?", "question_type": "concept" },
+    "grading_instructions": {
+      "core_requirements": ["It allows subclass methods to access that field or method directly.", "It also makes the feature accessible to all other classes in the same package."],
+      "acceptable_variations": ["protected = accessible to subclasses and to classes in the same package."],
+      "strictness_level": "strict"
+    }
+  },
+  {
+    "id": "java_5_1_10_q3",
+    "metadata": { "module": "Java", "chapter": "5.1.10" },
+    "content": { "question_text": "Why should you use protected fields with caution?", "question_type": "concept" },
+    "grading_instructions": {
+      "core_requirements": ["Other programmers may create subclasses of your class and start accessing your protected fields directly.", "Once that happens, you can no longer change the internal implementation of your class without breaking those subclasses — which goes against the spirit of OOP and data encapsulation."],
+      "acceptable_variations": ["Protected fields expose internals to subclasses, making it hard to change implementation later."],
+      "strictness_level": "moderate"
+    }
+  },
+  {
+    "id": "java_5_1_10_q4",
+    "metadata": { "module": "Java", "chapter": "5.1.10" },
+    "content": { "question_text": "Why do protected methods make more sense than protected fields?", "question_type": "concept" },
+    "grading_instructions": {
+      "core_requirements": ["A protected method signals that it is tricky to use correctly.", "It indicates that subclasses, which know their ancestor well, can be trusted to use it correctly — but other classes cannot."],
+      "acceptable_variations": ["Protected methods are intended for subclass use when the method requires special knowledge of the class internals."],
+      "strictness_level": "moderate"
+    }
+  },
+  {
+    "id": "java_5_1_10_q5",
+    "metadata": { "module": "Java", "chapter": "5.1.10" },
+    "content": { "question_text": "What are the four access control modifiers in Java and what does each allow?", "question_type": "list", "expected_count": 4 },
+    "grading_instructions": {
+      "core_requirements": ["private — accessible in the class only.", "public — accessible by the world.", "protected — accessible in the package and all subclasses.", "No modifier (default) — accessible in the package only."],
+      "acceptable_variations": ["private/public/protected/default with correct scope descriptions."],
+      "strictness_level": "strict"
+    }
+  }
+]

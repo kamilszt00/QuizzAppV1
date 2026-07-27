@@ -1,0 +1,162 @@
+[
+  {
+    "id": "java_4_6_1_q1",
+    "metadata": { "module": "Java", "chapter": "4.6.1" },
+    "content": { "question_text": "What does it mean if a method is 'overloaded' in Java?", "question_type": "concept" },
+    "grading_instructions": {
+      "core_requirements": ["Overloading occurs when several methods have the exact same name but different parameters."],
+      "acceptable_variations": ["Multiple methods sharing a name but taking different arguments."],
+      "strictness_level": "moderate"
+    }
+  },
+  {
+    "id": "java_4_6_1_q2",
+    "metadata": { "module": "Java", "chapter": "4.6.1" },
+    "content": { "question_text": "How does the Java compiler determine which version of an overloaded method to execute?", "question_type": "concept" },
+    "grading_instructions": {
+      "core_requirements": ["It matches the parameter types in the method declarations with the types of the arguments provided in the specific method call.", "This process is called overloading resolution."],
+      "acceptable_variations": ["By looking at the argument types passed in and finding the matching method signature."],
+      "strictness_level": "moderate"
+    }
+  },
+  {
+    "id": "java_4_6_1_q3",
+    "metadata": { "module": "Java", "chapter": "4.6.1" },
+    "content": { "question_text": "What two pieces of information make up the 'signature' of a method?", "question_type": "list", "expected_count": 2 },
+    "grading_instructions": {
+      "core_requirements": ["The name of the method.", "The parameter types it accepts."],
+      "acceptable_variations": ["Name and parameters."],
+      "strictness_level": "strict"
+    }
+  },
+  {
+    "id": "java_4_6_1_q4",
+    "metadata": { "module": "Java", "chapter": "4.6.1" },
+    "content": { "question_text": "Is the return type of a method considered part of its signature? Because of this, what is illegal to do in Java?", "question_type": "concept" },
+    "grading_instructions": {
+      "core_requirements": ["No, the return type is not part of the signature.", "It is illegal to have two methods with the same name and parameter types but different return types."],
+      "acceptable_variations": ["No. You cannot overload a method by only changing its return type."],
+      "strictness_level": "strict"
+    }
+  },
+  {
+    "id": "java_4_6_2_q1",
+    "metadata": { "module": "Java", "chapter": "4.6.2" },
+    "content": { "question_text": "What happens if you do not explicitly initialize an instance field inside a constructor?", "question_type": "concept" },
+    "grading_instructions": {
+      "core_requirements": ["It is automatically set to a default value.", "Numbers are set to 0, booleans to false, and object references to null."],
+      "acceptable_variations": ["It gets a default value of 0, false, or null."],
+      "strictness_level": "moderate"
+    }
+  },
+  {
+    "id": "java_4_6_2_q2",
+    "metadata": { "module": "Java", "chapter": "4.6.2" },
+    "content": { "question_text": "What is the crucial difference between an uninitialized instance field and an uninitialized local variable in a method?", "question_type": "concept" },
+    "grading_instructions": {
+      "core_requirements": ["An instance field is automatically initialized to a default value (0, false, null).", "A local variable is not automatically initialized and must be explicitly set, otherwise it causes a compile-time error."],
+      "acceptable_variations": ["Fields get default values automatically; local variables do not and will throw an error."],
+      "strictness_level": "strict"
+    }
+  },
+  {
+    "id": "java_4_6_3_q1",
+    "metadata": { "module": "Java", "chapter": "4.6.3" },
+    "content": { "question_text": "Under what specific condition does the Java compiler provide a free, no-argument constructor for your class?", "question_type": "concept" },
+    "grading_instructions": {
+      "core_requirements": ["Only when you write a class with no constructors whatsoever."],
+      "acceptable_variations": ["If you provide zero constructors, it gives you a default one."],
+      "strictness_level": "strict"
+    }
+  },
+  {
+    "id": "java_4_6_3_q2",
+    "metadata": { "module": "Java", "chapter": "4.6.3" },
+    "content": { "question_text": "If you define a custom constructor with arguments, what happens if someone tries to instantiate your class using a no-argument constructor (e.g., `new ClassName()`) without you explicitly writing one?", "question_type": "concept" },
+    "grading_instructions": {
+      "core_requirements": ["It will result in an error / it is illegal.", "Because supplying any custom constructor removes the free default constructor."],
+      "acceptable_variations": ["It will fail to compile because the default constructor is no longer provided."],
+      "strictness_level": "moderate"
+    }
+  },
+  {
+    "id": "java_4_6_4_q1",
+    "metadata": { "module": "Java", "chapter": "4.6.4" },
+    "content": { "question_text": "If you explicitly assign a value to an instance field directly in the class definition (e.g., `private String name = \"\";`), when exactly is this assignment carried out?", "question_type": "concept" },
+    "grading_instructions": {
+      "core_requirements": ["It is carried out before the constructor executes."],
+      "acceptable_variations": ["Prior to the constructor body running."],
+      "strictness_level": "strict"
+    }
+  },
+  {
+    "id": "java_4_6_5_q1",
+    "metadata": { "module": "Java", "chapter": "4.6.5" },
+    "content": { "question_text": "If a constructor parameter variable has the exact same name as an instance field, it 'shadows' that field. How do you properly access the instance field inside that constructor?", "question_type": "code" },
+    "grading_instructions": {
+      "core_requirements": ["By prefixing the field name with `this.` (e.g., `this.salary`)."],
+      "acceptable_variations": ["Using the this keyword."],
+      "strictness_level": "strict"
+    }
+  },
+  {
+    "id": "java_4_6_6_q1",
+    "metadata": { "module": "Java", "chapter": "4.6.6" },
+    "content": { "question_text": "How can you call one constructor from inside another constructor of the same class, and why might you do this?", "question_type": "concept" },
+    "grading_instructions": {
+      "core_requirements": ["You use the `this(...)` keyword with the appropriate arguments.", "It is done to eliminate duplicate construction code."],
+      "acceptable_variations": ["Use this() to avoid writing the same initialization logic twice."],
+      "strictness_level": "moderate"
+    }
+  },
+  {
+    "id": "java_4_6_6_q2",
+    "metadata": { "module": "Java", "chapter": "4.6.6" },
+    "content": { "question_text": "In Java (prior to Java 25), what is the strict restriction regarding where you can place a call to another constructor (the `this(...)` keyword)?", "question_type": "concept" },
+    "grading_instructions": {
+      "core_requirements": ["It must be the very first statement of the constructor body."],
+      "acceptable_variations": ["It has to be the first line of code."],
+      "strictness_level": "strict"
+    }
+  },
+  {
+    "id": "java_4_6_7_q1",
+    "metadata": { "module": "Java", "chapter": "4.6.7" },
+    "content": { "question_text": "Aside from setting a value in a constructor or assigning a value in the field declaration, what is the third mechanism Java provides to initialize instance fields?", "question_type": "concept" },
+    "grading_instructions": {
+      "core_requirements": ["An initialization block (arbitrary blocks of code inside the class declaration)."],
+      "acceptable_variations": ["Object initialization block."],
+      "strictness_level": "strict"
+    }
+  },
+  {
+    "id": "java_4_6_7_q2",
+    "metadata": { "module": "Java", "chapter": "4.6.7" },
+    "content": { "question_text": "When an object is constructed, which executes first: the field initialization blocks/declarations, or the body of the constructor?", "question_type": "concept" },
+    "grading_instructions": {
+      "core_requirements": ["The field initializers and initialization blocks execute first.", "The body of the constructor executes last."],
+      "acceptable_variations": ["Blocks run before the constructor body."],
+      "strictness_level": "strict"
+    }
+  },
+  {
+    "id": "java_4_6_8_q1",
+    "metadata": { "module": "Java", "chapter": "4.6.8" },
+    "content": { "question_text": "If a static field requires complex initialization logic (like a loop or generating a random number), what mechanism should you use to initialize it?", "question_type": "concept" },
+    "grading_instructions": {
+      "core_requirements": ["A static initialization block (a block tagged with the keyword `static`)."],
+      "acceptable_variations": ["Static block."],
+      "strictness_level": "strict"
+    }
+  },
+  {
+    "id": "java_4_6_8_q2",
+    "metadata": { "module": "Java", "chapter": "4.6.8" },
+    "content": { "question_text": "When exactly does static initialization (like evaluating static assignments and static initialization blocks) occur in a Java program?", "question_type": "concept" },
+    "grading_instructions": {
+      "core_requirements": ["It occurs when the class is first loaded."],
+      "acceptable_variations": ["Upon class loading."],
+      "strictness_level": "moderate"
+    }
+  }
+]

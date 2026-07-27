@@ -1,0 +1,5 @@
+1. How create an inner class that has no reference to the outer class object?
+declare the nested class as final
+2. When to create a static nested class?
+when the inner class does not need to touch anything in the outer object
+

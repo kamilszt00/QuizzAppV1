@@ -1,0 +1,150 @@
+[
+  {
+    "id": "java_5_2_5_q1",
+    "metadata": { "module": "Java", "chapter": "5.2.5" },
+    "content": {
+      "question_text": "What does the default toString method in the Object class return?",
+      "question_type": "concept"
+    },
+    "grading_instructions": {
+      "core_requirements": [
+        "It prints the class name and the hash code of the object."
+      ],
+      "acceptable_variations": [
+        "Class name followed by hash code",
+        "Object's class name and hash code"
+      ],
+      "strictness_level": "strict"
+    }
+  },
+  {
+    "id": "java_5_2_5_q2",
+    "metadata": { "module": "Java", "chapter": "5.2.5" },
+    "content": {
+      "question_text": "Why should you override the toString method in your classes?",
+      "question_type": "concept"
+    },
+    "grading_instructions": {
+      "core_requirements": [
+        "To provide useful information about the state of an object.",
+        "It is great for logging and debugging purposes."
+      ],
+      "acceptable_variations": [
+        "For logging and debugging support",
+        "So developers can get meaningful information about object state"
+      ],
+      "strictness_level": "moderate"
+    }
+  },
+  {
+    "id": "java_5_2_5_q3",
+    "metadata": { "module": "Java", "chapter": "5.2.5" },
+    "content": {
+      "question_text": "What is the recommended way to include the class name in a toString method instead of hardcoding it?",
+      "question_type": "concept"
+    },
+    "grading_instructions": {
+      "core_requirements": [
+        "Call getClass().getName() to obtain a string with the class name.",
+        "This allows the toString method to work correctly for subclasses."
+      ],
+      "acceptable_variations": [
+        "Use getClass().getName() instead of hardcoding the class name"
+      ],
+      "strictness_level": "strict"
+    }
+  },
+  {
+    "id": "java_5_2_5_q4",
+    "metadata": { "module": "Java", "chapter": "5.2.5" },
+    "content": {
+      "question_text": "How should a subclass properly implement its own toString method?",
+      "question_type": "concept"
+    },
+    "grading_instructions": {
+      "core_requirements": [
+        "The subclass should define its own toString method and add the subclass fields.",
+        "If the superclass uses getClass().getName(), the subclass can simply call super.toString() and append its own fields."
+      ],
+      "acceptable_variations": [
+        "Override toString, call super.toString(), then add subclass field values"
+      ],
+      "strictness_level": "moderate"
+    }
+  },
+  {
+    "id": "java_5_2_5_q5",
+    "metadata": { "module": "Java", "chapter": "5.2.5" },
+    "content": {
+      "question_text": "When is the toString method automatically invoked by the Java compiler?",
+      "question_type": "concept"
+    },
+    "grading_instructions": {
+      "core_requirements": [
+        "Whenever an object is concatenated with a string using the + operator.",
+        "The println method also automatically calls toString on the object passed to it."
+      ],
+      "acceptable_variations": [
+        "During string concatenation with +",
+        "When passed to System.out.println()"
+      ],
+      "strictness_level": "strict"
+    }
+  },
+  {
+    "id": "java_5_2_5_q6",
+    "metadata": { "module": "Java", "chapter": "5.2.5" },
+    "content": {
+      "question_text": "What happens if you call toString on an array in Java, and what is the correct way to get a readable string representation of an array?",
+      "question_type": "concept"
+    },
+    "grading_instructions": {
+      "core_requirements": [
+        "Arrays inherit toString from Object and print an archaic format (e.g., '[I@1a46e30' for int[]).",
+        "Use Arrays.toString(array) for a readable representation of one-dimensional arrays.",
+        "Use Arrays.deepToString(array) for multidimensional arrays."
+      ],
+      "acceptable_variations": [
+        "Arrays.toString() for readable output, Arrays.deepToString() for nested arrays"
+      ],
+      "strictness_level": "strict"
+    }
+  },
+  {
+    "id": "java_5_2_5_q7",
+    "metadata": { "module": "Java", "chapter": "5.2.5" },
+    "content": {
+      "question_text": "According to the text, what is the strong recommendation regarding adding a toString method to your classes?",
+      "question_type": "concept"
+    },
+    "grading_instructions": {
+      "core_requirements": [
+        "It is strongly recommended to add a toString method to each class you write.",
+        "Other programmers who use your classes will be grateful for the logging support."
+      ],
+      "acceptable_variations": [
+        "Always add toString to your classes",
+        "Add toString for logging and debugging support"
+      ],
+      "strictness_level": "moderate"
+    }
+  },
+  {
+    "id": "java_5_2_5_q8",
+    "metadata": { "module": "Java", "chapter": "5.2.5" },
+    "content": {
+      "question_text": "Do record types come with a pre-defined toString method?",
+      "question_type": "boolean"
+    },
+    "grading_instructions": {
+      "core_requirements": [
+        "Yes.",
+        "Records automatically provide a toString method that lists the class name and the names and stringified values of the fields."
+      ],
+      "acceptable_variations": [
+        "Yes, records have a default toString"
+      ],
+      "strictness_level": "strict"
+    }
+  }
+]

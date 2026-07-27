@@ -1,0 +1,35 @@
+1. What the equals method does by default?
+compares if two object variables refer to the same object
+
+2.In whihc class is the equals method defined?
+In Object class.
+
+3. How to actually use equals method for your purposes in inheritance tree?
+override the equals method of Object class and modify it for your purposes
+
+4. What checks should be implemented in equals method of subclass when you want to compare their state? (beside the state comparison)
+
+check if two objects are identical (the same object)
+
+check is the  reference passed as parameter is null
+
+check if the object is of the same class
+
+then the state check
+
+5. How to guard yourself agains the possibility that the field might be null?
+
+use Objects.equals(a,b)
+
+6. what does the Objects.equals(a,b) method return?
+it returns true if both are null, it returns false if one is null, it returns a.equals(b)  otherwise.
+
+7. What  is required in equals method  of the subclass?
+to first call for the equals method of superclass.
+
+8. What the differences about equals method in records?
+it is defined  automatically to compare its components.
+
+9. How to compare components of type double in record? 
+with Double.equals
+

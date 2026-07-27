@@ -1,0 +1,1685 @@
+
+[
+  {
+    "id": "java_3_3_1_q1",
+    "metadata": { "module": "Java", "chapter": "3.3.1" },
+    "content": { "question_text": "What is an integer type?", "question_type": "definition" },
+    "grading_instructions": {
+      "core_requirements": ["Numbers without fractional parts."],
+      "acceptable_variations": ["Whole numbers."],
+      "strictness_level": "moderate"
+    }
+  },
+  {
+    "id": "java_3_3_1_q2",
+    "metadata": { "module": "Java", "chapter": "3.3.1" },
+    "content": { "question_text": "How many integer types does Java provide?", "question_type": "concept", "expected_count": 1 },
+    "grading_instructions": {
+      "core_requirements": ["4"],
+      "acceptable_variations": ["Four", "byte, short, int, long"],
+      "strictness_level": "strict"
+    }
+  },
+  {
+    "id": "java_3_3_1_q3",
+    "metadata": { "module": "Java", "chapter": "3.3.1" },
+    "content": { "question_text": "Storage requirements for each of integer types?", "question_type": "list", "expected_count": 4 },
+    "grading_instructions": {
+      "core_requirements": ["byte = 1 byte (8 bits)", "short = 2 bytes (16 bits)", "int = 4 bytes (32 bits)", "long = 8 bytes (64 bits)"],
+      "acceptable_variations": ["Providing only bytes or only bits is acceptable."],
+      "strictness_level": "moderate"
+    }
+  },
+  {
+    "id": "java_3_3_1_q4",
+    "metadata": { "module": "Java", "chapter": "3.3.1" },
+    "content": { "question_text": "Range for each of integer types?", "question_type": "list", "expected_count": 4 },
+    "grading_instructions": {
+      "core_requirements": ["byte = -128 to 127", "short = -32768 to 32767", "int = around 2 billion", "long = around 9 quintillion"],
+      "acceptable_variations": ["Approximate values for int and long are required, exact values not strictly necessary."],
+      "strictness_level": "moderate"
+    }
+  },
+  {
+    "id": "java_3_3_1_q5",
+    "metadata": { "module": "Java", "chapter": "3.3.1" },
+    "content": { "question_text": "Which integer type is the most practical?", "question_type": "concept" },
+    "grading_instructions": {
+      "core_requirements": ["int"],
+      "acceptable_variations": [],
+      "strictness_level": "strict"
+    }
+  },
+  {
+    "id": "java_3_3_1_q6",
+    "metadata": { "module": "Java", "chapter": "3.3.1" },
+    "content": { "question_text": "What is the practical use of short and byte?", "question_type": "concept" },
+    "grading_instructions": {
+      "core_requirements": ["Specialized applications like low-level file handling", "Large arrays when storage space is at a premium"],
+      "acceptable_variations": ["Memory optimization"],
+      "strictness_level": "moderate"
+    }
+  },
+  {
+    "id": "java_3_3_1_q7",
+    "metadata": { "module": "Java", "chapter": "3.3.1" },
+    "content": { "question_text": "Does the range of Java integer type depend on the machine it is running on?", "question_type": "boolean" },
+    "grading_instructions": {
+      "core_requirements": ["No, Java has fixed ranges for types regardless of the machine."],
+      "acceptable_variations": ["Platform independent ranges"],
+      "strictness_level": "strict"
+    }
+  },
+  {
+    "id": "java_3_3_1_q8",
+    "metadata": { "module": "Java", "chapter": "3.3.1" },
+    "content": { "question_text": "What is required for a long integer type variable?", "question_type": "concept" },
+    "grading_instructions": {
+      "core_requirements": ["The L or l suffix."],
+      "acceptable_variations": [],
+      "strictness_level": "strict"
+    }
+  },
+  {
+    "id": "java_3_3_1_q9",
+    "metadata": { "module": "Java", "chapter": "3.3.1" },
+    "content": { "question_text": "What prefix is required for hexadecimal values?", "question_type": "concept" },
+    "grading_instructions": {
+      "core_requirements": ["0x or 0X prefix."],
+      "acceptable_variations": [],
+      "strictness_level": "strict"
+    }
+  },
+  {
+    "id": "java_3_3_1_q10",
+    "metadata": { "module": "Java", "chapter": "3.3.1" },
+    "content": { "question_text": "What prefix is required for octal values?", "question_type": "concept" },
+    "grading_instructions": {
+      "core_requirements": ["0 prefix."],
+      "acceptable_variations": [],
+      "strictness_level": "strict"
+    }
+  },
+  {
+    "id": "java_3_3_1_q11",
+    "metadata": { "module": "Java", "chapter": "3.3.1" },
+    "content": { "question_text": "What prefix is required for numbers in binary?", "question_type": "concept" },
+    "grading_instructions": {
+      "core_requirements": ["0b or 0B prefix."],
+      "acceptable_variations": [],
+      "strictness_level": "strict"
+    }
+  },
+  {
+    "id": "java_3_3_1_q12",
+    "metadata": { "module": "Java", "chapter": "3.3.1" },
+    "content": { "question_text": "What is a number literal?", "question_type": "definition" },
+    "grading_instructions": {
+      "core_requirements": ["A raw, hardcoded value that appears directly in the code, rather than being computed or read from somewhere."],
+      "acceptable_variations": ["A fixed value directly written in source code."],
+      "strictness_level": "moderate"
+    }
+  },
+  {
+    "id": "java_3_3_1_q13",
+    "metadata": { "module": "Java", "chapter": "3.3.1" },
+    "content": { "question_text": "What could be added to a number literal to make it more readable? What compiler does with it?", "question_type": "concept" },
+    "grading_instructions": {
+      "core_requirements": ["Underscores (_)", "The compiler simply removes them; they are for human readability only."],
+      "acceptable_variations": ["Using _ as a separator."],
+      "strictness_level": "moderate"
+    }
+  },
+  {
+    "id": "java_3_3_1_q14",
+    "metadata": { "module": "Java", "chapter": "3.3.1" },
+    "content": { "question_text": "What does it mean when variable is signed or unsigned?", "question_type": "definition" },
+    "grading_instructions": {
+      "core_requirements": ["Signed means the range can represent negative and positive numbers.", "Unsigned means the range represents positive numbers only."],
+      "acceptable_variations": [],
+      "strictness_level": "strict"
+    }
+  },
+  {
+    "id": "java_3_3_1_q15",
+    "metadata": { "module": "Java", "chapter": "3.3.1" },
+    "content": { "question_text": "Does Java have unsigned versions of integer types?", "question_type": "boolean" },
+    "grading_instructions": {
+      "core_requirements": ["No, Java does not contain dedicated unsigned versions of integer types."],
+      "acceptable_variations": ["No"],
+      "strictness_level": "strict"
+    }
+  },
+  {
+    "id": "java_3_3_1_q16",
+    "metadata": { "module": "Java", "chapter": "3.3.1" },
+    "content": { "question_text": "What method allows you to convert byte values into an integer between 0 and 255?", "question_type": "code" },
+    "grading_instructions": {
+      "core_requirements": ["Byte.toUnsignedInt()"],
+      "acceptable_variations": [],
+      "strictness_level": "strict"
+    }
+  },
+  {
+    "id": "java_3_3_2_q1",
+    "metadata": { "module": "Java", "chapter": "3.3.2" },
+    "content": { "question_text": "What does floating-point types denote?", "question_type": "definition" },
+    "grading_instructions": {
+      "core_requirements": ["Numbers with fractional parts."],
+      "acceptable_variations": ["Decimals"],
+      "strictness_level": "moderate"
+    }
+  },
+  {
+    "id": "java_3_3_2_q2",
+    "metadata": { "module": "Java", "chapter": "3.3.2" },
+    "content": { "question_text": "How many floating-point types does Java have?", "question_type": "list", "expected_count": 2 },
+    "grading_instructions": {
+      "core_requirements": ["Two: double and float."],
+      "acceptable_variations": ["float, double"],
+      "strictness_level": "strict"
+    }
+  },
+  {
+    "id": "java_3_3_2_q3",
+    "metadata": { "module": "Java", "chapter": "3.3.2" },
+    "content": { "question_text": "Why is double called that?", "question_type": "concept" },
+    "grading_instructions": {
+      "core_requirements": ["Because it has double the precision of a float."],
+      "acceptable_variations": ["Twice the precision of float"],
+      "strictness_level": "moderate"
+    }
+  },
+  {
+    "id": "java_3_3_2_q4",
+    "metadata": { "module": "Java", "chapter": "3.3.2" },
+    "content": { "question_text": "What are the storage requirements of floating-point types?", "question_type": "list", "expected_count": 2 },
+    "grading_instructions": {
+      "core_requirements": ["float = 4 bytes (32 bits)", "double = 8 bytes (64 bits)"],
+      "acceptable_variations": ["Accepting either bytes or bits specification."],
+      "strictness_level": "moderate"
+    }
+  },
+  {
+    "id": "java_3_3_2_q5",
+    "metadata": { "module": "Java", "chapter": "3.3.2" },
+    "content": { "question_text": "Whats the range of floating-point types (significant decimal digits)?", "question_type": "list", "expected_count": 2 },
+    "grading_instructions": {
+      "core_requirements": ["float = 6-7 significant decimal digits", "double = 15 significant decimal digits"],
+      "acceptable_variations": [],
+      "strictness_level": "moderate"
+    }
+  },
+  {
+    "id": "java_3_3_2_q6",
+    "metadata": { "module": "Java", "chapter": "3.3.2" },
+    "content": { "question_text": "When should float be used and why?", "question_type": "concept" },
+    "grading_instructions": {
+      "core_requirements": ["Only when working with a library that strictly requires it.", "Because its limited precision is insufficient for many situations."],
+      "acceptable_variations": ["Memory optimization constraints", "External library requirements"],
+      "strictness_level": "moderate"
+    }
+  },
+  {
+    "id": "java_3_3_2_q7",
+    "metadata": { "module": "Java", "chapter": "3.3.2" },
+    "content": { "question_text": "How is float used in implementing neural networks?", "question_type": "code" },
+    "grading_instructions": {
+      "core_requirements": ["Float.floatToFloat16 converts float to a 16-bit half precision value stored in short."],
+      "acceptable_variations": [],
+      "strictness_level": "strict"
+    }
+  },
+  {
+    "id": "java_3_3_2_q8",
+    "metadata": { "module": "Java", "chapter": "3.3.2" },
+    "content": { "question_text": "What is required for numbers of type float and why?", "question_type": "concept" },
+    "grading_instructions": {
+      "core_requirements": ["An f or F suffix.", "Otherwise, they will be considered as double by default."],
+      "acceptable_variations": [],
+      "strictness_level": "strict"
+    }
+  },
+  {
+    "id": "java_3_3_2_q9",
+    "metadata": { "module": "Java", "chapter": "3.3.2" },
+    "content": { "question_text": "Can you supply a suffix for numbers of type double?", "question_type": "concept" },
+    "grading_instructions": {
+      "core_requirements": ["Yes, but it is not required (e.g., d or D)."],
+      "acceptable_variations": ["Yes"],
+      "strictness_level": "moderate"
+    }
+  },
+  {
+    "id": "java_3_3_2_q10",
+    "metadata": { "module": "Java", "chapter": "3.3.2" },
+    "content": { "question_text": "What is a decimal exponent and what denotes it? Give example.", "question_type": "concept" },
+    "grading_instructions": {
+      "core_requirements": ["A numerical representation of 10 to the power of a given number.", "Denoted by E or e.", "Example: 1.729E3 is 1729."],
+      "acceptable_variations": ["Scientific notation representing base 10."],
+      "strictness_level": "moderate"
+    }
+  },
+  {
+    "id": "java_3_3_2_q11",
+    "metadata": { "module": "Java", "chapter": "3.3.2" },
+    "content": { "question_text": "What is a hexadecimal exponent and what it denotes?", "question_type": "concept" },
+    "grading_instructions": {
+      "core_requirements": ["Representation of 2 to the power of a given number.", "Denoted by p or P (e.g., p-3 is 2 to power of -3)."],
+      "acceptable_variations": [],
+      "strictness_level": "strict"
+    }
+  },
+  {
+    "id": "java_3_3_2_q12",
+    "metadata": { "module": "Java", "chapter": "3.3.2" },
+    "content": { "question_text": "Explain how 0.125 floating-point literal denotes as 0x1.0p-3 in hexadecimal?", "question_type": "concept" },
+    "grading_instructions": {
+      "core_requirements": ["0x1.0 is a hex value equal to 1 + 0/16 = 1.", "p-3 is 2 to the power of -3, which is 0.125.", "1 * 0.125 = 0.125."],
+      "acceptable_variations": ["Math breakdown showing 1 * (2^-3)."],
+      "strictness_level": "moderate"
+    }
+  },
+  {
+    "id": "java_3_3_2_q13",
+    "metadata": { "module": "Java", "chapter": "3.3.2" },
+    "content": { "question_text": "What is a floating point number if the hexadecimal representation is 0x1.2p-3?", "question_type": "concept" },
+    "grading_instructions": {
+      "core_requirements": ["0x1.2p-3 = (1 + 2/16) * (2^-3) = 1.125 * 0.125 = 0.140625."],
+      "acceptable_variations": ["0.140625"],
+      "strictness_level": "strict"
+    }
+  },
+  {
+    "id": "java_3_3_2_q14",
+    "metadata": { "module": "Java", "chapter": "3.3.2" },
+    "content": { "question_text": "What special floating-point values denote overflows and errors in floating-point computation?", "question_type": "list", "expected_count": 3 },
+    "grading_instructions": {
+      "core_requirements": ["Positive infinity", "Negative infinity", "NaN (Not a Number)"],
+      "acceptable_variations": [],
+      "strictness_level": "strict"
+    }
+  },
+  {
+    "id": "java_3_3_2_q15",
+    "metadata": { "module": "Java", "chapter": "3.3.2" },
+    "content": { "question_text": "What specification does all floating-point computations follow?", "question_type": "concept" },
+    "grading_instructions": {
+      "core_requirements": ["IEEE 754"],
+      "acceptable_variations": [],
+      "strictness_level": "strict"
+    }
+  },
+  {
+    "id": "java_3_3_2_q16",
+    "metadata": { "module": "Java", "chapter": "3.3.2" },
+    "content": { "question_text": "Whats the result of dividing a positive floating-point number by 0?", "question_type": "concept" },
+    "grading_instructions": {
+      "core_requirements": ["Positive infinity"],
+      "acceptable_variations": ["Infinity"],
+      "strictness_level": "moderate"
+    }
+  },
+  {
+    "id": "java_3_3_2_q17",
+    "metadata": { "module": "Java", "chapter": "3.3.2" },
+    "content": { "question_text": "Whats the result of dividing negative floating-point number by 0?", "question_type": "concept" },
+    "grading_instructions": {
+      "core_requirements": ["Negative infinity"],
+      "acceptable_variations": ["-Infinity"],
+      "strictness_level": "moderate"
+    }
+  },
+  {
+    "id": "java_3_3_2_q18",
+    "metadata": { "module": "Java", "chapter": "3.3.2" },
+    "content": { "question_text": "What computations yield NaN?", "question_type": "list", "expected_count": 2 },
+    "grading_instructions": {
+      "core_requirements": ["Dividing 0.0 by 0", "Square root of a negative number"],
+      "acceptable_variations": ["0/0"],
+      "strictness_level": "moderate"
+    }
+  },
+  {
+    "id": "java_3_3_2_q19",
+    "metadata": { "module": "Java", "chapter": "3.3.2" },
+    "content": { "question_text": "How to access special floating-point values (without computations)?", "question_type": "code" },
+    "grading_instructions": {
+      "core_requirements": ["Double.POSITIVE_INFINITY", "Double.NEGATIVE_INFINITY", "Double.NaN"],
+      "acceptable_variations": ["Float.POSITIVE_INFINITY", "Float.NEGATIVE_INFINITY", "Float.NaN"],
+      "strictness_level": "lenient"
+    }
+  },
+  {
+    "id": "java_3_3_2_q20",
+    "metadata": { "module": "Java", "chapter": "3.3.2" },
+    "content": { "question_text": "Why is x == Double.NaN never true?", "question_type": "concept" },
+    "grading_instructions": {
+      "core_requirements": ["Because NaN, by definition, is not equal to any value, including itself."],
+      "acceptable_variations": [],
+      "strictness_level": "moderate"
+    }
+  },
+  {
+    "id": "java_3_3_2_q21",
+    "metadata": { "module": "Java", "chapter": "3.3.2" },
+    "content": { "question_text": "How to properly check if something is NaN?", "question_type": "code" },
+    "grading_instructions": {
+      "core_requirements": ["Using Double.isNaN(x)"],
+      "acceptable_variations": ["Float.isNaN(x)"],
+      "strictness_level": "lenient"
+    }
+  },
+  {
+    "id": "java_3_3_2_q22",
+    "metadata": { "module": "Java", "chapter": "3.3.2" },
+    "content": { "question_text": "Are there negative and positive 0 in floating-point numbers?", "question_type": "boolean" },
+    "grading_instructions": {
+      "core_requirements": ["Yes, there are 0.0 and -0.0."],
+      "acceptable_variations": ["Yes"],
+      "strictness_level": "moderate"
+    }
+  },
+  {
+    "id": "java_3_3_2_q23",
+    "metadata": { "module": "Java", "chapter": "3.3.2" },
+    "content": { "question_text": "Why are floating-point numbers not suitable for financial calculations?", "question_type": "concept" },
+    "grading_instructions": {
+      "core_requirements": ["Because they are represented in the binary number system, which cannot precisely represent some decimal fractions.", "This leads to roundoff errors."],
+      "acceptable_variations": ["Precision loss in binary representation"],
+      "strictness_level": "moderate"
+    }
+  },
+  {
+    "id": "java_3_3_2_q24",
+    "metadata": { "module": "Java", "chapter": "3.3.2" },
+    "content": { "question_text": "What should be actually used for financial calculations rather than Floating-point numbers?", "question_type": "code" },
+    "grading_instructions": {
+      "core_requirements": ["The BigDecimal class."],
+      "acceptable_variations": ["BigDecimal"],
+      "strictness_level": "strict"
+    }
+  },
+  {
+    "id": "java_3_3_3_q1",
+    "metadata": { "module": "Java", "chapter": "3.3.3" },
+    "content": { "question_text": "What is a char value representing?", "question_type": "definition" },
+    "grading_instructions": {
+      "core_requirements": ["A 16-bit UTF-16 code unit in the Unicode encoding scheme."],
+      "acceptable_variations": ["UTF-16 code unit"],
+      "strictness_level": "moderate"
+    }
+  },
+  {
+    "id": "java_3_3_3_q2",
+    "metadata": { "module": "Java", "chapter": "3.3.3" },
+    "content": { "question_text": "Why is it no longer the case that one char value describes an individual character?", "question_type": "concept" },
+    "grading_instructions": {
+      "core_requirements": ["Because some Unicode characters require two char values to be represented (surrogate pairs)."],
+      "acceptable_variations": ["Unicode characters exceeding 16 bits need two chars"],
+      "strictness_level": "moderate"
+    }
+  },
+  {
+    "id": "java_3_3_3_q3",
+    "metadata": { "module": "Java", "chapter": "3.3.3" },
+    "content": { "question_text": "How are char values represented?", "question_type": "concept" },
+    "grading_instructions": {
+      "core_requirements": ["With single quotes (e.g., 'A')."],
+      "acceptable_variations": ["Single quotation marks"],
+      "strictness_level": "strict"
+    }
+  },
+  {
+    "id": "java_3_3_3_q4",
+    "metadata": { "module": "Java", "chapter": "3.3.3" },
+    "content": { "question_text": "What is the value of character constant 'A'?", "question_type": "concept" },
+    "grading_instructions": {
+      "core_requirements": ["65"],
+      "acceptable_variations": [],
+      "strictness_level": "strict"
+    }
+  },
+  {
+    "id": "java_3_3_3_q5",
+    "metadata": { "module": "Java", "chapter": "3.3.3" },
+    "content": { "question_text": "Can values of type char be described as hexadecimal values? If yes, what's the range?", "question_type": "concept" },
+    "grading_instructions": {
+      "core_requirements": ["Yes.", "From \\u0000 to \\uFFFF."],
+      "acceptable_variations": [],
+      "strictness_level": "strict"
+    }
+  },
+  {
+    "id": "java_3_3_3_q6",
+    "metadata": { "module": "Java", "chapter": "3.3.3" },
+    "content": { "question_text": "What are the 5 most important escape sequences for char values in Java?", "question_type": "list", "expected_count": 5 },
+    "grading_instructions": {
+      "core_requirements": ["\\n (newline)", "\\t (tab)", "\\\" (double quote)", "\\' (single quote)", "\\\\ (backslash)"],
+      "acceptable_variations": ["Descriptions without exact symbol accepted if intent is clear."],
+      "strictness_level": "moderate"
+    }
+  },
+  {
+    "id": "java_3_3_3_q7",
+    "metadata": { "module": "Java", "chapter": "3.3.3" },
+    "content": { "question_text": "Whats very important to remember about escape sequences and their processing?", "question_type": "concept" },
+    "grading_instructions": {
+      "core_requirements": ["They are processed before the code is parsed.", "Must be careful using them in comments."],
+      "acceptable_variations": ["Unicode escapes happen early in compilation"],
+      "strictness_level": "moderate"
+    }
+  },
+  {
+    "id": "java_3_3_5_q1",
+    "metadata": { "module": "Java", "chapter": "3.3.5" },
+    "content": { "question_text": "What does boolean represent?", "question_type": "definition" },
+    "grading_instructions": {
+      "core_requirements": ["Truth values (true or false)."],
+      "acceptable_variations": ["Logic states"],
+      "strictness_level": "moderate"
+    }
+  },
+  {
+    "id": "java_3_3_5_q2",
+    "metadata": { "module": "Java", "chapter": "3.3.5" },
+    "content": { "question_text": "What is boolean used for?", "question_type": "concept" },
+    "grading_instructions": {
+      "core_requirements": ["Evaluating logical conditions."],
+      "acceptable_variations": ["Conditional checks", "Control flow tests"],
+      "strictness_level": "moderate"
+    }
+  },
+  {
+    "id": "java_3_3_5_q3",
+    "metadata": { "module": "Java", "chapter": "3.3.5" },
+    "content": { "question_text": "Can you convert between boolean and integer values?", "question_type": "boolean" },
+    "grading_instructions": {
+      "core_requirements": ["No."],
+      "acceptable_variations": [],
+      "strictness_level": "strict"
+    }
+  },
+  {
+    "id": "java_3_3_q1",
+    "metadata": { "module": "Java", "chapter": "3.3" },
+    "content": { "question_text": "What does it mean that JAVA is a strongly typed language?", "question_type": "concept" },
+    "grading_instructions": {
+      "core_requirements": ["Every variable must have a declared type."],
+      "acceptable_variations": ["Strict type checking"],
+      "strictness_level": "moderate"
+    }
+  },
+  {
+    "id": "java_3_3_q2",
+    "metadata": { "module": "Java", "chapter": "3.3" },
+    "content": { "question_text": "How many primitive variable types are there in Java?", "question_type": "concept", "expected_count": 1 },
+    "grading_instructions": {
+      "core_requirements": ["8"],
+      "acceptable_variations": ["Eight"],
+      "strictness_level": "strict"
+    }
+  },
+  {
+    "id": "java_3_3_q3",
+    "metadata": { "module": "Java", "chapter": "3.3" },
+    "content": { "question_text": "What data does all primitive types represent?", "question_type": "list" },
+    "grading_instructions": {
+      "core_requirements": ["4 integer types", "2 floating-point types", "1 character type (char for UTF-16 code units)", "1 boolean type (truth values)"],
+      "acceptable_variations": ["Specific names of the 8 primitives"],
+      "strictness_level": "moderate"
+    }
+  },
+  {
+    "id": "java_3_3_q4",
+    "metadata": { "module": "Java", "chapter": "3.3" },
+    "content": { "question_text": "What does it mean that BigNumbers has arbitrary precision?", "question_type": "concept" },
+    "grading_instructions": {
+      "core_requirements": ["The size is not fixed.", "It scales as large as system memory allows."],
+      "acceptable_variations": ["No mathematical limits outside of RAM"],
+      "strictness_level": "moderate"
+    }
+  },
+  {
+    "id": "java_3_3_q5",
+    "metadata": { "module": "Java", "chapter": "3.3" },
+    "content": { "question_text": "Whats the downside of BigNumbers?", "question_type": "concept" },
+    "grading_instructions": {
+      "core_requirements": ["They are very slow compared to primitive types."],
+      "acceptable_variations": ["Performance cost", "Slower computation"],
+      "strictness_level": "moderate"
+    }
+  },
+  {
+    "id": "java_3_3_q6",
+    "metadata": { "module": "Java", "chapter": "3.3" },
+    "content": { "question_text": "Are BigNumbers primitive types?", "question_type": "boolean" },
+    "grading_instructions": {
+      "core_requirements": ["No, BigNumbers are objects."],
+      "acceptable_variations": ["No"],
+      "strictness_level": "strict"
+    }
+  },
+  {
+    "id": "java_3_3_q7",
+    "metadata": { "module": "Java", "chapter": "3.3" },
+    "content": { "question_text": "In which package are BigNumbers stored in? Type code to import the BigNumbers package.", "question_type": "code" },
+    "grading_instructions": {
+      "core_requirements": ["java.math", "import java.math.BigInteger;"],
+      "acceptable_variations": ["import java.math.*;", "java.math.BigDecimal"],
+      "strictness_level": "moderate"
+    }
+  },
+  {
+    "id": "java_3_3_q8",
+    "metadata": { "module": "Java", "chapter": "3.3" },
+    "content": { "question_text": "What is the precision issue with floating-point types?", "question_type": "concept" },
+    "grading_instructions": {
+      "core_requirements": ["Because they use binary floating point representation, it is impossible to represent some fractions exactly."],
+      "acceptable_variations": ["Binary roundoff errors"],
+      "strictness_level": "moderate"
+    }
+  },
+  {
+    "id": "java_3_4_1_q1",
+    "metadata": { "module": "Java", "chapter": "3.4.1" },
+    "content": { "question_text": "What do variables store?", "question_type": "concept" },
+    "grading_instructions": {
+      "core_requirements": ["Values"],
+      "acceptable_variations": ["Data"],
+      "strictness_level": "lenient"
+    }
+  },
+  {
+    "id": "java_3_4_1_q2",
+    "metadata": { "module": "Java", "chapter": "3.4.1" },
+    "content": { "question_text": "What does every variable need?", "question_type": "concept" },
+    "grading_instructions": {
+      "core_requirements": ["A type"],
+      "acceptable_variations": ["Data type"],
+      "strictness_level": "moderate"
+    }
+  },
+  {
+    "id": "java_3_4_1_q3",
+    "metadata": { "module": "Java", "chapter": "3.4.1" },
+    "content": { "question_text": "Declare a variable named salary?", "question_type": "code" },
+    "grading_instructions": {
+      "core_requirements": ["int salary;"],
+      "acceptable_variations": ["double salary;", "Any valid type works, type itself is less strictly checked than syntax."],
+      "strictness_level": "lenient"
+    }
+  },
+  {
+    "id": "java_3_4_1_q4",
+    "metadata": { "module": "Java", "chapter": "3.4.1" },
+    "content": { "question_text": "Initialize a previous variable?", "question_type": "code" },
+    "grading_instructions": {
+      "core_requirements": ["salary = 100;"],
+      "acceptable_variations": ["Any numeric assignment without type declaration."],
+      "strictness_level": "lenient"
+    }
+  },
+  {
+    "id": "java_3_4_1_q5",
+    "metadata": { "module": "Java", "chapter": "3.4.1" },
+    "content": { "question_text": "Can you declare and initialize at the same time?", "question_type": "boolean" },
+    "grading_instructions": {
+      "core_requirements": ["Yes"],
+      "acceptable_variations": [],
+      "strictness_level": "strict"
+    }
+  },
+  {
+    "id": "java_3_4_1_q6",
+    "metadata": { "module": "Java", "chapter": "3.4.1" },
+    "content": { "question_text": "Declare and initialize salary variable?", "question_type": "code" },
+    "grading_instructions": {
+      "core_requirements": ["int salary = 100;"],
+      "acceptable_variations": ["double salary = 100.0;", "Using different numerical value is fine."],
+      "strictness_level": "lenient"
+    }
+  },
+  {
+    "id": "java_3_4_1_q7",
+    "metadata": { "module": "Java", "chapter": "3.4.1" },
+    "content": { "question_text": "What does every complete Java statement need to end with?", "question_type": "concept" },
+    "grading_instructions": {
+      "core_requirements": ["A semicolon (;)"],
+      "acceptable_variations": [],
+      "strictness_level": "strict"
+    }
+  },
+  {
+    "id": "java_3_4_1_q8",
+    "metadata": { "module": "Java", "chapter": "3.4.1" },
+    "content": { "question_text": "What characters should you use to name a variable?", "question_type": "list" },
+    "grading_instructions": {
+      "core_requirements": ["A-Z, a-z, 0-9", "Do not start with a number."],
+      "acceptable_variations": ["Alphanumeric characters starting with a letter."],
+      "strictness_level": "moderate"
+    }
+  },
+  {
+    "id": "java_3_4_1_q9",
+    "metadata": { "module": "Java", "chapter": "3.4.1" },
+    "content": { "question_text": "Are variable names case sensitive?", "question_type": "boolean" },
+    "grading_instructions": {
+      "core_requirements": ["Yes"],
+      "acceptable_variations": [],
+      "strictness_level": "strict"
+    }
+  },
+  {
+    "id": "java_3_4_1_q10",
+    "metadata": { "module": "Java", "chapter": "3.4.1" },
+    "content": { "question_text": "How to denote a variable that is syntactically required but never used?", "question_type": "concept" },
+    "grading_instructions": {
+      "core_requirements": ["With an underscore (_)"],
+      "acceptable_variations": [],
+      "strictness_level": "strict"
+    }
+  },
+  {
+    "id": "java_3_4_1_q11",
+    "metadata": { "module": "Java", "chapter": "3.4.1" },
+    "content": { "question_text": "Can you declare multiple variables on the same line?", "question_type": "concept" },
+    "grading_instructions": {
+      "core_requirements": ["Yes, but it should be avoided due to poor readability."],
+      "acceptable_variations": ["Yes"],
+      "strictness_level": "moderate"
+    }
+  },
+  {
+    "id": "java_3_4_2_q1",
+    "metadata": { "module": "Java", "chapter": "3.4.2" },
+    "content": { "question_text": "What is variable initialization?", "question_type": "definition" },
+    "grading_instructions": {
+      "core_requirements": ["Assigning a declared variable an initial value."],
+      "acceptable_variations": ["Giving a variable its first value."],
+      "strictness_level": "moderate"
+    }
+  },
+  {
+    "id": "java_3_4_2_q2",
+    "metadata": { "module": "Java", "chapter": "3.4.2" },
+    "content": { "question_text": "Can you use an uninitialized variable?", "question_type": "concept" },
+    "grading_instructions": {
+      "core_requirements": ["In a local method variable: No.", "In an object (instance field): Yes, because they are initialized with a default value (though it's bad practice)."],
+      "acceptable_variations": ["Depends on scope; local no, instance yes."],
+      "strictness_level": "moderate"
+    }
+  },
+  {
+    "id": "java_3_4_2_q3",
+    "metadata": { "module": "Java", "chapter": "3.4.2" },
+    "content": { "question_text": "When can you use the var keyword?", "question_type": "concept" },
+    "grading_instructions": {
+      "core_requirements": ["When the type of the variable can be safely inferred from the initial value assigned."],
+      "acceptable_variations": ["Type inference on initialization"],
+      "strictness_level": "moderate"
+    }
+  },
+  {
+    "id": "java_3_4_2_q4",
+    "metadata": { "module": "Java", "chapter": "3.4.2" },
+    "content": { "question_text": "Can you use var with local variables?", "question_type": "boolean" },
+    "grading_instructions": {
+      "core_requirements": ["Yes"],
+      "acceptable_variations": [],
+      "strictness_level": "strict"
+    }
+  },
+  {
+    "id": "java_3_4_2_q5",
+    "metadata": { "module": "Java", "chapter": "3.4.2" },
+    "content": { "question_text": "Can you use var with instance fields?", "question_type": "boolean" },
+    "grading_instructions": {
+      "core_requirements": ["No"],
+      "acceptable_variations": [],
+      "strictness_level": "strict"
+    }
+  },
+  {
+    "id": "java_3_4_3_q1",
+    "metadata": { "module": "Java", "chapter": "3.4.3" },
+    "content": { "question_text": "What keyword denotes a constant?", "question_type": "code" },
+    "grading_instructions": {
+      "core_requirements": ["final"],
+      "acceptable_variations": [],
+      "strictness_level": "strict"
+    }
+  },
+  {
+    "id": "java_3_4_3_q2",
+    "metadata": { "module": "Java", "chapter": "3.4.3" },
+    "content": { "question_text": "What rules apply to constants when it comes to naming?", "question_type": "concept" },
+    "grading_instructions": {
+      "core_requirements": ["All caps", "Underscores (_) separating words"],
+      "acceptable_variations": ["UPPER_SNAKE_CASE"],
+      "strictness_level": "moderate"
+    }
+  },
+  {
+    "id": "java_3_4_3_q3",
+    "metadata": { "module": "Java", "chapter": "3.4.3" },
+    "content": { "question_text": "What is a constant and what does the final keyword indicate?", "question_type": "definition" },
+    "grading_instructions": {
+      "core_requirements": ["Once the variable is initialized with a value, that value cannot be changed or reassigned."],
+      "acceptable_variations": ["Immutable reference"],
+      "strictness_level": "moderate"
+    }
+  },
+  {
+    "id": "java_3_4_4_q1",
+    "metadata": { "module": "Java", "chapter": "3.4.4" },
+    "content": { "question_text": "What is an enumerated type of variable?", "question_type": "definition" },
+    "grading_instructions": {
+      "core_requirements": ["A type of variable that can hold only a predefined, restricted set of values (and null)."],
+      "acceptable_variations": ["Fixed set of constants"],
+      "strictness_level": "moderate"
+    }
+  },
+  {
+    "id": "java_3_4_4_q2",
+    "metadata": { "module": "Java", "chapter": "3.4.4" },
+    "content": { "question_text": "Declare an enumerated type named Size that holds clothes sizes.", "question_type": "code" },
+    "grading_instructions": {
+      "core_requirements": ["enum Size {SMALL, MEDIUM, LARGE, EXTRA_LARGE};"],
+      "acceptable_variations": ["Semicolon at the end is optional", "Specific size names can vary as long as enum syntax is correct"],
+      "strictness_level": "moderate"
+    }
+  },
+  {
+    "id": "java_3_4_4_q3",
+    "metadata": { "module": "Java", "chapter": "3.4.4" },
+    "content": { "question_text": "Declare a variable from an enumerated type with size medium?", "question_type": "code" },
+    "grading_instructions": {
+      "core_requirements": ["Size size = Size.MEDIUM;"],
+      "acceptable_variations": ["var size = Size.MEDIUM;"],
+      "strictness_level": "lenient"
+    }
+  },
+  {
+    "id": "java_3_5_1_q1",
+    "metadata": { "module": "Java", "chapter": "3.5.1" },
+    "content": { "question_text": "List the usual arithmetic operators?", "question_type": "list" },
+    "grading_instructions": {
+      "core_requirements": ["+, -, *, /, %"],
+      "acceptable_variations": ["Addition, Subtraction, Multiplication, Division, Modulo"],
+      "strictness_level": "moderate"
+    }
+  },
+  {
+    "id": "java_3_5_1_q2",
+    "metadata": { "module": "Java", "chapter": "3.5.1" },
+    "content": { "question_text": "Result of integer division by 0?", "question_type": "concept" },
+    "grading_instructions": {
+      "core_requirements": ["Exception"],
+      "acceptable_variations": ["ArithmeticException", "Runtime error"],
+      "strictness_level": "moderate"
+    }
+  },
+  {
+    "id": "java_3_5_1_q3",
+    "metadata": { "module": "Java", "chapter": "3.5.1" },
+    "content": { "question_text": "Result of floating-point division 0.0 / 0.0?", "question_type": "concept" },
+    "grading_instructions": {
+      "core_requirements": ["NaN"],
+      "acceptable_variations": ["Not a Number"],
+      "strictness_level": "strict"
+    }
+  },
+  {
+    "id": "java_3_5_1_q4",
+    "metadata": { "module": "Java", "chapter": "3.5.1" },
+    "content": { "question_text": "What is the result of modulo?", "question_type": "definition" },
+    "grading_instructions": {
+      "core_requirements": ["The remainder of a division operation."],
+      "acceptable_variations": ["Remainder"],
+      "strictness_level": "moderate"
+    }
+  },
+  {
+    "id": "java_3_5_2_q1",
+    "metadata": { "module": "Java", "chapter": "3.5.2" },
+    "content": { "question_text": "How do you calculate the square root of a number in Java?", "question_type": "code" },
+    "grading_instructions": {
+      "core_requirements": ["Use the Math.sqrt() method."],
+      "acceptable_variations": ["Math.sqrt(x)"],
+      "strictness_level": "moderate"
+    }
+  },
+  {
+    "id": "java_3_5_2_q2",
+    "metadata": { "module": "Java", "chapter": "3.5.2" },
+    "content": { "question_text": "Does Java have an operator for raising a quantity to a power? How is it done?", "question_type": "concept" },
+    "grading_instructions": {
+      "core_requirements": ["No, Java has no operator for raising a quantity to a power.", "You must use the Math.pow() method."],
+      "acceptable_variations": ["Use Math.pow(x, a)"],
+      "strictness_level": "moderate"
+    }
+  },
+  {
+    "id": "java_3_5_2_q3",
+    "metadata": { "module": "Java", "chapter": "3.5.2" },
+    "content": { "question_text": "What data types are used for the arguments and the return value of the Math.pow method?", "question_type": "concept" },
+    "grading_instructions": {
+      "core_requirements": ["Both arguments are of type double.", "It returns a double."],
+      "acceptable_variations": ["double"],
+      "strictness_level": "strict"
+    }
+  },
+  {
+    "id": "java_3_5_2_q4",
+    "metadata": { "module": "Java", "chapter": "3.5.2" },
+    "content": { "question_text": "Name at least three trigonometric functions supplied by the Math class.", "question_type": "list", "expected_count": 3 },
+    "grading_instructions": {
+      "core_requirements": ["Any three of: Math.sin, Math.cos, Math.tan, Math.atan, Math.atan2"],
+      "acceptable_variations": ["sin, cos, tan, atan, atan2"],
+      "strictness_level": "moderate"
+    }
+  },
+  {
+    "id": "java_3_5_2_q5",
+    "metadata": { "module": "Java", "chapter": "3.5.2" },
+    "content": { "question_text": "What method, added in Java 21, forces a number to fit within given bounds?", "question_type": "code" },
+    "grading_instructions": {
+      "core_requirements": ["Math.clamp"],
+      "acceptable_variations": [],
+      "strictness_level": "strict"
+    }
+  },
+  {
+    "id": "java_3_5_2_q6",
+    "metadata": { "module": "Java", "chapter": "3.5.2" },
+    "content": { "question_text": "What are the three constants provided by the Math class that denote closest possible approximations to mathematical constants?", "question_type": "list", "expected_count": 3 },
+    "grading_instructions": {
+      "core_requirements": ["Math.PI", "Math.TAU", "Math.E"],
+      "acceptable_variations": ["PI, TAU, E"],
+      "strictness_level": "moderate"
+    }
+  },
+  {
+    "id": "java_3_5_2_q7",
+    "metadata": { "module": "Java", "chapter": "3.5.2" },
+    "content": { "question_text": "How can you avoid writing the 'Math.' prefix for mathematical methods and constants in your code?", "question_type": "code" },
+    "grading_instructions": {
+      "core_requirements": ["By adding a static import line to the top of the source file: import static java.lang.Math.*;"],
+      "acceptable_variations": ["import static java.lang.Math.*;"],
+      "strictness_level": "moderate"
+    }
+  },
+  {
+    "id": "java_3_5_2_q8",
+    "metadata": { "module": "Java", "chapter": "3.5.2" },
+    "content": { "question_text": "What is the primary difference in behavior between the Math class and the StrictMath class?", "question_type": "concept" },
+    "grading_instructions": {
+      "core_requirements": ["Math uses the computer's floating-point unit for fastest performance.", "StrictMath guarantees identical, completely predictable results across all platforms, prioritizing predictability over maximum performance."],
+      "acceptable_variations": ["Math is faster, StrictMath ensures the same results everywhere"],
+      "strictness_level": "moderate"
+    }
+  },
+  {
+    "id": "java_3_5_2_q9",
+    "metadata": { "module": "Java", "chapter": "3.5.2" },
+    "content": { "question_text": "What happens when standard mathematical operators (like multiplication) compute a value that overflows the maximum size of an integer?", "question_type": "concept" },
+    "grading_instructions": {
+      "core_requirements": ["They quietly return wrong results without throwing an error."],
+      "acceptable_variations": ["Returns a negative or incorrect number silently"],
+      "strictness_level": "moderate"
+    }
+  },
+  {
+    "id": "java_3_5_2_q10",
+    "metadata": { "module": "Java", "chapter": "3.5.2" },
+    "content": { "question_text": "How can you make integer arithmetic safer so that your program generates an exception upon overflow instead of continuing with a wrong result?", "question_type": "code" },
+    "grading_instructions": {
+      "core_requirements": ["Use the 'Exact' methods provided by the Math class, such as Math.multiplyExact(), Math.addExact(), etc."],
+      "acceptable_variations": ["Call methods like addExact or multiplyExact"],
+      "strictness_level": "moderate"
+    }
+  },
+  {
+    "id": "java_3_5_3_q1",
+    "metadata": { "module": "Java", "chapter": "3.5.3" },
+    "content": { "question_text": "When combining two numeric values of different types (e.g., int and double) with a binary operator, what happens before the operation is carried out?", "question_type": "concept" },
+    "grading_instructions": {
+      "core_requirements": ["Both operands are converted to a common type."],
+      "acceptable_variations": ["The smaller type is promoted to the larger type (e.g., int becomes double)."],
+      "strictness_level": "moderate"
+    }
+  },
+  {
+    "id": "java_3_5_3_q2",
+    "metadata": { "module": "Java", "chapter": "3.5.3" },
+    "content": { "question_text": "Does converting a large integer (like an int or long) into a float or double ever result in data loss?", "question_type": "concept" },
+    "grading_instructions": {
+      "core_requirements": ["Yes, it can lose precision.", "The floating-point type might not have enough significant digits to represent the exact integer."],
+      "acceptable_variations": ["Magnitude is kept, but exact precision/digits can be lost."],
+      "strictness_level": "moderate"
+    }
+  },
+  {
+    "id": "java_3_5_4_q1",
+    "metadata": { "module": "Java", "chapter": "3.5.4" },
+    "content": { "question_text": "How do you explicitly force a conversion from a double to an int, and what happens to the fractional part?", "question_type": "concept" },
+    "grading_instructions": {
+      "core_requirements": ["You use an explicit cast like (int).", "The fractional part is discarded (truncated)."],
+      "acceptable_variations": ["Use (int) variableName, and it rounds down/chops off the decimal."],
+      "strictness_level": "strict"
+    }
+  },
+  {
+    "id": "java_3_5_4_q2",
+    "metadata": { "module": "Java", "chapter": "3.5.4" },
+    "content": { "question_text": "If you want to round a floating-point number to the nearest integer instead of truncating it, what should you use?", "question_type": "code" },
+    "grading_instructions": {
+      "core_requirements": ["Use the Math.round() method."],
+      "acceptable_variations": ["Math.round(x)"],
+      "strictness_level": "strict"
+    }
+  },
+  {
+    "id": "java_3_5_5_q1",
+    "metadata": { "module": "Java", "chapter": "3.5.5" },
+    "content": { "question_text": "What hidden behavior occurs if a compound assignment operator (like +=) yields a value whose type is different from the left-hand side variable?", "question_type": "concept" },
+    "grading_instructions": {
+      "core_requirements": ["The value is automatically coerced (cast) to fit the type of the left-hand side variable."],
+      "acceptable_variations": ["Implicit casting occurs to force it to fit."],
+      "strictness_level": "moderate"
+    }
+  },
+  {
+    "id": "java_3_5_6_q1",
+    "metadata": { "module": "Java", "chapter": "3.5.6" },
+    "content": { "question_text": "What is the crucial difference between the prefix (++n) and postfix (n++) increment operators when they are used inside expressions?", "question_type": "concept" },
+    "grading_instructions": {
+      "core_requirements": ["The prefix form does the addition first (evaluates to the new value).", "The postfix form evaluates to the old value of the variable before applying the increment."],
+      "acceptable_variations": ["Prefix updates then returns; Postfix returns then updates."],
+      "strictness_level": "strict"
+    }
+  },
+  {
+    "id": "java_3_5_7_q1",
+    "metadata": { "module": "Java", "chapter": "3.5.7" },
+    "content": { "question_text": "How are the logical AND (&&) and logical OR (||) operators evaluated to optimize performance and avoid errors?", "question_type": "concept" },
+    "grading_instructions": {
+      "core_requirements": ["They are evaluated in a \"short-circuit\" fashion.", "The second operand is not evaluated if the first operand already determines the overall value."],
+      "acceptable_variations": ["Short-circuiting."],
+      "strictness_level": "strict"
+    }
+  },
+  {
+    "id": "java_3_5_8_q1",
+    "metadata": { "module": "Java", "chapter": "3.5.8" },
+    "content": { "question_text": "What is the syntax of the conditional (ternary) operator?", "question_type": "code" },
+    "grading_instructions": {
+      "core_requirements": ["condition ? expression1 : expression2"],
+      "acceptable_variations": ["boolean ? trueResult : falseResult"],
+      "strictness_level": "moderate"
+    }
+  },
+  {
+    "id": "java_3_5_9_q1",
+    "metadata": { "module": "Java", "chapter": "3.5.9" },
+    "content": { "question_text": "In modern Java switch expressions (using the -> arrow syntax), how can you match multiple values to a single case?", "question_type": "concept" },
+    "grading_instructions": {
+      "core_requirements": ["Provide multiple labels for each case, separated by commas."],
+      "acceptable_variations": ["Use a comma-separated list (e.g., case 1, 2, 3 ->)."],
+      "strictness_level": "moderate"
+    }
+  },
+  {
+    "id": "java_3_5_9_q2",
+    "metadata": { "module": "Java", "chapter": "3.5.9" },
+    "content": { "question_text": "When using a switch expression with a numeric or String selector, what is strictly required to ensure all possible values are handled safely?", "question_type": "concept" },
+    "grading_instructions": {
+      "core_requirements": ["A default case must be provided."],
+      "acceptable_variations": ["You need a default label."],
+      "strictness_level": "strict"
+    }
+  },
+  {
+    "id": "java_3_5_10_q1",
+    "metadata": { "module": "Java", "chapter": "3.5.10" },
+    "content": { "question_text": "Name the four logical bitwise operators that work directly with the bit patterns of integers.", "question_type": "list", "expected_count": 4 },
+    "grading_instructions": {
+      "core_requirements": ["& (AND)", "| (OR)", "^ (XOR)", "~ (NOT)"],
+      "acceptable_variations": ["Just symbols (&, |, ^, ~) or just names (AND, OR, XOR, NOT) are acceptable."],
+      "strictness_level": "moderate"
+    }
+  },
+  {
+    "id": "java_3_5_11_q1",
+    "metadata": { "module": "Java", "chapter": "3.5.11" },
+    "content": { "question_text": "If you are unsure about the exact operator hierarchy/precedence in a complex expression, what is the best practice to ensure it executes in the order you intend?", "question_type": "concept" },
+    "grading_instructions": {
+      "core_requirements": ["Use parentheses."],
+      "acceptable_variations": ["Wrap the operations in brackets/parentheses to force the order."],
+      "strictness_level": "lenient"
+    }
+  },
+  {
+    "id": "java_3_6_q1",
+    "metadata": { "module": "Java", "chapter": "3.6" },
+    "content": { "question_text": "What is the primary difference between StringBuilder and StringBuffer, and which one is generally preferred for everyday use?", "question_type": "concept" },
+    "grading_instructions": {
+      "core_requirements": ["StringBuffer is thread-safe but less efficient.", "StringBuilder is more efficient and should be used for single-thread operations (which is usually the case)."],
+      "acceptable_variations": ["Use StringBuilder unless you explicitly need thread safety."],
+      "strictness_level": "moderate"
+    }
+  },
+  {
+    "id": "java_3_6_q2",
+    "metadata": { "module": "Java", "chapter": "3.6" },
+    "content": { "question_text": "Does the standard String class have a built-in method to reverse a string? If not, how do you achieve this?", "question_type": "code" },
+    "grading_instructions": {
+      "core_requirements": ["No, String does not have a reverse method.", "You must use StringBuilder's reverse method, e.g., new StringBuilder(original).reverse().toString();"],
+      "acceptable_variations": ["Use StringBuilder.reverse()"],
+      "strictness_level": "moderate"
+    }
+  },
+  {
+    "id": "java_3_6_1_q1",
+    "metadata": { "module": "Java", "chapter": "3.6.1" },
+    "content": { "question_text": "What happens when you use the + operator to concatenate a String with a non-String value (like an int)?", "question_type": "concept" },
+    "grading_instructions": {
+      "core_requirements": ["The non-string value is converted to a string."],
+      "acceptable_variations": ["Implicitly casts the other value to a String."],
+      "strictness_level": "moderate"
+    }
+  },
+  {
+    "id": "java_3_6_1_q2",
+    "metadata": { "module": "Java", "chapter": "3.6.1" },
+    "content": { "question_text": "Why might the expression `\"Next year: \" + age + 1` give an unexpected result, and how do you fix it?", "question_type": "concept" },
+    "grading_instructions": {
+      "core_requirements": ["Because the + operators are evaluated left to right, so it concatenates everything as strings instead of doing the math first.", "Fix it by using parentheses around the math operation: `\"Next year: \" + (age + 1)`."],
+      "acceptable_variations": ["Evaluates left to right, use brackets to force addition."],
+      "strictness_level": "moderate"
+    }
+  },
+  {
+    "id": "java_3_6_1_q3",
+    "metadata": { "module": "Java", "chapter": "3.6.1" },
+    "content": { "question_text": "If you need to join multiple strings together separated by a specific delimiter (like a comma or slash), what method should you use?", "question_type": "code" },
+    "grading_instructions": {
+      "core_requirements": ["String.join()"],
+      "acceptable_variations": ["join"],
+      "strictness_level": "strict"
+    }
+  },
+  {
+    "id": "java_3_6_2_q1",
+    "metadata": { "module": "Java", "chapter": "3.6.2" },
+    "content": { "question_text": "How can you easily distinguish a static method call from an instance method call just by looking at the code?", "question_type": "concept" },
+    "grading_instructions": {
+      "core_requirements": ["An instance method is preceded by a variable or object instance (e.g., greeting.length()).", "A static method is preceded by the name of the Class itself (e.g., String.join())."],
+      "acceptable_variations": ["Static calls use the Class name, instance calls use the object variable."],
+      "strictness_level": "moderate"
+    }
+  },
+  {
+    "id": "java_3_6_3_q1",
+    "metadata": { "module": "Java", "chapter": "3.6.3" },
+    "content": { "question_text": "When using `greeting.substring(a, b)`, what characters does it return, and how long is the resulting string?", "question_type": "concept" },
+    "grading_instructions": {
+      "core_requirements": ["It copies everything from the beginning index up to, but not including, the second index.", "The length of the resulting string is exactly b - a."],
+      "acceptable_variations": ["Inclusive of the first index, exclusive of the second."],
+      "strictness_level": "strict"
+    }
+  },
+  {
+    "id": "java_3_6_4_q1",
+    "metadata": { "module": "Java", "chapter": "3.6.4" },
+    "content": { "question_text": "Can you modify a specific character within an existing String object? Why or why not?", "question_type": "concept" },
+    "grading_instructions": {
+      "core_requirements": ["No, you cannot.", "Because the String class in Java is immutable."],
+      "acceptable_variations": ["Strings are immutable, so they cannot be changed after creation."],
+      "strictness_level": "strict"
+    }
+  },
+  {
+    "id": "java_3_6_4_q2",
+    "metadata": { "module": "Java", "chapter": "3.6.4" },
+    "content": { "question_text": "What is the primary performance advantage of Strings being immutable in Java?", "question_type": "concept" },
+    "grading_instructions": {
+      "core_requirements": ["The compiler can arrange for strings to be shared in a common pool."],
+      "acceptable_variations": ["String pooling/sharing memory locations for identical strings."],
+      "strictness_level": "moderate"
+    }
+  },
+  {
+    "id": "java_3_6_5_q1",
+    "metadata": { "module": "Java", "chapter": "3.6.5" },
+    "content": { "question_text": "How must you test if two strings contain the exact same characters, and what operator should you NEVER use for this?", "question_type": "concept" },
+    "grading_instructions": {
+      "core_requirements": ["You must use the .equals() method.", "You should never use the == operator to compare strings."],
+      "acceptable_variations": ["Use equals(), avoid ==."],
+      "strictness_level": "strict"
+    }
+  },
+  {
+    "id": "java_3_6_5_q2",
+    "metadata": { "module": "Java", "chapter": "3.6.5" },
+    "content": { "question_text": "Why is it dangerous to use the == operator to compare strings?", "question_type": "concept" },
+    "grading_instructions": {
+      "core_requirements": ["It only determines whether or not the strings are stored in the same memory location, not if their contents are equal."],
+      "acceptable_variations": ["== checks memory reference, not actual value."],
+      "strictness_level": "moderate"
+    }
+  },
+  {
+    "id": "java_3_6_6_q1",
+    "metadata": { "module": "Java", "chapter": "3.6.6" },
+    "content": { "question_text": "What is the difference between an empty string (\"\") and a null string?", "question_type": "concept" },
+    "grading_instructions": {
+      "core_requirements": ["An empty string is a valid Java object with a length of 0.", "A null string indicates that no object is currently associated with the variable at all."],
+      "acceptable_variations": ["Empty has length 0 and exists in memory, null means no reference/doesn't exist."],
+      "strictness_level": "moderate"
+    }
+  },
+  {
+    "id": "java_3_6_9_q1",
+    "metadata": { "module": "Java", "chapter": "3.6.9" },
+    "content": { "question_text": "Why is it bad practice to build a long string piece-by-piece using the + operator (for example, inside a loop)? What should you use instead?", "question_type": "concept" },
+    "grading_instructions": {
+      "core_requirements": ["Every time you concatenate strings, a completely new String object is constructed, which is time-consuming and wastes memory.", "You should use the StringBuilder class instead."],
+      "acceptable_variations": ["Concatenation creates too many objects in memory. Use StringBuilder."],
+      "strictness_level": "strict"
+    }
+  },
+  {
+    "id": "java_3_6_9_q2",
+    "metadata": { "module": "Java", "chapter": "3.6.9" },
+    "content": { "question_text": "When you are finished appending data to a StringBuilder, how do you convert it back into a standard String object?", "question_type": "code" },
+    "grading_instructions": {
+      "core_requirements": ["Call the .toString() method on the builder object."],
+      "acceptable_variations": ["toString()"],
+      "strictness_level": "strict"
+    }
+  },
+  {
+    "id": "java_3_6_9_q3",
+    "metadata": { "module": "Java", "chapter": "3.6.9" },
+    "content": { "question_text": "Why are you able to chain StringBuilder methods together, like `builder.append(\"A\").append(\"B\")`?", "question_type": "concept" },
+    "grading_instructions": {
+      "core_requirements": ["Because the StringBuilder methods return the builder object itself."],
+      "acceptable_variations": ["It returns 'this' or the current instance of the builder."],
+      "strictness_level": "moderate"
+    }
+  },
+  {
+    "id": "java_3_6_10_q1",
+    "metadata": { "module": "Java", "chapter": "3.6.10" },
+    "content": { "question_text": "What is the exact syntax for starting and ending a multi-line Text Block in Java?", "question_type": "concept" },
+    "grading_instructions": {
+      "core_requirements": ["It starts with three double quotes (\"\"\") followed immediately by a line feed (newline).", "It ends with another three double quotes (\"\"\")."],
+      "acceptable_variations": ["Wrap the text in \"\"\" on separate lines."],
+      "strictness_level": "strict"
+    }
+  },
+  {
+    "id": "java_3_6_10_q2",
+    "metadata": { "module": "Java", "chapter": "3.6.10" },
+    "content": { "question_text": "What are Text Blocks particularly well-suited for in everyday development?", "question_type": "concept" },
+    "grading_instructions": {
+      "core_requirements": ["Including snippets of code from other languages, such as SQL queries or HTML blocks."],
+      "acceptable_variations": ["Writing multi-line JSON, SQL, or HTML without needing to concatenate strings manually."],
+      "strictness_level": "moderate"
+    }
+  },
+  {
+    "id": "java_3_6_10_q3",
+    "metadata": { "module": "Java", "chapter": "3.6.10" },
+    "content": { "question_text": "Do you need to use escape sequences (like \\\") for regular quotation marks when writing inside a Text Block?", "question_type": "boolean" },
+    "grading_instructions": {
+      "core_requirements": ["No, you generally do not have to escape standard quotation marks in a Text Block."],
+      "acceptable_variations": ["No, unless the block ends with one or has three in a row."],
+      "strictness_level": "strict"
+    }
+  },
+  {
+    "id": "java_3_6_10_q4",
+    "metadata": { "module": "Java", "chapter": "3.6.10" },
+    "content": { "question_text": "How can you format a long string inside a Text Block across multiple lines in your IDE, without actually adding a newline character to the resulting string?", "question_type": "code" },
+    "grading_instructions": {
+      "core_requirements": ["Place a backslash (\\) directly before the end of the line to join it with the next line."],
+      "acceptable_variations": ["Use a \\ at the end of the line."],
+      "strictness_level": "moderate"
+    }
+  },
+  {
+    "id": "java_3_6_10_q5",
+    "metadata": { "module": "Java", "chapter": "3.6.10" },
+    "content": { "question_text": "How do Text Blocks handle leading whitespace or indentation that is common to all lines in the block?", "question_type": "concept" },
+    "grading_instructions": {
+      "core_requirements": ["The indentation that is common to all lines is subtracted or stripped out."],
+      "acceptable_variations": ["It automatically removes the common left margin indentation."],
+      "strictness_level": "moderate"
+    }
+  },
+  {
+    "id": "java_3_6_10_q6",
+    "metadata": { "module": "Java", "chapter": "3.6.10" },
+    "content": { "question_text": "If you need to strictly preserve trailing spaces at the end of a line in a text block, what escape sequence must you use?", "question_type": "code" },
+    "grading_instructions": {
+      "core_requirements": ["Use the \\s escape sequence."],
+      "acceptable_variations": ["\\s"],
+      "strictness_level": "strict"
+    }
+  },
+  {
+    "id": "java_3_7_q1",
+    "metadata": { "module": "Java", "chapter": "3.7.1" },
+    "content": { "question_text": "In standard Java development (prior to Java 25), what object is typically constructed and attached to System.in to read console input?", "question_type": "code" },
+    "grading_instructions": {
+      "core_requirements": ["A Scanner object."],
+      "acceptable_variations": ["Scanner in = new Scanner(System.in);", "Scanner"],
+      "strictness_level": "moderate"
+    }
+  },
+  {
+    "id": "java_3_7_q2",
+    "metadata": { "module": "Java", "chapter": "3.7.1" },
+    "content": { "question_text": "Why are standard reading methods (like Scanner's nextLine) not suitable for reading passwords from a console, and what method should you use instead?", "question_type": "concept" },
+    "grading_instructions": {
+      "core_requirements": ["Standard methods leave the input plainly visible to anyone.", "You should use the readPassword method of the Console class instead."],
+      "acceptable_variations": ["Scanner shows text on screen, use System.console().readPassword()"],
+      "strictness_level": "strict"
+    }
+  },
+  {
+    "id": "java_3_7_q3",
+    "metadata": { "module": "Java", "chapter": "3.7.1" },
+    "content": { "question_text": "For security reasons, what data type does readPassword() return instead of a standard String, and why?", "question_type": "concept" },
+    "grading_instructions": {
+      "core_requirements": ["It returns an array of characters (char[]).", "This allows the array elements to be immediately overwritten with a filler value (like '*') after processing so the password doesn't linger in memory."],
+      "acceptable_variations": ["Returns char[] so you can manually overwrite it in memory."],
+      "strictness_level": "moderate"
+    }
+  },
+  {
+    "id": "java_3_7_q4",
+    "metadata": { "module": "Java", "chapter": "3.7.2" },
+    "content": { "question_text": "When using formatted strings, what conversion characters are used to denote a decimal integer, a fixed-point floating-point number, and a string?", "question_type": "list", "expected_count": 3 },
+    "grading_instructions": {
+      "core_requirements": ["d for decimal integer", "f for floating-point", "s for string"],
+      "acceptable_variations": ["d, f, s"],
+      "strictness_level": "strict"
+    }
+  },
+  {
+    "id": "java_3_7_q5",
+    "metadata": { "module": "Java", "chapter": "3.7.2" },
+    "content": { "question_text": "What exactly does the format specifier \"%8.2f\" tell the compiler to do when printing a floating-point number?", "question_type": "concept" },
+    "grading_instructions": {
+      "core_requirements": ["It prints the number with a total field width of 8 characters.", "It prints with a precision of 2 characters after the decimal point."],
+      "acceptable_variations": ["8 spaces wide, 2 decimal places."],
+      "strictness_level": "strict"
+    }
+  },
+  {
+    "id": "java_3_7_q6",
+    "metadata": { "module": "Java", "chapter": "3.7.2" },
+    "content": { "question_text": "Why might a formatted number (like 3,333.33) look completely different when your program is run on a computer in another country, and how do you force a fixed format?", "question_type": "concept" },
+    "grading_instructions": {
+      "core_requirements": ["Formatting is locale-specific (for example, Germany uses a period for group separators and a comma for decimals).", "You can force a fixed format by specifying a Locale as the first argument to the String.format method (e.g., String.format(Locale.US, ...))."],
+      "acceptable_variations": ["Depends on system region. Fix it by passing Locale.US."],
+      "strictness_level": "moderate"
+    }
+  },
+  {
+    "id": "java_3_8_1_q1",
+    "metadata": { "module": "Java", "chapter": "3.8.1" },
+    "content": { "question_text": "Can you declare a local variable with the same name inside a nested block if it was already declared in the outer block?", "question_type": "boolean" },
+    "grading_instructions": {
+      "core_requirements": ["No.", "Java does not allow you to redefine/shadow a variable in an inner block if it exists in the outer block."],
+      "acceptable_variations": ["No, it will cause a compile-time error."],
+      "strictness_level": "strict"
+    }
+  },
+  {
+    "id": "java_3_8_2_q1",
+    "metadata": { "module": "Java", "chapter": "3.8.2" },
+    "content": { "question_text": "If you need to execute multiple statements when an `if` condition is true, what must you use?", "question_type": "concept" },
+    "grading_instructions": {
+      "core_requirements": ["A block statement.", "You must surround the statements with braces {}."],
+      "acceptable_variations": ["Braces or curly brackets {}"],
+      "strictness_level": "moderate"
+    }
+  },
+  {
+    "id": "java_3_8_2_q2",
+    "metadata": { "module": "Java", "chapter": "3.8.2" },
+    "content": { "question_text": "In a nested `if`/`else` structure that does not use braces, which `if` statement does the `else` block belong to by default?", "question_type": "concept" },
+    "grading_instructions": {
+      "core_requirements": ["The `else` groups with the closest preceding `if`."],
+      "acceptable_variations": ["The nearest if statement."],
+      "strictness_level": "strict"
+    }
+  },
+  {
+    "id": "java_3_8_3_q1",
+    "metadata": { "module": "Java", "chapter": "3.8.3" },
+    "content": { "question_text": "What is the fundamental difference in execution behavior between a `while` loop and a `do/while` loop?", "question_type": "concept" },
+    "grading_instructions": {
+      "core_requirements": ["A `while` loop evaluates the condition at the top, so it might never execute if the condition is false initially.", "A `do/while` loop evaluates the condition at the bottom, meaning the block is guaranteed to execute at least once."],
+      "acceptable_variations": ["while checks before running; do/while checks after running once."],
+      "strictness_level": "moderate"
+    }
+  },
+  {
+    "id": "java_3_8_4_q1",
+    "metadata": { "module": "Java", "chapter": "3.8.4" },
+    "content": { "question_text": "What are the three standard \"slots\" or parts specified inside the parentheses of a `for` loop declaration?", "question_type": "list", "expected_count": 3 },
+    "grading_instructions": {
+      "core_requirements": ["Counter initialization", "The condition (tested before each pass)", "How to update the counter"],
+      "acceptable_variations": ["Initialization, Condition/Test, Update/Increment"],
+      "strictness_level": "moderate"
+    }
+  },
+  {
+    "id": "java_3_8_4_q2",
+    "metadata": { "module": "Java", "chapter": "3.8.4" },
+    "content": { "question_text": "Why is it dangerous to test floating-point numbers for equality in a loop condition (e.g., `x != 10`)?", "question_type": "concept" },
+    "grading_instructions": {
+      "core_requirements": ["Because of roundoff errors, the exact target value might never be reached.", "This can cause the program to get stuck in an infinite loop."],
+      "acceptable_variations": ["Precision issues mean the number might jump past the exact equality check."],
+      "strictness_level": "moderate"
+    }
+  },
+  {
+    "id": "java_3_8_4_q3",
+    "metadata": { "module": "Java", "chapter": "3.8.4" },
+    "content": { "question_text": "If you declare a variable in the initialization slot of a `for` loop (e.g., `for (int i = 1; ...)`), where can that variable be accessed?", "question_type": "concept" },
+    "grading_instructions": {
+      "core_requirements": ["Its scope extends only until the end of the body of the `for` loop."],
+      "acceptable_variations": ["It is only accessible inside the for loop."],
+      "strictness_level": "strict"
+    }
+  },
+  {
+    "id": "java_3_8_5_q1",
+    "metadata": { "module": "Java", "chapter": "3.8.5" },
+    "content": { "question_text": "In modern Java (Java 14+), what is the primary difference between a traditional `switch` statement and a `switch` expression?", "question_type": "concept" },
+    "grading_instructions": {
+      "core_requirements": ["A switch expression evaluates to and yields a value.", "A switch statement just executes code blocks without returning a value."],
+      "acceptable_variations": ["Expressions return a value, statements do not."],
+      "strictness_level": "moderate"
+    }
+  },
+  {
+    "id": "java_3_8_5_q2",
+    "metadata": { "module": "Java", "chapter": "3.8.5" },
+    "content": { "question_text": "How do you avoid the dangerous 'fallthrough' behavior in modern `switch` constructs?", "question_type": "concept" },
+    "grading_instructions": {
+      "core_requirements": ["Use the arrow syntax (->) instead of colons (:)."],
+      "acceptable_variations": ["Use arrow labels ->"],
+      "strictness_level": "strict"
+    }
+  },
+  {
+    "id": "java_3_8_5_q3",
+    "metadata": { "module": "Java", "chapter": "3.8.5" },
+    "content": { "question_text": "If a branch in a `switch` expression requires multiple lines of code, how do you provide the final value for that branch?", "question_type": "code" },
+    "grading_instructions": {
+      "core_requirements": ["Wrap the code in braces {} and use the `yield` statement to return the value."],
+      "acceptable_variations": ["Use braces and the yield keyword."],
+      "strictness_level": "strict"
+    }
+  },
+  {
+    "id": "java_3_8_5_q4",
+    "metadata": { "module": "Java", "chapter": "3.8.5" },
+    "content": { "question_text": "Can you use `return`, `break`, or `continue` statements to jump out of a `switch` expression?", "question_type": "boolean" },
+    "grading_instructions": {
+      "core_requirements": ["No.", "A switch expression must strictly produce a value or throw an exception."],
+      "acceptable_variations": ["No, jumping out is not allowed."],
+      "strictness_level": "strict"
+    }
+  },
+  {
+    "id": "java_3_8_6_q1",
+    "metadata": { "module": "Java", "chapter": "3.8.6" },
+    "content": { "question_text": "What does an unlabeled `break` statement do when executed inside a loop?", "question_type": "concept" },
+    "grading_instructions": {
+      "core_requirements": ["It immediately exits the entire loop."],
+      "acceptable_variations": ["Terminates the loop early."],
+      "strictness_level": "moderate"
+    }
+  },
+  {
+    "id": "java_3_8_6_q2",
+    "metadata": { "module": "Java", "chapter": "3.8.6" },
+    "content": { "question_text": "If you have deeply nested loops, how can you completely break out of all of them at once from the innermost loop?", "question_type": "concept" },
+    "grading_instructions": {
+      "core_requirements": ["Use a labeled break statement.", "The label must precede the outermost loop you want to break out of."],
+      "acceptable_variations": ["Use a break with a label attached to the outer loop."],
+      "strictness_level": "strict"
+    }
+  },
+  {
+    "id": "java_3_8_6_q3",
+    "metadata": { "module": "Java", "chapter": "3.8.6" },
+    "content": { "question_text": "What is the difference between `break` and `continue` when executed inside a loop?", "question_type": "concept" },
+    "grading_instructions": {
+      "core_requirements": ["`break` exits the entire loop.", "`continue` only skips the remainder of the current iteration and jumps immediately to the next iteration (the loop header or update step)."],
+      "acceptable_variations": ["Break stops the loop, continue skips to the next loop cycle."],
+      "strictness_level": "moderate"
+    }
+  },
+  {
+    "id": "java_3_9_q1",
+    "metadata": { "module": "Java", "chapter": "3.9" },
+    "content": { "question_text": "If the precision of the basic integer and floating-point types is not sufficient for your calculations, what two classes from the java.math package should you use?", "question_type": "list", "expected_count": 2 },
+    "grading_instructions": {
+      "core_requirements": ["BigInteger", "BigDecimal"],
+      "acceptable_variations": ["BigInteger and BigDecimal"],
+      "strictness_level": "strict"
+    }
+  },
+  {
+    "id": "java_3_9_q2",
+    "metadata": { "module": "Java", "chapter": "3.9" },
+    "content": { "question_text": "Can you use standard mathematical operators like + and * to combine BigInteger or BigDecimal objects? Why or why not?", "question_type": "concept" },
+    "grading_instructions": {
+      "core_requirements": ["No, you must use methods like add() and multiply().", "Java does not have programmable operator overloading."],
+      "acceptable_variations": ["No, use .add() or .multiply() because operators aren't overloaded for objects."],
+      "strictness_level": "moderate"
+    }
+  },
+  {
+    "id": "java_3_9_q3",
+    "metadata": { "module": "Java", "chapter": "3.9" },
+    "content": { "question_text": "How do you turn an ordinary number (like 100) into a BigInteger, and how do you initialize a massive number that exceeds standard integer limits?", "question_type": "code" },
+    "grading_instructions": {
+      "core_requirements": ["Use the static valueOf method for ordinary numbers (e.g., BigInteger.valueOf(100)).", "Use a constructor with a string argument for longer numbers (e.g., new BigInteger(\"123456789...\"))."],
+      "acceptable_variations": ["valueOf() and new BigInteger(\"String\")"],
+      "strictness_level": "moderate"
+    }
+  },
+  {
+    "id": "java_3_9_q4",
+    "metadata": { "module": "Java", "chapter": "3.9" },
+    "content": { "question_text": "Why should you ALWAYS construct BigDecimal objects from integers or strings, and strictly avoid using the double constructor (e.g., new BigDecimal(0.1))?", "question_type": "concept" },
+    "grading_instructions": {
+      "core_requirements": ["Because the double constructor is inherently prone to roundoff errors."],
+      "acceptable_variations": ["Doubles cause precision loss/roundoff issues upon initialization."],
+      "strictness_level": "strict"
+    }
+  },
+  {
+    "id": "java_3_9_q5",
+    "metadata": { "module": "Java", "chapter": "3.9" },
+    "content": { "question_text": "When using the divide() method on a BigDecimal, what happens if the result does not have a finite decimal expansion (like 1/3), and how do you fix it?", "question_type": "concept" },
+    "grading_instructions": {
+      "core_requirements": ["It throws an exception.", "You must provide a rounding mode (like RoundingMode.HALF_UP) as a second parameter to obtain a rounded result."],
+      "acceptable_variations": ["Throws an error, fix it by passing a RoundingMode."],
+      "strictness_level": "moderate"
+    }
+  },
+  {
+    "id": "java_3_9_q6",
+    "metadata": { "module": "Java", "chapter": "3.9" },
+    "content": { "question_text": "How do you properly check if one BigInteger or BigDecimal is greater than, less than, or equal to another?", "question_type": "concept" },
+    "grading_instructions": {
+      "core_requirements": ["Use the compareTo() method.", "It returns 0 if they are equal, a negative result if the first is less than the second, and a positive result otherwise."],
+      "acceptable_variations": ["Use compareTo(other), returns 0, -1, or 1."],
+      "strictness_level": "moderate"
+    }
+  },
+  {
+    "id": "java_3_10_1_q1",
+    "metadata": { "module": "Java", "chapter": "3.10.1" },
+    "content": { "question_text": "Can you change the length of an array after you create it? If you need a data structure that can frequently expand, what should you use instead?", "question_type": "concept" },
+    "grading_instructions": {
+      "core_requirements": ["No, once you create an array, you cannot change its length.", "You should use array lists instead."],
+      "acceptable_variations": ["Size is fixed, use ArrayList for dynamic sizing."],
+      "strictness_level": "moderate"
+    }
+  },
+  {
+    "id": "java_3_10_1_q2",
+    "metadata": { "module": "Java", "chapter": "3.10.1" },
+    "content": { "question_text": "Write the shorthand syntax to declare and initialize an array of integers named `smallPrimes` with the values 2, 3, 5, 7, 11, and 13, without using the `new` keyword.", "question_type": "code" },
+    "grading_instructions": {
+      "core_requirements": ["int[] smallPrimes = { 2, 3, 5, 7, 11, 13 };"],
+      "acceptable_variations": ["Spacing doesn't matter as long as the curly braces and values are correct."],
+      "strictness_level": "strict"
+    }
+  },
+  {
+    "id": "java_3_10_2_q1",
+    "metadata": { "module": "Java", "chapter": "3.10.2" },
+    "content": { "question_text": "When you create an array using the `new` operator (e.g., `new int[10]` or `new String[10]`), what default values are the elements automatically initialized to?", "question_type": "list", "expected_count": 3 },
+    "grading_instructions": {
+      "core_requirements": ["Arrays of numbers are initialized to zero.", "Arrays of boolean are initialized to false.", "Arrays of objects are initialized to null."],
+      "acceptable_variations": ["Numbers = 0, boolean = false, Objects/Strings = null."],
+      "strictness_level": "strict"
+    }
+  },
+  {
+    "id": "java_3_10_2_q2",
+    "metadata": { "module": "Java", "chapter": "3.10.2" },
+    "content": { "question_text": "How do you access the total number of elements present in an array variable named `a`?", "question_type": "code" },
+    "grading_instructions": {
+      "core_requirements": ["a.length"],
+      "acceptable_variations": ["Using the length property."],
+      "strictness_level": "strict"
+    }
+  },
+  {
+    "id": "java_3_10_3_q1",
+    "metadata": { "module": "Java", "chapter": "3.10.3" },
+    "content": { "question_text": "Write the syntax for an enhanced \"for each\" loop that iterates through an array of integers named `a` and prints each `element`.", "question_type": "code" },
+    "grading_instructions": {
+      "core_requirements": ["for (int element : a) { IO.println(element); }"],
+      "acceptable_variations": ["for (int element : a)", "Variable names can vary as long as the `Type variable : collection` structure is correct."],
+      "strictness_level": "moderate"
+    }
+  },
+  {
+    "id": "java_3_10_3_q2",
+    "metadata": { "module": "Java", "chapter": "3.10.3" },
+    "content": { "question_text": "What is the easiest way to print all the values of an array as a readable string, enclosed in brackets and separated by commas, without writing a loop?", "question_type": "code" },
+    "grading_instructions": {
+      "core_requirements": ["Arrays.toString(a)"],
+      "acceptable_variations": ["Use the toString method of the Arrays class."],
+      "strictness_level": "strict"
+    }
+  },
+  {
+    "id": "java_3_10_4_q1",
+    "metadata": { "module": "Java", "chapter": "3.10.4" },
+    "content": { "question_text": "If you assign one array variable to another (e.g., `int[] luckyNumbers = smallPrimes;`), do you create a second, separate array in memory? If not, how do you actually copy the values?", "question_type": "concept" },
+    "grading_instructions": {
+      "core_requirements": ["No, both variables refer to the exact same array in memory.", "To actually copy the values to a new array, use the Arrays.copyOf() method."],
+      "acceptable_variations": ["It just copies the reference/pointer. You need Arrays.copyOf(array, length) to make a real copy."],
+      "strictness_level": "strict"
+    }
+  },
+  {
+    "id": "java_3_10_5_q1",
+    "metadata": { "module": "Java", "chapter": "3.10.5" },
+    "content": { "question_text": "In the standard main method declaration `void main(String[] args)`, what exactly does the `args` array contain?", "question_type": "concept" },
+    "grading_instructions": {
+      "core_requirements": ["It contains the arguments specified on the command line when the program was started."],
+      "acceptable_variations": ["Command-line arguments."],
+      "strictness_level": "moderate"
+    }
+  },
+  {
+    "id": "java_3_10_6_q1",
+    "metadata": { "module": "Java", "chapter": "3.10.6" },
+    "content": { "question_text": "Which method from the standard library can you use to quickly sort an array of numbers named `a`?", "question_type": "code" },
+    "grading_instructions": {
+      "core_requirements": ["Arrays.sort(a)"],
+      "acceptable_variations": ["Arrays.sort()"],
+      "strictness_level": "strict"
+    }
+  },
+  {
+    "id": "java_3_10_7_q1",
+    "metadata": { "module": "Java", "chapter": "3.10.7" },
+    "content": { "question_text": "Write the standard syntax to declare and initialize a two-dimensional array of `double` values named `balances` with `NYEARS` rows and `NRATES` columns.", "question_type": "code" },
+    "grading_instructions": {
+      "core_requirements": ["double[][] balances = new double[NYEARS][NRATES];"],
+      "acceptable_variations": ["double[][] balances; balances = new double[NYEARS][NRATES];"],
+      "strictness_level": "strict"
+    }
+  },
+  {
+    "id": "java_3_10_7_q2",
+    "metadata": { "module": "Java", "chapter": "3.10.7" },
+    "content": { "question_text": "If you want to use an enhanced \"for each\" loop to process all elements in a two-dimensional array, how must you structure it?", "question_type": "concept" },
+    "grading_instructions": {
+      "core_requirements": ["You must nest two loops.", "The outer loop iterates through the rows (which are 1D arrays), and the inner loop iterates through the individual values of each row."],
+      "acceptable_variations": ["Use two nested for-each loops."],
+      "strictness_level": "moderate"
+    }
+  },
+  {
+    "id": "java_3_10_7_q3",
+    "metadata": { "module": "Java", "chapter": "3.10.7" },
+    "content": { "question_text": "What is the fastest way to print out a quick, readable list of all elements inside a two-dimensional array for debugging purposes?", "question_type": "code" },
+    "grading_instructions": {
+      "core_requirements": ["Use Arrays.deepToString(a)"],
+      "acceptable_variations": ["Arrays.deepToString()"],
+      "strictness_level": "strict"
+    }
+  },
+  {
+    "id": "java_3_10_8_q1",
+    "metadata": { "module": "Java", "chapter": "3.10.8" },
+    "content": { "question_text": "Does Java have true, contiguous multidimensional arrays in memory (like C or C++)? If not, what does it use instead?", "question_type": "concept" },
+    "grading_instructions": {
+      "core_requirements": ["No, Java does not have true multidimensional arrays.", "Instead, they are implemented as \"arrays of arrays\"."],
+      "acceptable_variations": ["No, it uses arrays containing references to other arrays."],
+      "strictness_level": "moderate"
+    }
+  },
+  {
+    "id": "java_3_10_8_q2",
+    "metadata": { "module": "Java", "chapter": "3.10.8" },
+    "content": { "question_text": "Because Java implements 2D arrays as \"arrays of arrays,\" what unique structural feature does this allow you to create?", "question_type": "concept" },
+    "grading_instructions": {
+      "core_requirements": ["You can create \"ragged\" arrays.", "This means different rows in the same 2D array can have different lengths."],
+      "acceptable_variations": ["Rows don't have to be the same size/length."],
+      "strictness_level": "moderate"
+    }
+  },
+  {
+    "id": "java_3_10_8_q3",
+    "metadata": { "module": "Java", "chapter": "3.10.8" },
+    "content": { "question_text": "Because rows in a Java 2D array are just individual 1D arrays, what operation can you easily perform on the rows themselves?", "question_type": "concept" },
+    "grading_instructions": {
+      "core_requirements": ["You can easily swap them."],
+      "acceptable_variations": ["Swap rows by changing their array references."],
+      "strictness_level": "moderate"
+    }
+  }
+]
+
+```

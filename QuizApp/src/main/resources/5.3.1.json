@@ -1,0 +1,220 @@
+[
+  {
+    "id": "java_5_3_1_q1",
+    "metadata": { "module": "Java", "chapter": "5.3.1" },
+    "content": {
+      "question_text": "What is an ArrayList in Java?",
+      "question_type": "concept"
+    },
+    "grading_instructions": {
+      "core_requirements": [
+        "A generic class with a type parameter.",
+        "It has a dynamically resizable array (can grow/shrink automatically)."
+      ],
+      "acceptable_variations": [
+        "A resizable array implementation of the List interface.",
+        "A generic collection that can expand dynamically."
+      ],
+      "strictness_level": "moderate"
+    }
+  },
+  {
+    "id": "java_5_3_1_q2",
+    "metadata": { "module": "Java", "chapter": "5.3.1" },
+    "content": {
+      "question_text": "How does an ArrayList differ from a basic array?",
+      "question_type": "concept"
+    },
+    "grading_instructions": {
+      "core_requirements": [
+        "An ArrayList has a dynamic size that can expand or shrink automatically.",
+        "A basic array has a fixed size once created."
+      ],
+      "acceptable_variations": [
+        "ArrayList can grow; arrays cannot.",
+        "ArrayList is resizable; arrays are fixed length."
+      ],
+      "strictness_level": "strict"
+    }
+  },
+  {
+    "id": "java_5_3_1_q3",
+    "metadata": { "module": "Java", "chapter": "5.3.1" },
+    "content": {
+      "question_text": "Can you use var with the diamond syntax when creating an ArrayList? If so, what type is inferred?",
+      "question_type": "concept"
+    },
+    "grading_instructions": {
+      "core_requirements": [
+        "Yes, you can use var with the diamond syntax.",
+        "It yields an ArrayList with type Object (ArrayList<Object>)."
+      ],
+      "acceptable_variations": [
+        "var list = new ArrayList<>(); infers ArrayList<Object>."
+      ],
+      "strictness_level": "moderate"
+    }
+  },
+  {
+    "id": "java_5_3_1_q4",
+    "metadata": { "module": "Java", "chapter": "5.3.1" },
+    "content": {
+      "question_text": "What is considered a raw type ArrayList?",
+      "question_type": "concept"
+    },
+    "grading_instructions": {
+      "core_requirements": [
+        "An ArrayList without a type parameter (e.g., ArrayList instead of ArrayList<String>).",
+        "It behaves like an ArrayList of Object."
+      ],
+      "acceptable_variations": [
+        "Using ArrayList without angle brackets.",
+        "ArrayList<Object> is essentially the same as the raw type in practice."
+      ],
+      "strictness_level": "strict"
+    }
+  },
+  {
+    "id": "java_5_3_1_q5",
+    "metadata": { "module": "Java", "chapter": "5.3.1" },
+    "content": {
+      "question_text": "How do you add elements to an ArrayList?",
+      "question_type": "code"
+    },
+    "grading_instructions": {
+      "core_requirements": [
+        "Using the .add() method."
+      ],
+      "acceptable_variations": [
+        "Call add() on the ArrayList instance."
+      ],
+      "strictness_level": "strict"
+    }
+  },
+  {
+    "id": "java_5_3_1_q6",
+    "metadata": { "module": "Java", "chapter": "5.3.1" },
+    "content": {
+      "question_text": "What happens internally when an ArrayList runs out of space?",
+      "question_type": "concept"
+    },
+    "grading_instructions": {
+      "core_requirements": [
+        "ArrayList automatically creates a larger internal array.",
+        "It copies all existing elements from the old smaller array to the new larger one."
+      ],
+      "acceptable_variations": [
+        "It resizes by allocating a new array and copying elements over."
+      ],
+      "strictness_level": "moderate"
+    }
+  },
+  {
+    "id": "java_5_3_1_q7",
+    "metadata": { "module": "Java", "chapter": "5.3.1" },
+    "content": {
+      "question_text": "When you know approximately how many elements you want to store, what can you do to improve performance?",
+      "question_type": "concept"
+    },
+    "grading_instructions": {
+      "core_requirements": [
+        "Call .ensureCapacity(x) before filling the ArrayList.",
+        "Or pass the initial capacity as an integer parameter to the ArrayList constructor."
+      ],
+      "acceptable_variations": [
+        "Use ensureCapacity() to pre-allocate.",
+        "Set initial capacity in the constructor to avoid frequent resizing."
+      ],
+      "strictness_level": "moderate"
+    }
+  },
+  {
+    "id": "java_5_3_1_q8",
+    "metadata": { "module": "Java", "chapter": "5.3.1" },
+    "content": {
+      "question_text": "What is the difference between an ArrayList with a capacity of 100 and a regular array of size 100?",
+      "question_type": "concept"
+    },
+    "grading_instructions": {
+      "core_requirements": [
+        "A regular array has 100 slots ready to use immediately.",
+        "An ArrayList with capacity 100 has the capacity to hold 100 elements but initially holds no elements (size is 0)."
+      ],
+      "acceptable_variations": [
+        "Array has pre-allocated slots; ArrayList only has the capacity, not actual elements."
+      ],
+      "strictness_level": "strict"
+    }
+  },
+  {
+    "id": "java_5_3_1_q9",
+    "metadata": { "module": "Java", "chapter": "5.3.1" },
+    "content": {
+      "question_text": "How do you check the current number of elements in an ArrayList?",
+      "question_type": "code"
+    },
+    "grading_instructions": {
+      "core_requirements": [
+        "Using the .size() method."
+      ],
+      "acceptable_variations": [
+        "Call size() on the ArrayList instance."
+      ],
+      "strictness_level": "strict"
+    }
+  },
+  {
+    "id": "java_5_3_1_q10",
+    "metadata": { "module": "Java", "chapter": "5.3.1" },
+    "content": {
+      "question_text": "When you are sure an ArrayList is at its permanent size (no more elements will be added), what can you do to reduce memory usage?",
+      "question_type": "concept"
+    },
+    "grading_instructions": {
+      "core_requirements": [
+        "You can call the .trimToSize() method."
+      ],
+      "acceptable_variations": [
+        "Use trimToSize() to free excess capacity."
+      ],
+      "strictness_level": "strict"
+    }
+  },
+  {
+    "id": "java_5_3_1_q11",
+    "metadata": { "module": "Java", "chapter": "5.3.1" },
+    "content": {
+      "question_text": "What exactly does the trimToSize() method do?",
+      "question_type": "concept"
+    },
+    "grading_instructions": {
+      "core_requirements": [
+        "It adjusts the internal array's capacity to exactly match the current number of elements.",
+        "This reduces memory usage by freeing unused capacity."
+      ],
+      "acceptable_variations": [
+        "Trims the capacity to the current size.",
+        "Shrinks the backing array to fit the exact number of stored elements."
+      ],
+      "strictness_level": "moderate"
+    }
+  },
+  {
+    "id": "java_5_3_1_q12",
+    "metadata": { "module": "Java", "chapter": "5.3.1" },
+    "content": {
+      "question_text": "Why can't you use the [] array indexing operator with ArrayLists?",
+      "question_type": "concept"
+    },
+    "grading_instructions": {
+      "core_requirements": [
+        "Java does not support operator overloading.",
+        "ArrayLists use methods like .get(index) and .set(index, element) instead."
+      ],
+      "acceptable_variations": [
+        "[] is reserved for arrays only; ArrayList uses get() and set()."
+      ],
+      "strictness_level": "moderate"
+    }
+  }
+]

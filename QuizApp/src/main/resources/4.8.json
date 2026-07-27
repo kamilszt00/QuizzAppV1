@@ -1,0 +1,162 @@
+[
+  {
+    "id": "java_4_8_1_q1",
+    "metadata": { "module": "Java", "chapter": "4.8.1" },
+    "content": { "question_text": "What are the two primary practical reasons for grouping classes into packages in Java?", "question_type": "list", "expected_count": 2 },
+    "grading_instructions": {
+      "core_requirements": ["To organize work and separate it from code libraries provided by others.", "To guarantee the uniqueness of class names and prevent naming conflicts."],
+      "acceptable_variations": ["Organization/grouping, and preventing name collisions."],
+      "strictness_level": "moderate"
+    }
+  },
+  {
+    "id": "java_4_8_1_q2",
+    "metadata": { "module": "Java", "chapter": "4.8.1" },
+    "content": { "question_text": "If you define a class or method without any access modifier (neither `public` nor `private`), what is its default access level?", "question_type": "concept" },
+    "grading_instructions": {
+      "core_requirements": ["It gets package-level access.", "It can only be accessed by other code located within the exact same package."],
+      "acceptable_variations": ["Package-private. Only visible to other classes in its package."],
+      "strictness_level": "strict"
+    }
+  },
+  {
+    "id": "java_4_8_2_q1",
+    "metadata": { "module": "Java", "chapter": "4.8.2" },
+    "content": { "question_text": "From the perspective of the Java compiler, what is the relationship between a package and a nested sub-package (for example, `java.util` and `java.util.random`)?", "question_type": "concept" },
+    "grading_instructions": {
+      "core_requirements": ["There is absolutely no relationship between them.", "The compiler treats them as completely independent collections of classes."],
+      "acceptable_variations": ["None. Nested packages are fully independent."],
+      "strictness_level": "strict"
+    }
+  },
+  {
+    "id": "java_4_8_3_q1",
+    "metadata": { "module": "Java", "chapter": "4.8.3" },
+    "content": { "question_text": "Does the Java `import` statement act like the `#include` directive in C/C++ by pulling external code into your file?", "question_type": "concept" },
+    "grading_instructions": {
+      "core_requirements": ["No, it does not.", "The import statement is strictly for programmer convenience to allow you to use a simple class name instead of typing the fully qualified name (e.g., `LocalDate` instead of `java.time.LocalDate`)."],
+      "acceptable_variations": ["No, imports are only for convenience so you don't have to type the full package path."],
+      "strictness_level": "strict"
+    }
+  },
+  {
+    "id": "java_4_8_3_q2",
+    "metadata": { "module": "Java", "chapter": "4.8.3" },
+    "content": { "question_text": "If you write `import java.util.*;` at the top of your file, does it also import the classes located inside the `java.util.random` package?", "question_type": "boolean" },
+    "grading_instructions": {
+      "core_requirements": ["No.", "The `*` notation only imports the classes directly inside the specified package, not its nested sub-packages."],
+      "acceptable_variations": ["No, you would need a separate import for the sub-package."],
+      "strictness_level": "strict"
+    }
+  },
+  {
+    "id": "java_4_8_5_q1",
+    "metadata": { "module": "Java", "chapter": "4.8.5" },
+    "content": { "question_text": "What does a `static import` statement allow you to do that a standard class import does not?", "question_type": "concept" },
+    "grading_instructions": {
+      "core_requirements": ["It allows you to import specific static methods and fields so you can use them without typing their class name prefix.", "For example, allowing you to just type `sqrt()` instead of `Math.sqrt()`."],
+      "acceptable_variations": ["Lets you use static methods/variables without the class name attached."],
+      "strictness_level": "moderate"
+    }
+  },
+  {
+    "id": "java_4_8_6_q1",
+    "metadata": { "module": "Java", "chapter": "4.8.6" },
+    "content": { "question_text": "Where must the `package` declaration be located within your `.java` source file, and what happens if you completely omit it?", "question_type": "concept" },
+    "grading_instructions": {
+      "core_requirements": ["It must be placed at the very top of the source file, before any class definitions or imports.", "If you omit it, the classes in that file are automatically placed into the 'unnamed package'."],
+      "acceptable_variations": ["Top of the file. Omitting it puts the code in the default/unnamed package."],
+      "strictness_level": "strict"
+    }
+  },
+  {
+    "id": "java_4_8_6_q2",
+    "metadata": { "module": "Java", "chapter": "4.8.6" },
+    "content": { "question_text": "If you declare a class to be in the package `com.horstmann.corejava`, what strict rule applies to where the actual `.java` file must be saved on your computer?", "question_type": "concept" },
+    "grading_instructions": {
+      "core_requirements": ["The file must be placed in a nested directory structure that exactly matches the package name.", "For example: `com/horstmann/corejava/`."],
+      "acceptable_variations": ["The folder path must perfectly mirror the package name."],
+      "strictness_level": "strict"
+    }
+  },
+  {
+    "id": "java_4_8_7_q1",
+    "metadata": { "module": "Java", "chapter": "4.8.7" },
+    "content": { "question_text": "Why is it recommended to explicitly compile your code (`javac`) before running it, especially as programs get larger?", "question_type": "concept" },
+    "grading_instructions": {
+      "core_requirements": ["It produces a class file containing the virtual machine code for its methods.", "Compiling first lets you catch a lot of errors—such as type mismatches, missing imports, and wrong method signatures—before running."],
+      "acceptable_variations": ["It creates the compiled class files and catches syntax/import errors early."],
+      "strictness_level": "moderate"
+    }
+  },
+  {
+    "id": "java_4_8_7_q2",
+    "metadata": { "module": "Java", "chapter": "4.8.7" },
+    "content": { "question_text": "What is a key difference in how the `javac` compiler and the `java` virtual machine command expect you to reference your code?", "question_type": "concept" },
+    "grading_instructions": {
+      "core_requirements": ["The `javac` compiler operates on files, requiring file separators and a `.java` extension.", "The `java` virtual machine loads classes, requiring dot separators instead of file paths."],
+      "acceptable_variations": ["Compiler needs the file path (with .java); JVM needs the package/class name (with dots)."],
+      "strictness_level": "strict"
+    }
+  },
+  {
+    "id": "java_4_8_7_q3",
+    "metadata": { "module": "Java", "chapter": "4.8.7" },
+    "content": { "question_text": "True or False: If your source file has a `package` declaration, the Java compiler will throw an error if that file is not placed in a matching subdirectory.", "question_type": "boolean" },
+    "grading_instructions": {
+      "core_requirements": ["False.", "The compiler does not check the directory structure when compiling source files.", "However, the resulting program will not run because the virtual machine won't find the classes if the directory structure doesn't match the packages."],
+      "acceptable_variations": ["False, it compiles fine but the JVM will fail to run it later."],
+      "strictness_level": "strict"
+    }
+  },
+  {
+    "id": "java_4_8_8_q1",
+    "metadata": { "module": "Java", "chapter": "4.8.8" },
+    "content": { "question_text": "What is the primary danger of forgetting to write the `private` keyword on an instance variable?", "question_type": "concept" },
+    "grading_instructions": {
+      "core_requirements": ["The variable defaults to package access.", "This breaks encapsulation because any other class in the same package can directly access and modify that variable."],
+      "acceptable_variations": ["It becomes package-private, allowing other classes in the package to bypass encapsulation and change its data."],
+      "strictness_level": "moderate"
+    }
+  },
+  {
+    "id": "java_4_8_9_q1",
+    "metadata": { "module": "Java", "chapter": "4.8.9" },
+    "content": { "question_text": "What is the 'class path' in Java?", "question_type": "concept" },
+    "grading_instructions": {
+      "core_requirements": ["The class path is the collection of all locations that can contain class files.", "It lists the directories and archive files that serve as starting points for locating classes."],
+      "acceptable_variations": ["The list of folders and JARs where the JVM looks for compiled code."],
+      "strictness_level": "moderate"
+    }
+  },
+  {
+    "id": "java_4_8_9_q2",
+    "metadata": { "module": "Java", "chapter": "4.8.9" },
+    "content": { "question_text": "Under the hood, what common file format does a JAR (Java archive) file actually use?", "question_type": "concept" },
+    "grading_instructions": {
+      "core_requirements": ["The ZIP format."],
+      "acceptable_variations": ["ZIP"],
+      "strictness_level": "strict"
+    }
+  },
+  {
+    "id": "java_4_8_9_q3",
+    "metadata": { "module": "Java", "chapter": "4.8.9" },
+    "content": { "question_text": "When configuring a class path, what symbol is universally used to denote the current directory?", "question_type": "code" },
+    "grading_instructions": {
+      "core_requirements": ["The period (`.`)."],
+      "acceptable_variations": ["."],
+      "strictness_level": "strict"
+    }
+  },
+  {
+    "id": "java_4_8_10_q1",
+    "metadata": { "module": "Java", "chapter": "4.8.10" },
+    "content": { "question_text": "Why is it generally considered a bad idea to permanently set the `CLASSPATH` environment variable globally on your operating system?", "question_type": "concept" },
+    "grading_instructions": {
+      "core_requirements": ["People often forget the global setting is active.", "This causes confusion when their programs compile but fail to run because the required classes or current directory are missing from that forgotten global path."],
+      "acceptable_variations": ["It causes hard-to-debug errors later because developers forget they have a global override active."],
+      "strictness_level": "moderate"
+    }
+  }
+]

@@ -1,0 +1,62 @@
+[
+  {
+    "id": "java_5_1_2_q1",
+    "metadata": { "module": "Java", "chapter": "5.1.2" },
+    "content": { "question_text": "What term is used when you supply a new method in a subclass because the superclass method is not appropriate?", "question_type": "concept" },
+    "grading_instructions": {
+      "core_requirements": ["Overriding (or to override) the superclass method."],
+      "acceptable_variations": ["Override", "Method overriding"],
+      "strictness_level": "strict"
+    }
+  },
+  {
+    "id": "java_5_1_2_q2",
+    "metadata": { "module": "Java", "chapter": "5.1.2" },
+    "content": { "question_text": "Can a subclass method directly access the private fields of its superclass? If not, how must it access that data?", "question_type": "concept" },
+    "grading_instructions": {
+      "core_requirements": ["No, it cannot directly access the private fields.", "It must use the public interface (the public methods) of the superclass."],
+      "acceptable_variations": ["No, it has to call a public getter method from the parent."],
+      "strictness_level": "moderate"
+    }
+  },
+  {
+    "id": "java_5_1_2_q3",
+    "metadata": { "module": "Java", "chapter": "5.1.2" },
+    "content": { "question_text": "What happens if a subclass method tries to call the superclass version of the method by just using its name (e.g., `getSalary()` calling `getSalary()`)?", "question_type": "concept" },
+    "grading_instructions": {
+      "core_requirements": ["The method simply calls itself.", "This creates an infinite chain of calls leading to a program crash."],
+      "acceptable_variations": ["Infinite loop/recursion that crashes the program."],
+      "strictness_level": "moderate"
+    }
+  },
+  {
+    "id": "java_5_1_2_q4",
+    "metadata": { "module": "Java", "chapter": "5.1.2" },
+    "content": { "question_text": "What special keyword must you use to indicate that you want to call a method of the superclass, rather than the current class?", "question_type": "code" },
+    "grading_instructions": {
+      "core_requirements": ["super"],
+      "acceptable_variations": ["The super keyword"],
+      "strictness_level": "strict"
+    }
+  },
+  {
+    "id": "java_5_1_2_q5",
+    "metadata": { "module": "Java", "chapter": "5.1.2" },
+    "content": { "question_text": "Why is it inaccurate to think of the `super` keyword as being completely analogous to the `this` reference?", "question_type": "concept" },
+    "grading_instructions": {
+      "core_requirements": ["`super` is not a reference to an object.", "You cannot assign the value `super` to another object variable; it is only a special keyword directing the compiler."],
+      "acceptable_variations": ["Unlike 'this', 'super' isn't an actual object reference and can't be assigned to a variable."],
+      "strictness_level": "moderate"
+    }
+  },
+  {
+    "id": "java_5_1_2_q6",
+    "metadata": { "module": "Java", "chapter": "5.1.2" },
+    "content": { "question_text": "Can inheritance take away fields or methods from a superclass?", "question_type": "boolean" },
+    "grading_instructions": {
+      "core_requirements": ["No.", "Inheritance can never take away any fields or methods."],
+      "acceptable_variations": ["False"],
+      "strictness_level": "strict"
+    }
+  }
+]
