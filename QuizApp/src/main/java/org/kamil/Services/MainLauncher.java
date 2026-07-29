@@ -6,6 +6,7 @@ import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.kamil.Model.Answer;
 import org.kamil.Model.Question;
+import org.kamil.Model.Result;
 
 import java.io.File;
 import java.io.IOException;
@@ -31,14 +32,18 @@ public class MainLauncher {
             answers.add(new Answer(skan.nextLine(), q.content.getQuestion_type()));
         }
 
-
-
-
-
-
+        List<Result> results = new ArrayList<>(questions.size());
         for (int i = 0; i < questions.size(); i++) {
-            System.out.println(questions.get(i).content.getQuestion_text());
-            System.out.println(answers.get(i).getAnswer());
+            results.add(new Result(questions.get(i).content.getQuestion_text(),answers.get(i).getAnswer(), answers.get(i).getQuestionID()));
+        }
+
+
+
+        for (Result r : results) {
+            System.out.println(r.getQuestion());
+            System.out.println(r.getAnswer());
+            System.out.println(r.getId());
+
         }
 
 
