@@ -9,6 +9,7 @@ import org.kamil.Model.Question;
 import org.kamil.Model.Result;
 
 import java.io.File;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -29,7 +30,7 @@ public class MainLauncher {
         for (Question q : questions) {
             System.out.println(q.content.getQuestion_text());
             System.out.println("Please provide answer to the questions: ");
-            answers.add(new Answer(skan.nextLine(), q.content.getQuestion_type()));
+            answers.add(new Answer(skan.nextLine(), q.getId()));
         }
 
         List<Result> results = new ArrayList<>(questions.size());
@@ -37,14 +38,10 @@ public class MainLauncher {
             results.add(new Result(questions.get(i).content.getQuestion_text(),answers.get(i).getAnswer(), answers.get(i).getQuestionID()));
         }
 
+        objectMapper.writeValue(new File("src/main/resources/Results/res1.json"), results);
 
 
-        for (Result r : results) {
-            System.out.println(r.getQuestion());
-            System.out.println(r.getAnswer());
-            System.out.println(r.getId());
 
-        }
 
 
     }
