@@ -9,8 +9,8 @@ public class Question {
 
 
     public static class Content {
-        public String question_text;
-        public String question_type;
+        private String question_text;
+        private String question_type;
 
         public String getQuestion_text() {
             return question_text;

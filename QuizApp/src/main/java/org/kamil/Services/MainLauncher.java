@@ -19,15 +19,20 @@ public class MainLauncher {
         ObjectMapper objectMapper = new ObjectMapper();
         objectMapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
         List<Question> questions = objectMapper.readValue(new File("src/main/resources/4.1.json"),new TypeReference<List<Question>>(){});
+        Scanner skan = new Scanner(System.in);
+
 
         for (Question q : questions) {
             System.out.println(q.content.getQuestion_text());
-            Scanner skan = new Scanner(System.in);
             System.out.println("Please provide answer to the questions: ");
             q.setAnswer(skan.nextLine());
         }
 
 
+
+
+
+        // checking input
         for (Question q : questions) {
             System.out.println(q.content.getQuestion_text());
             System.out.println(q.getAnswer());
