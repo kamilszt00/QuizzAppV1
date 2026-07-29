@@ -4,10 +4,12 @@ import com.fasterxml.jackson.core.StreamReadFeature;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import org.kamil.Model.Answer;
 import org.kamil.Model.Question;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Scanner;
@@ -20,22 +22,23 @@ public class MainLauncher {
         objectMapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
         List<Question> questions = objectMapper.readValue(new File("src/main/resources/4.1.json"),new TypeReference<List<Question>>(){});
         Scanner skan = new Scanner(System.in);
+        List<Answer> answers = new ArrayList<>();
 
 
         for (Question q : questions) {
             System.out.println(q.content.getQuestion_text());
             System.out.println("Please provide answer to the questions: ");
-            q.setAnswer(skan.nextLine());
+            answers.add(new Answer(skan.nextLine(), q.content.getQuestion_type()));
         }
 
 
 
 
 
-        // checking input
-        for (Question q : questions) {
-            System.out.println(q.content.getQuestion_text());
-            System.out.println(q.getAnswer());
+
+        for (int i = 0; i < questions.size(); i++) {
+            System.out.println(questions.get(i).content.getQuestion_text());
+            System.out.println(answers.get(i).getAnswer());
         }
 
 
