@@ -3,7 +3,7 @@ package org.kamil.Model;
 import com.fasterxml.jackson.annotation.JsonUnwrapped;
 
 public class Question {
-
+    private String answer;
 
     public Content content;
 
@@ -18,7 +18,11 @@ public class Question {
     }
 
 
+    public String getAnswer() {
+        return answer;
+    }
 
-
-
+    public void setAnswer(String answer) {
+        this.answer = answer;
+    }
 }
