@@ -26,12 +26,15 @@ public class MainLauncher {
         Scanner skan = new Scanner(System.in);
         List<Answer> answers = new ArrayList<>();
 
+        
 
-        for (Question q : questions) {
-            System.out.println(q.content.getQuestion_text());
+        questions.forEach(question -> {
+            System.out.println(question.content.getQuestion_text());
             System.out.println("Please provide answer to the questions: ");
-            answers.add(new Answer(skan.nextLine(), q.getId()));
-        }
+            answers.add(new Answer(skan.nextLine(), question.getId()));
+        });
+
+
 
         List<Result> results = new ArrayList<>(questions.size());
         for (int i = 0; i < questions.size(); i++) {
