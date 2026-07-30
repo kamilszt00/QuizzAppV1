@@ -5,18 +5,18 @@ public class Result {
     private String answer;
     private String id;
     private String type;
-    private String requirements;
-    private String variations;
-    private String level;
+    private String[] core_requirements;
+    private String[] acceptable_variations;
+    private String strictness_level;
 
-    public Result(String question, String answer, String id, String type, String requirements, String variations, String level) {
+    public Result(String question, String answer, String id, String type, String[] core_requirements, String[] acceptable_variations, String strictness_level) {
         this.answer = answer;
         this.question = question;
         this.id =  id;
         this.type = type;
-        this.requirements = requirements;
-        this.variations = variations;
-        this.level = level;
+        this.core_requirements = core_requirements;
+        this.acceptable_variations = acceptable_variations;
+        this.strictness_level = strictness_level;
     }
 
     public String getAnswer() {
@@ -35,15 +35,15 @@ public class Result {
         return type;
     }
 
-    public String getLevel() {
-        return level;
+    public String getStrictness_level() {
+        return strictness_level;
     }
 
-    public String getRequirements() {
-        return requirements;
+    public String[] getCore_requirements() {
+        return core_requirements;
     }
 
-    public String getVariations() {
-        return variations;
+    public String[] getAcceptable_variations() {
+        return acceptable_variations;
     }
 }

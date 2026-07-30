@@ -28,20 +28,20 @@ public class MainLauncher {
 
 
 
-        //questions.forEach(question -> {
-        //    System.out.println(question.content.getQuestion_text());
-        //    System.out.println("Please provide answer to the questions: ");
-        //    answers.add(new Answer(skan.nextLine(), question.getId()));
-        //});
+        questions.forEach(question -> {
+            System.out.println(question.content.getQuestion_text());
+            System.out.println("Please provide answer to the questions: ");
+            answers.add(new Answer(skan.nextLine(), question.getId()));
+        });
 
 
 
-        //List<Result> results = new ArrayList<>(questions.size());
-        ///for (int i = 0; i < questions.size(); i++) {
-        //    results.add(new Result(questions.get(i).content.getQuestion_text(),answers.get(i).getAnswer(), answers.get(i).getQuestionID(),questions.get(i).content.getQuestion_type(), questions.get(i).instructions.getCore_requirements(),questions.get(i).instructions.getAcceptable_variations(),questions.get(i).instructions.getStrictness_level()));
-        //}
+        List<Result> results = new ArrayList<>(questions.size());
+        for (int i = 0; i < questions.size(); i++) {
+            results.add(new Result(questions.get(i).content.getQuestion_text(),answers.get(i).getAnswer(), answers.get(i).getQuestionID(),questions.get(i).content.getQuestion_type(), questions.get(i).grading_instructions.getCore_requirements(),questions.get(i).grading_instructions.getAcceptable_variations(),questions.get(i).grading_instructions.getStrictness_level()));
+        }
 
-        ///objectMapper.writeValue(new File("src/main/resources/Results/res1.json"), results);
+        objectMapper.writeValue(new File("src/main/resources/Results/res1.json"), results);
 
 
 

@@ -27,8 +27,8 @@ public class Question {
         private String strictness_level;
 
 
-        public String getCore_requirements() {return Arrays.toString(core_requirements); }
-        public String getAcceptable_variations() {return Arrays.toString(acceptable_variations); }
+        public String[] getCore_requirements() {return core_requirements; }
+        public String[] getAcceptable_variations() {return acceptable_variations; }
         public String getStrictness_level() {return strictness_level; }
     }
 
@@ -44,7 +44,7 @@ public class Question {
 
     @Override
     public String toString() {
-        return id + " | " + content.getQuestion_text() + " | " + content.getQuestion_type() + " | " + grading_instructions.getCore_requirements() + " | " + grading_instructions.getAcceptable_variations() + " | " + grading_instructions.getStrictness_level();
+        return id + " | " + content.getQuestion_text() + " | " + content.getQuestion_type() + " | " + Arrays.toString(grading_instructions.getCore_requirements()) + " | " + Arrays.toString(grading_instructions.getAcceptable_variations()) + " | " + grading_instructions.getStrictness_level();
     }
 }
 
