@@ -2,11 +2,13 @@ package org.kamil.Model;
 
 import com.fasterxml.jackson.annotation.JsonUnwrapped;
 
+import java.util.Arrays;
+
 public class Question {
     private String id;
 
     public Content content;
-
+    public Grading_instructions grading_instructions;
 
     public static class Content {
         private String question_text;
@@ -18,12 +20,31 @@ public class Question {
         public String getQuestion_type() {return question_type; }
     }
 
+
+    public static class Grading_instructions {
+        private String[] core_requirements;
+        private String[] acceptable_variations;
+        private String strictness_level;
+
+
+        public String getCore_requirements() {return Arrays.toString(core_requirements); }
+        public String getAcceptable_variations() {return Arrays.toString(acceptable_variations); }
+        public String getStrictness_level() {return strictness_level; }
+    }
+
+
     public void setId(String id) {
         this.id = id;
     }
 
     public String getId() {
         return id;
+    }
+
+
+    @Override
+    public String toString() {
+        return id + " | " + content.getQuestion_text() + " | " + content.getQuestion_type() + " | " + grading_instructions.getCore_requirements() + " | " + grading_instructions.getAcceptable_variations() + " | " + grading_instructions.getStrictness_level();
     }
 }
 
