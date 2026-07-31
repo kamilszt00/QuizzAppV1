@@ -8,7 +8,7 @@ import org.kamil.Model.Answer;
 import org.kamil.Model.Question;
 import org.kamil.Model.Result;
 import org.kamil.Repository.AnswerStore;
-import org.kamil.Repository.QuestionLoader;
+
 import org.kamil.Repository.QuestionStore;
 
 import java.io.File;
@@ -26,7 +26,7 @@ public class MainLauncher {
         AnswerStore answerStorage = new AnswerStore();
 
         questionsStorage.setQuestionsStored(objectMapper.readValue(new File("src/main/resources/9.json"),new TypeReference<List<Question>>(){}));
-        QuestionLoader.questionsLoading(questionsStorage.getQuestionsStored(),answerStorage.getAnswers());
+        QuizIterator.iterQuiz(questionsStorage.getQuestionsStored(),answerStorage);
 
 
 
@@ -34,11 +34,11 @@ public class MainLauncher {
 
 
 
-//        questions.forEach(question -> {
-//            System.out.println(question.content.getQuestion_text());
-//            System.out.println("Please provide answer to the questions: ");
-//            answers.add(new Answer(skan.nextLine(), question.getId()));
-//        });
+
+
+
+
+
 //
 //
 //
