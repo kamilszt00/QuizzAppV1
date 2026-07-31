@@ -26,6 +26,8 @@ public class MainLauncher {
         QuizIterator.iterQuiz(questionsStorage.getQuestionsStored(),answerStorage);
         ResultRepository resultRepository = new ResultRepository(ResultService.resultMapper(questionsStorage,answerStorage));
 
+        objectMapper.writeValue(new File("src/main/resources/Results/result.json"), resultRepository.getResultsStored());
+
 
 
 
