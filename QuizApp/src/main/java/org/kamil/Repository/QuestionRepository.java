@@ -5,7 +5,7 @@ import org.kamil.Model.Question;
 import java.util.ArrayList;
 import java.util.List;
 
-public class QuestionStore {
+public class QuestionRepository {
     private List<Question> questionsStored = new ArrayList<>();
 
     public List<Question> getQuestionsStored() {
