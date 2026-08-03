@@ -2,7 +2,6 @@ package org.kamil.Model;
 
 public class Answer {
     private String answer;
-    private String questionID;
 
 
     public String getAnswer() {
@@ -14,16 +13,14 @@ public class Answer {
     }
 
 
-    public void setQuestionID(String questionID) {
-        this.questionID = questionID;
-    }
 
-    public String getQuestionID() {
-        return questionID;
-    }
 
-    public Answer(String answer, String questionID) {
+    public Answer(String answer) {
         this.answer = answer;
-        this.questionID = questionID;
+    }
+
+    @Override
+    public String toString() {
+        return "Answer is " + answer;
     }
 }

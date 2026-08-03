@@ -15,8 +15,8 @@ public class ResultService {
         List<Result> results = new ArrayList<>();
         for (int i = 0; i < questionRepository.getQuestionsStored().size(); i++) {
             results.add(new Result(questionRepository.getQuestionsStored().get(i).content.getQuestion_text(),
-                    answerRepository.getAnswers().get(i).getAnswer(),
-                    answerRepository.getAnswers().get(i).getQuestionID(),
+                    answerRepository.getAnswers().get(questionRepository.getQuestionsStored().get(i).getId()).getAnswer(),
+                    questionRepository.getQuestionsStored().get(i).getId(),
                     questionRepository.getQuestionsStored().get(i).content.getQuestion_type(),
                     questionRepository.getQuestionsStored().get(i).grading_instructions.getCore_requirements(),
                     questionRepository.getQuestionsStored().get(i).grading_instructions.getAcceptable_variations(),
