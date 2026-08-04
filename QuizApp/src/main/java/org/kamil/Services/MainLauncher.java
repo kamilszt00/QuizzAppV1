@@ -28,7 +28,7 @@ public class MainLauncher {
 
         ResultRepository resultRepository = new ResultRepository(ResultService.resultMapper(questionsStorage,answerStorage));
 
-        objectMapper.writeValue(new File("src/main/resources/Results/result.json"), resultRepository.getResultsStored());
+        //objectMapper.writeValue(new File("src/main/resources/Results/result.json"), resultRepository.getResultsStored());
 
 
 
