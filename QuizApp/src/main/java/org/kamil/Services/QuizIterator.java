@@ -14,7 +14,7 @@ public class QuizIterator {
         System.out.println("Please provide answers to the questions: ");
         questionList.forEach(Question -> {
             System.out.println(Question.content.getQuestion_text());
-            answerRepository.getAnswers().put(Question.getId(),new Answer(skan.nextLine()));
+            answerRepository.addAnswer(Question.getId(),new Answer(skan.nextLine()));
         });
 
     }

@@ -21,4 +21,9 @@ public class AnswerRepository {
     }
 
 
+    public void addAnswer(String s, Answer a) {
+        answers.put(s,a);
+    }
+
+
 }

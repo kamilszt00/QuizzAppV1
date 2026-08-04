@@ -8,7 +8,7 @@ import java.util.List;
 
 public class ResultRepository {
 
-    private List<Result> resultsStored;
+    private List<Result> resultsStored = new ArrayList<>();
 
 
     public List<Result> getResultsStored() {
@@ -19,10 +19,9 @@ public class ResultRepository {
         this.resultsStored = resultsStored;
     }
 
-    public ResultRepository(List<Result> results) {
-        resultsStored = results;
+    public void addResult(Result r) {
+        resultsStored.add(r);
     }
-
 
 
 

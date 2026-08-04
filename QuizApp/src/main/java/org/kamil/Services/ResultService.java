@@ -11,15 +11,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ResultService {
-    public static List<Result> resultMapper(QuestionRepository questionRepository, AnswerRepository answerRepository) {
-        List<Result> results = new ArrayList<>();
-        questionRepository.getQuestionsStored().forEach(question -> {
-            results.add(new Result(answerRepository.getAnswers().get(question.getId()).getAnswer() , question));
-        });
+    public static void resultMapper(QuestionRepository questionRepository, AnswerRepository answerRepository, ResultRepository resultRepository) {
+            questionRepository.getQuestionsStored().forEach(question -> {
+                resultRepository.addResult(new Result(answerRepository.getAnswers().get(question.getId()).getAnswer(), question));
+            });
 
 
 
-
-        return results;
     }
 }

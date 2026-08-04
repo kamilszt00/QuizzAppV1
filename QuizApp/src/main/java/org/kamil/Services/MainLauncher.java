@@ -19,6 +19,7 @@ public class MainLauncher {
         objectMapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
         QuestionRepository questionsStorage = new QuestionRepository();
         AnswerRepository answerStorage = new AnswerRepository();
+        ResultRepository resultRepository = new ResultRepository();
 
         QuizzGreeter.greetUser();
         String chapter = ChapterSelectionService.chapterSelector("src/main/resources/chapters");
@@ -26,12 +27,12 @@ public class MainLauncher {
 
         questionsStorage.setQuestionsStored(objectMapper.readValue(chapterFile,new TypeReference<List<Question>>(){}));
         QuizIterator.iterQuiz(questionsStorage.getQuestionsStored(),answerStorage);
-//
-//
-//        ResultRepository resultRepository = new ResultRepository(ResultService.resultMapper(questionsStorage,answerStorage));
-//
-//        objectMapper.writeValue(new File("src/main/resources/Results/result.json"), resultRepository.getResultsStored());
-//
+
+        ResultService.resultMapper(questionsStorage,answerStorage, resultRepository);
+
+
+        objectMapper.writeValue(new File("src/main/resources/Results/result.json"), resultRepository.getResultsStored());
+
 
 
 

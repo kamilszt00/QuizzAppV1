@@ -15,4 +15,8 @@ public class QuestionRepository {
     public void setQuestionsStored(List<Question> questionsStored) {
         this.questionsStored = questionsStored;
     }
+
+    public void addQuestion(Question q) {
+        questionsStored.add(q);
+    }
 }
