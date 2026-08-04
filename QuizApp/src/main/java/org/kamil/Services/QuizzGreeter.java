@@ -1,0 +1,8 @@
+package org.kamil.Services;
+
+public class QuizzGreeter {
+    public static void greetUser() {
+        System.out.println("Hello to the Quiz app, pick a chapter to quizz on: ");
+
+    }
+}

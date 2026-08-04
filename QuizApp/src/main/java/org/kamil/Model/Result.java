@@ -1,8 +1,11 @@
 package org.kamil.Model;
 
+import com.fasterxml.jackson.annotation.JsonUnwrapped;
+
 public class Result {
 
     private String answer;
+    @JsonUnwrapped
     private Question question;
 
 

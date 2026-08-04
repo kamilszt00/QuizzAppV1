@@ -15,21 +15,23 @@ import java.util.*;
 
 public class MainLauncher {
     public static void main(String[] args) throws IOException {
-
-
         ObjectMapper objectMapper = new ObjectMapper();
         objectMapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
         QuestionRepository questionsStorage = new QuestionRepository();
         AnswerRepository answerStorage = new AnswerRepository();
 
-        questionsStorage.setQuestionsStored(objectMapper.readValue(new File("src/main/resources/chapters/9.json"),new TypeReference<List<Question>>(){}));
+        QuizzGreeter.greetUser();
+        String chapter = ChapterSelectionService.chapterSelector("src/main/resources/chapters");
+        File chapterFile = new File("src/main/resources/chapters/%s.json".formatted(chapter));
+
+        questionsStorage.setQuestionsStored(objectMapper.readValue(chapterFile,new TypeReference<List<Question>>(){}));
         QuizIterator.iterQuiz(questionsStorage.getQuestionsStored(),answerStorage);
-
-
-        ResultRepository resultRepository = new ResultRepository(ResultService.resultMapper(questionsStorage,answerStorage));
-
-        //objectMapper.writeValue(new File("src/main/resources/Results/result.json"), resultRepository.getResultsStored());
-
+//
+//
+//        ResultRepository resultRepository = new ResultRepository(ResultService.resultMapper(questionsStorage,answerStorage));
+//
+//        objectMapper.writeValue(new File("src/main/resources/Results/result.json"), resultRepository.getResultsStored());
+//
 
 
 
