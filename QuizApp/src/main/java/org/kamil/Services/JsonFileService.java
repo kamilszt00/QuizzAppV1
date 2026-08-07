@@ -19,7 +19,7 @@ public class JsonFileService {
     }
 
     public List<Question> mapQuestions (File chapterFile) throws IOException {
-        return objectMapper.readValue(chapterFile, new TypeReference<List<Question>>() {});
+        return objectMapper.readValue(chapterFile, new TypeReference<>() {});
     }
 
     public void mapResults(List<Result> results) throws IOException {
