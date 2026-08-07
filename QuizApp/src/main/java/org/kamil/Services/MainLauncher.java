@@ -15,51 +15,33 @@ import java.util.*;
 
 public class MainLauncher {
     public static void main(String[] args) throws IOException {
-        ObjectMapper objectMapper = new ObjectMapper();
-        objectMapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
-        QuestionRepository questionsStorage = new QuestionRepository();
-        AnswerRepository answerStorage = new AnswerRepository();
-        ResultRepository resultRepository = new ResultRepository();
+        run();
+    }
+
+
+
+    private static void run() throws IOException {
+
 
         QuizzGreeter.greetUser();
-        String chapter = ChapterSelectionService.chapterSelector("src/main/resources/chapters");
-        File chapterFile = new File("src/main/resources/chapters/%s.json".formatted(chapter));
+        boolean keepQuizzing = true;
 
-        questionsStorage.setQuestionsStored(objectMapper.readValue(chapterFile,new TypeReference<List<Question>>(){}));
-        QuizIterator.iterQuiz(questionsStorage.getQuestionsStored(),answerStorage);
-
-        ResultService.resultMapper(questionsStorage,answerStorage, resultRepository);
-
-
-        objectMapper.writeValue(new File("src/main/resources/Results/result.json"), resultRepository.getResultsStored());
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        while (keepQuizzing) {
+            ObjectMapper objectMapper = new ObjectMapper();
+            objectMapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
+            QuestionRepository questionsStorage = new QuestionRepository();
+            AnswerRepository answerStorage = new AnswerRepository();
+            ResultRepository resultRepository = new ResultRepository();
+            String chapter = ChapterSelectionService.chapterSelector("src/main/resources/chapters");
+            File chapterFile = new File("src/main/resources/chapters/%s.json".formatted(chapter));
+            questionsStorage.setQuestionsStored(objectMapper.readValue(chapterFile,new TypeReference<List<Question>>(){}));
+            QuizIterator.iterQuiz(questionsStorage.getQuestionsStored(),answerStorage);
+            ResultService.resultMapper(questionsStorage,answerStorage, resultRepository);
+            objectMapper.writeValue(new File("src/main/resources/Results/result.json"), resultRepository.getResultsStored());
+            keepQuizzing = NextQuiz.askForNextQuiz();
+        }
     }
+
 
 
 }
