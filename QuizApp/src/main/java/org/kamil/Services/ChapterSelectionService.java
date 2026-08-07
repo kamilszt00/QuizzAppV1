@@ -23,7 +23,16 @@ public class ChapterSelectionService {
         chapters.forEach(s -> {
             System.out.print(s + " | ");
         });
-        System.out.println("Pick one chapter please: ");
-        return skan.nextLine();
+        String userInput = "";
+
+
+        boolean chapterNotSelected = true;
+        while (chapterNotSelected) {
+            System.out.println("Pick one chapter please: (the format is X.X.X)");
+            userInput = skan.nextLine();
+            chapterNotSelected = !InputValidationService.validateInput(userInput.trim(), chapters);
+        }
+
+        return userInput;
     }
 }
