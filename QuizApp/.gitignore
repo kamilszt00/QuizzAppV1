@@ -40,4 +40,4 @@ build/
 
 ### quiz content ###
 src/main/resources/chapters/
-src/main/resources/Results/
+src/main/resources/Results/*

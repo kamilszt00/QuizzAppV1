@@ -43,7 +43,7 @@ public class ChapterSelectionService {
 
         boolean chapterNotSelected = true;
         while (chapterNotSelected) {
-            System.out.println("Pick a chapter to start: ");
+            System.out.println(ConsoleUI.YELLOW + "Pick a chapter to start: " + ConsoleUI.RESET);
             userInput = skan.nextLine();
             chapterNotSelected = !InputValidationService.validateInput(userInput.trim(), chapters);
         }

@@ -11,9 +11,12 @@ public class QuizIterator {
 
     public static void iterQuiz(List<Question> questionList, AnswerRepository answerRepository) {
         Scanner skan = new Scanner(System.in);
-        System.out.println("Please provide answers to the questions: ");
+        System.out.println(ConsoleUI.YELLOW + ConsoleUI.BOLD + "Number of questions: %d ".formatted(questionList.size()) + ConsoleUI.RESET);
+
+
+        System.out.println(ConsoleUI.YELLOW + ConsoleUI.BOLD + "Please provide answers to the questions: " + ConsoleUI.RESET);
         questionList.forEach(Question -> {
-            System.out.println(Question.content.getQuestion_text());
+            System.out.println(ConsoleUI.YELLOW + ConsoleUI.BOLD + "Question %d: ".formatted((questionList.indexOf(Question) + 1)) + ConsoleUI.RESET + Question.content.getQuestion_text());
             answerRepository.addAnswer(Question.getId(),new Answer(skan.nextLine()));
         });
 
