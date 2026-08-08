@@ -8,6 +8,9 @@ import org.kamil.Model.Result;
 
 import java.io.File;
 import java.io.IOException;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.List;
 
 public class JsonFileService {
@@ -23,7 +26,10 @@ public class JsonFileService {
     }
 
     public void mapResults(List<Result> results) throws IOException {
-        objectMapper.writeValue(new File("src/main/resources/Results/result.json"), results);
+        String date = LocalDateTime.now().format(DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm:ss"));
+        objectMapper.writeValue(new File("/home/kamilxcv/Downloads/quiz%s.json".formatted(date)), results);
     }
+
+
 
 }
