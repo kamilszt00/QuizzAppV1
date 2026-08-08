@@ -16,7 +16,7 @@ public class QuizIterator {
 
         System.out.println(ConsoleUI.YELLOW + ConsoleUI.BOLD + "Please provide answers to the questions: " + ConsoleUI.RESET);
         questionList.forEach(Question -> {
-            System.out.println(ConsoleUI.YELLOW + ConsoleUI.BOLD + "Question %d: ".formatted((questionList.indexOf(Question) + 1)) + ConsoleUI.RESET + Question.content.getQuestion_text());
+            System.out.println(ConsoleUI.YELLOW + ConsoleUI.BOLD + "Question %d/%d: ".formatted((questionList.indexOf(Question) + 1),questionList.size()) + ConsoleUI.RESET + Question.content.getQuestion_text());
             answerRepository.addAnswer(Question.getId(),new Answer(skan.nextLine()));
         });
 

@@ -26,8 +26,9 @@ public class JsonFileService {
     }
 
     public void mapResults(List<Result> results) throws IOException {
-        String date = LocalDateTime.now().format(DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm:ss"));
+        String date = LocalDateTime.now().format(DateTimeFormatter.ofPattern("dd-MM-yyyy|HH:mm:ss"));
         objectMapper.writeValue(new File("/home/kamilxcv/Downloads/quiz%s.json".formatted(date)), results);
+        System.out.println(ConsoleUI.YELLOW + "Results of quiz saved to Downloads with name: " + date + ConsoleUI.RESET);
     }
 
 
