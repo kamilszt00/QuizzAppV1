@@ -1,9 +1,10 @@
 package org.kamil.Services;
 
 
+import org.kamil.Model.Question;
 import org.kamil.Repository.AnswerRepository;
 
-import org.kamil.Repository.QuestionRepository;
+import org.kamil.Repository.Repository;
 import org.kamil.Repository.ResultRepository;
 
 import java.io.File;
@@ -20,7 +21,8 @@ public class MainLauncher {
 
     private static void run() throws IOException {
         JsonFileService jsonFileService = new JsonFileService();
-        QuestionRepository questionsStorage = new QuestionRepository();
+
+        Repository<Question> questionStore = new Repository<>();
         AnswerRepository answerStorage = new AnswerRepository();
         ResultRepository resultRepository = new ResultRepository();
 
@@ -30,9 +32,9 @@ public class MainLauncher {
         while (keepQuizzing) {
             String chapter = ChapterSelectionService.chapterSelector("src/main/resources/chapters");
             File chapterFile = new File("src/main/resources/chapters/%s.json".formatted(chapter));
-            questionsStorage.setQuestionsStored(jsonFileService.mapQuestions(chapterFile));
-            QuizIterator.iterQuiz(questionsStorage.getQuestionsStored(),answerStorage);
-            ResultService.resultMapper(questionsStorage,answerStorage, resultRepository);
+            questionStore.setListOfStored(jsonFileService.mapQuestions(chapterFile));
+            QuizIterator.iterQuiz(questionStore.getListOfStored(),answerStorage);
+            ResultService.resultMapper(questionStore,answerStorage,resultRepository);
             jsonFileService.mapResults(resultRepository.getResultsStored());
             keepQuizzing = NextQuiz.askForNextQuiz();
         }
