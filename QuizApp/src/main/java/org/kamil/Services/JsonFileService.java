@@ -5,13 +5,14 @@ import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.kamil.Model.Question;
 import org.kamil.Model.Result;
-
 import java.io.File;
 import java.io.IOException;
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+import java.util.ArrayList;
+import java.util.LinkedHashMap;
 import java.util.List;
+import java.util.Map;
 
 public class JsonFileService {
     private final ObjectMapper objectMapper;
@@ -23,13 +24,27 @@ public class JsonFileService {
 
     public List<Question> mapQuestions (File chapterFile) throws IOException {
         return objectMapper.readValue(chapterFile, new TypeReference<>() {});
+
     }
 
-    public void mapResults(List<Result> results) throws IOException {
+
+    public Map<String,Question> mappingQuestions (File chapterFile) throws IOException {
+        Map<String,Question> qMap = new LinkedHashMap<>();
+        List<Question> q = objectMapper.readValue(chapterFile, new TypeReference<>() {});
+        q.forEach(Q -> {
+            qMap.put(Q.getId(),Q);
+        });
+        return qMap;
+    }
+
+    public void mapResults(Map<String,Result> resultMap) throws IOException {
         String date = LocalDateTime.now().format(DateTimeFormatter.ofPattern("dd-MM-yyyy|HH:mm:ss"));
+        List<Result> results = new ArrayList<>(resultMap.values());
         objectMapper.writeValue(new File("/home/kamilxcv/Downloads/quiz%s.json".formatted(date)), results);
         System.out.println(ConsoleUI.YELLOW + "Results of quiz saved to Downloads with name: " + date + ConsoleUI.RESET);
     }
+
+
 
 
 

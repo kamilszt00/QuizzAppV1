@@ -9,7 +9,7 @@ public class Result {
     private Question question;
 
 
-    public Result(String answer, Question question) {
+    public Result(Question question, String answer) {
         this.answer = answer;
         this.question = question;
 
