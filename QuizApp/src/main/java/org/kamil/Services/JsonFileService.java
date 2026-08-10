@@ -5,6 +5,8 @@ import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.kamil.Model.Question;
 import org.kamil.Model.Result;
+import org.kamil.Repository.RepositoryMap;
+
 import java.io.File;
 import java.io.IOException;
 import java.time.LocalDateTime;
@@ -37,9 +39,10 @@ public class JsonFileService {
         return qMap;
     }
 
-    public void mapResults(Map<String,Result> resultMap) throws IOException {
+    public void mapResults(RepositoryMap<String,Result> resultRepo) throws IOException {
         String date = LocalDateTime.now().format(DateTimeFormatter.ofPattern("dd-MM-yyyy|HH:mm:ss"));
-        List<Result> results = new ArrayList<>(resultMap.values());
+        List<Result> results = new ArrayList<>();
+        resultRepo.forEach((id,result) -> results.add(result));
         objectMapper.writeValue(new File("/home/kamilxcv/Downloads/quiz%s.json".formatted(date)), results);
         System.out.println(ConsoleUI.YELLOW + "Results of quiz saved to Downloads with name: " + date + ConsoleUI.RESET);
     }

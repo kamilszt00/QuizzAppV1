@@ -21,22 +21,22 @@ public class MainLauncher {
         JsonFileService jsonFileService = new JsonFileService();
 
 
-
-        RepositoryMap<String,Question> questionMapRepo = new RepositoryMap<>();
-        RepositoryMap<String, Answer> answerMapRepo = new RepositoryMap<>();
-        RepositoryMap<String, Result> resultMapRepo = new RepositoryMap<>();
-
         QuizzGreeter.greetUser();
         boolean keepQuizzing = true;
 
         while (keepQuizzing) {
+            RepositoryMap<String,Question> questionMapRepo = new RepositoryMap<>();
+            RepositoryMap<String, Answer> answerMapRepo = new RepositoryMap<>();
+            RepositoryMap<String, Result> resultMapRepo = new RepositoryMap<>();
+
             String chapter = ChapterSelectionService.chapterSelector("src/main/resources/chapters");
             File chapterFile = new File("src/main/resources/chapters/%s.json".formatted(chapter));
             questionMapRepo.setMapOfStored(jsonFileService.mappingQuestions(chapterFile));
-            QuizIterator.iterQuiz(questionMapRepo.getMapOfStored(), answerMapRepo.getMapOfStored());
+            QuizIterator.iterQuiz(questionMapRepo, answerMapRepo);
+            // add skipping + reviewing options
+            ResultService.resultMapper(questionMapRepo,answerMapRepo,resultMapRepo);
 
-            ResultService.resultMapper(questionMapRepo.getMapOfStored(),answerMapRepo.getMapOfStored(),resultMapRepo.getMapOfStored());
-            jsonFileService.mapResults(resultMapRepo.getMapOfStored());
+            jsonFileService.mapResults(resultMapRepo);
             keepQuizzing = NextQuiz.askForNextQuiz();
         }
     }
