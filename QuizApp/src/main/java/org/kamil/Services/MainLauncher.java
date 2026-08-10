@@ -1,6 +1,7 @@
 package org.kamil.Services;
 
 
+import org.kamil.Config.ConfigCheck;
 import org.kamil.Config.ConfigService;
 import org.kamil.Model.Answer;
 import org.kamil.Model.Question;
@@ -26,8 +27,9 @@ public class MainLauncher {
         boolean keepQuizzing = true;
 
         ConfigService config= new ConfigService();
-
+        ConfigCheck configCheck = new ConfigCheck();
         QuizzGreeter.greetUser();
+        configCheck.checkConfig(config);
 
 //        while (keepQuizzing) {
 //            RepositoryMap<String,Question> questionMapRepo = new RepositoryMap<>();
