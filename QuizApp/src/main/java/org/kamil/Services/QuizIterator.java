@@ -5,6 +5,7 @@ import org.kamil.Model.Question;
 import org.kamil.Repository.RepositoryMap;
 
 
+import java.io.Console;
 import java.util.Scanner;
 import java.util.concurrent.atomic.AtomicInteger;
 
@@ -37,21 +38,21 @@ public class QuizIterator {
 
     private void summary(RepositoryMap<String,Question> questionRepo, RepositoryMap<String,Answer> answerRepo) {
         AtomicInteger AtmBlanked = new AtomicInteger();
-        System.out.println("Here is summary of your answers: ");
+        System.out.println(ConsoleUI.YELLOW + ConsoleUI.BOLD + "Here is summary of your answers: " + ConsoleUI.RESET);
         questionRepo.forEach((id,Question) -> {
 
-            String prompt = "Question : " + Question.content.getQuestion_text() + " | Answer : " + answerRepo.getValue(id).getAnswer();
+            String prompt =  "Question : "  + Question.content.getQuestion_text()  + " | Answer : " +  answerRepo.getValue(id).getAnswer() ;
             if (answerRepo.getValue(id).getAnswer().isEmpty()) {
                 System.out.println(ConsoleUI.RED + prompt + ConsoleUI.RESET);
                 AtmBlanked.getAndIncrement();
             } else {
-                System.out.println(prompt);
+                System.out.println(ConsoleUI.GREEN + prompt + ConsoleUI.RESET);
             }
 
         });
         int blanked = Integer.parseInt(AtmBlanked.toString());
-        System.out.println("You've answered " + (questionRepo.size() - blanked) + " out of " + questionRepo.size() + ", " + blanked + " were skipped");
-        System.out.println("Would you like to try answer skipped questions one more time?");
+        System.out.println("You've answered " + ConsoleUI.GREEN +(questionRepo.size() - blanked) + ConsoleUI.RESET + " out of " + questionRepo.size() + " questions, " +ConsoleUI.GRAY + blanked + ConsoleUI.RESET + " were skipped");
+        System.out.println(ConsoleUI.YELLOW + ConsoleUI.BOLD + "Would you like to try answering skipped questions one more time? Y/n" + ConsoleUI.RESET);
         if (skan.nextLine().equalsIgnoreCase("y")) {
             questionIter(questionRepo,answerRepo);
         }
