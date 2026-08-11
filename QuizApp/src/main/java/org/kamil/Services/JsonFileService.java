@@ -39,11 +39,11 @@ public class JsonFileService {
         return qMap;
     }
 
-    public void mapResults(RepositoryMap<String,Result> resultRepo) throws IOException {
+    public void mapResults(RepositoryMap<String,Result> resultRepo, String path) throws IOException {
         String date = LocalDateTime.now().format(DateTimeFormatter.ofPattern("dd-MM-yyyy|HH:mm:ss"));
         List<Result> results = new ArrayList<>();
         resultRepo.forEach((id,result) -> results.add(result));
-        objectMapper.writeValue(new File("/home/kamilxcv/Downloads/quiz%s.json".formatted(date)), results);
+        objectMapper.writeValue(new File(path + "/quiz%s.json".formatted(date)), results);
         System.out.println(ConsoleUI.YELLOW + "Results of quiz saved to Downloads with name: " + date + ConsoleUI.RESET);
     }
 
