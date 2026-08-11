@@ -26,12 +26,12 @@ public class MainLauncher {
             RepositoryMap<String,Question> questionMapRepo = new RepositoryMap<>();
             RepositoryMap<String, Answer> answerMapRepo = new RepositoryMap<>();
             RepositoryMap<String, Result> resultMapRepo = new RepositoryMap<>();
+            QuizIterator quizIterator = new QuizIterator();
 
             String chapter = ChapterSelectionService.chapterSelector(config.getChaptersPath());
             File chapterFile = new File(config.getChaptersPath() + "/%s.json".formatted(chapter));
             questionMapRepo.setMapOfStored(jsonFileService.mappingQuestions(chapterFile));
-            QuizIterator.iterQuiz(questionMapRepo, answerMapRepo);
-            // add skipping + reviewing options
+            quizIterator.iterQuiz(questionMapRepo, answerMapRepo);
             ResultService.resultMapper(questionMapRepo,answerMapRepo,resultMapRepo);
 
             jsonFileService.mapResults(resultMapRepo, config.getResultSavePath());

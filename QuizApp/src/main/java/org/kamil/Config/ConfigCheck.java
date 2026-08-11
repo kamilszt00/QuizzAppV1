@@ -3,7 +3,7 @@ package org.kamil.Config;
 import java.io.File;
 import java.util.Scanner;
 import java.util.function.Consumer;
-import java.util.function.Predicate;
+
 
 public class ConfigCheck {
     Scanner skan = new Scanner(System.in);
@@ -19,7 +19,7 @@ public class ConfigCheck {
     }
 
 
-    //First path changer
+
     public void firstPathCheck(ConfigService configService) {
         if (!configService.hasChaptersPath()) {
             configService.setChaptersPath(promptForStringPath("No chapters path detected, please provide path to chapters for quizzing"));
@@ -35,7 +35,7 @@ public class ConfigCheck {
     }
 
 
-    //path changer if user wants to
+
      private void maybeUpdatePath(String currentPathMessage, String promptMessage, Consumer<String> setter) {
          System.out.println(currentPathMessage);
          System.out.println("Would you like to change it? Y/n");

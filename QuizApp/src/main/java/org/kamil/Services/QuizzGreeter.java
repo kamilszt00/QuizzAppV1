@@ -1,6 +1,6 @@
 package org.kamil.Services;
 
-import org.kamil.Config.ConfigService;
+
 
 public class QuizzGreeter {
     public static void greetUser() {

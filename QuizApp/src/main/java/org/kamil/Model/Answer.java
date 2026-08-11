@@ -2,6 +2,7 @@ package org.kamil.Model;
 
 public class Answer {
     private String answer;
+    private boolean isAnswered;
 
 
     public String getAnswer() {
@@ -15,8 +16,9 @@ public class Answer {
 
 
 
-    public Answer(String answer) {
+    public Answer(String answer, boolean isAnswered) {
         this.answer = answer;
+        this.isAnswered = isAnswered;
     }
 
     @Override

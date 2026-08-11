@@ -15,9 +15,6 @@ public class RepositoryMap<T,E> {
     }
 
     public void addToMap(T key, E value) {
-        if (mapOfStored.containsKey(key)) {
-            throw new IllegalArgumentException("Duplicate key: " + key);
-        }
         mapOfStored.put(key,value);
     }
 
